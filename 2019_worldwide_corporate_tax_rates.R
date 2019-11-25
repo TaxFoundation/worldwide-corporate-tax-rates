@@ -794,9 +794,9 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
     #Top
     using(plyr)
     toprate<-arrange(data2019_gdp_mis, desc(rate))
-    toprate<-toprate[1:20,]
+    toprate<-toprate[1:21,]
     
-    toprate$continent <- if_else(toprate$continent == "EU","Europa",toprate$continent)
+    toprate$continent <- if_else(toprate$continent == "EU","Europe",toprate$continent)
     toprate$continent <- if_else(toprate$continent == "OC","Oceania",toprate$continent)
     toprate$continent <- if_else(toprate$continent == "AF","Africa",toprate$continent)
     toprate$continent <- if_else(toprate$continent == "AS","Asia",toprate$continent)
@@ -809,6 +809,7 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
     colnames(toprate)[colnames(toprate)=="continent"] <- "Continent"
     colnames(toprate)[colnames(toprate)=="rate"] <- "Rate"
     
+    toprate <- toprate[order(-toprate$Rate, toprate$Country),]
     
     #bottom
     using(plyr)
@@ -816,7 +817,7 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
     bottomrate<-subset(bottomrate, rate > 0)
     bottomrate <- bottomrate[1:20,]
     
-    bottomrate$continent <- if_else(bottomrate$continent == "EU","Europa",bottomrate$continent)
+    bottomrate$continent <- if_else(bottomrate$continent == "EU","Europe",bottomrate$continent)
     bottomrate$continent <- if_else(bottomrate$continent == "OC","Oceania",bottomrate$continent)
     bottomrate$continent <- if_else(bottomrate$continent == "AF","Africa",bottomrate$continent)
     bottomrate$continent <- if_else(bottomrate$continent == "AS","Asia",bottomrate$continent)
@@ -829,11 +830,13 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
     colnames(bottomrate)[colnames(bottomrate)=="continent"] <- "Countinent"
     colnames(bottomrate)[colnames(bottomrate)=="rate"] <- "Rate"
     
+    bottomrate <- bottomrate[order(bottomrate$Rate, bottomrate$Country),]
+    
     #zero
     zerorate <- arrange(data2019_gdp_mis, rate)
     zerorate <- subset(zerorate, rate==0)
     
-    zerorate$continent <- if_else(zerorate$continent == "EU","Europa",zerorate$continent)
+    zerorate$continent <- if_else(zerorate$continent == "EU","Europe",zerorate$continent)
     zerorate$continent <- if_else(zerorate$continent == "OC","Oceania",zerorate$continent)
     zerorate$continent <- if_else(zerorate$continent == "AF","Africa",zerorate$continent)
     zerorate$continent <- if_else(zerorate$continent == "AS","Asia",zerorate$continent)
@@ -845,6 +848,8 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
     colnames(zerorate)[colnames(zerorate)=="country"] <- "Country"
     colnames(zerorate)[colnames(zerorate)=="continent"] <- "Countinent"
     colnames(zerorate)[colnames(zerorate)=="rate"] <- "Rate"
+    
+    zerorate <- zerorate[order(zerorate$Country),]
       
     #exporting top, bottom, and zero rate
     write.csv(toprate, "final-outputs/toprates.csv")
