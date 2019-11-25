@@ -165,6 +165,8 @@ et des Contributions Publiques, "Section V : Calcul de l'impôt," http://www.imp
 
 * **TKL - Tokelau:** No data found.
 
+* **TKM - Turkmenistan:** Corporate tax rate of 8 percent, see Deloitte, "International Tax - Turkmenistan Highlights," 2019, https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Tax/dttl-tax-turkmenistanhighlights-2019.pdf. The 20 percent rate shown in the KPMG dataset only applies to _other_ residents, including contractors/subcontractors under the Petroleum law.
+
 * **TLS - Timor-Leste:** Corporate income tax rate of 10 percent, see PwC, "Timor-Leste: Corporate - Taxes on corporate income," http://taxsummaries.pwc.com/ID/Timor-Leste-Corporate-Taxes-on-corporate-income.
 
 * **TON - Tonga:** Corporate income tax rate of 25 percent, see "Doing Business 2020: Economy Profile Tonga," page 41, https://www.doingbusiness.org/content/dam/doingBusiness/country/t/tonga/TON.pdf and World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?scope=10986%2F12192&query=tonga&submit=&filtertype_0=title&filter_relational_operator_0=contains&filter_0=.
