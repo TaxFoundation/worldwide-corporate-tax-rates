@@ -827,7 +827,7 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
     bottomrate <- subset(bottomrate, select = c(country, continent, rate))
     
     colnames(bottomrate)[colnames(bottomrate)=="country"] <- "Country"
-    colnames(bottomrate)[colnames(bottomrate)=="continent"] <- "Countinent"
+    colnames(bottomrate)[colnames(bottomrate)=="continent"] <- "Continent"
     colnames(bottomrate)[colnames(bottomrate)=="rate"] <- "Rate"
     
     bottomrate <- bottomrate[order(bottomrate$Rate, bottomrate$Country),]
@@ -846,7 +846,7 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
     zerorate <- subset(zerorate, select = c(country, continent, rate))
     
     colnames(zerorate)[colnames(zerorate)=="country"] <- "Country"
-    colnames(zerorate)[colnames(zerorate)=="continent"] <- "Countinent"
+    colnames(zerorate)[colnames(zerorate)=="continent"] <- "Continent"
     colnames(zerorate)[colnames(zerorate)=="rate"] <- "Rate"
     
     zerorate <- zerorate[order(zerorate$Country),]
