@@ -73,7 +73,7 @@ Income Tax Act of the Kingdom of Bhutan 2001," updated January 2017, https://www
 
 * **GRL - Greenland:** Corporate income tax rate of 31.8 percent, see Akileraartarnermut Aqutsisoqarfik, "Tax rates 2016/17," https://int.aka.gl/en/Tax-Greenland/Tax-rates-2017.
 
-* **GUF - French Guiana:** As an overseas départements of France, Guadeloupe does not seem to have its own tax system, hence shown as 'N/A,' see Ministere de l'Economie, "Overview of the French Tax System," https://www.impots.gouv.fr/portail/files/media/1_metier/5_international/french_tax_system.pdf.
+* **GUF - French Guiana:** As an overseas départements of France, French Guiana does not seem to have its own tax system, hence shown as 'N/A,' see Ministere de l'Economie, "Overview of the French Tax System," https://www.impots.gouv.fr/portail/files/media/1_metier/5_international/french_tax_system.pdf.
 
 * **GUM - Guam:** Corporate income tax rate of 21 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
 

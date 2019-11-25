@@ -429,6 +429,10 @@ all_years_preliminary[c("2013")][all_years_preliminary$iso_3 == "ERI",] <-  30
 #FLK - Falkland Islands (Malvinas)
 all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "FLK",] <- 26
 
+#FRA - France (correct for postponing rate cut)
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "FRA",] <- 34.43
+
+
 #FRO - Faroe Islands
 all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "FRO",] <- 18
   
@@ -802,7 +806,7 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
     toprate <- subset(toprate, select = c(country, continent, rate))
     
     colnames(toprate)[colnames(toprate)=="country"] <- "Country"
-    colnames(toprate)[colnames(toprate)=="continent"] <- "Countinent"
+    colnames(toprate)[colnames(toprate)=="continent"] <- "Continent"
     colnames(toprate)[colnames(toprate)=="rate"] <- "Rate"
     
     

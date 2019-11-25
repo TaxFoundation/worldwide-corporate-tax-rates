@@ -1,21 +1,21 @@
 "","Country","Countinent","Rate"
 "14","Barbados","North America",5.5
 "15","Uzbekistan","Asia",7.5
-"16","Hungary","Europa",9
-"17","Montenegro","Europa",9
-"18","Andorra","Europa",10
-"19","Bulgaria","Europa",10
-"20","Bosnia and Herzegovina","Europa",10
-"21","Gibraltar","Europa",10
+"16","Hungary","Europe",9
+"17","Montenegro","Europe",9
+"18","Andorra","Europe",10
+"20","Bosnia and Herzegovina","Europe",10
+"19","Bulgaria","Europe",10
+"21","Gibraltar","Europe",10
+"28","Kosovo, Republic of","Europe",10
 "22","Kyrgyzstan","Asia",10
-"23","The former Yugoslav Republic of Macedonia","Europa",10
 "24","Nauru","Oceania",10
 "25","Paraguay","South America",10
 "26","Qatar","Asia",10
+"23","The former Yugoslav Republic of Macedonia","Europe",10
 "27","Timor-Leste","Oceania",10
-"28","Kosovo, Republic of","Europa",10
 "29","China, Macao Special Administrative Region","Asia",12
-"30","Republic of Moldova","Europa",12
-"31","Cyprus","Europa",12.5
-"32","Ireland","Europa",12.5
-"33","Liechtenstein","Europa",12.5
+"30","Republic of Moldova","Europe",12
+"31","Cyprus","Europe",12.5
+"32","Ireland","Europe",12.5
+"33","Liechtenstein","Europe",12.5

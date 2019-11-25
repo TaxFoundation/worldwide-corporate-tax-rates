@@ -1,19 +1,19 @@
-"","Country","Countinent","Rate"
+"","Country","Continent","Rate"
 "1","United Arab Emirates","Asia",55
 "2","Comoros","Africa",50
 "3","Puerto Rico","North America",37.5
 "4","Suriname","South America",36
-"5","Democratic Republic of the Congo","Africa",35
-"6","Guinea","Africa",35
-"7","Equatorial Guinea","Africa",35
-"8","Kiribati","Oceania",35
-"9","Saint Martin (French Part)","North America",35
-"10","Malta","Europa",35
-"11","Sudan","Africa",35
-"12","Sint Maarten (Dutch part)","North America",35
 "13","Chad","Africa",35
+"5","Democratic Republic of the Congo","Africa",35
+"7","Equatorial Guinea","Africa",35
+"6","Guinea","Africa",35
+"8","Kiribati","Oceania",35
+"10","Malta","Europe",35
+"9","Saint Martin (French Part)","North America",35
+"12","Sint Maarten (Dutch part)","North America",35
+"11","Sudan","Africa",35
 "14","Zambia","Africa",35
-"15","France","Europa",34.43
+"15","France","Europe",34.43
 "16","Brazil","South America",34
 "17","Venezuela (Bolivarian Republic of)","South America",34
 "18","Cameroon","Africa",33
