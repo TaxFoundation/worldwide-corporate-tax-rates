@@ -680,9 +680,7 @@ gdp$country[gdp$country == "Vietnam"] <- "Viet Nam"
 
 #Drop rows that contain data of regions
 gdp$country <- as.character(gdp$country)
-gdp <- subset(gdp, gdp$country != "World" 
-              & gdp$country != "WorldLessUSA"
-              & gdp$country != "Africa"
+gdp <- subset(gdp, gdp$country != "Africa"
               & gdp$country != "Asia"
               & gdp$country != "AsiaandOceania"
               & gdp$country != "AsiaLessJapan"
@@ -756,7 +754,6 @@ write.csv(final_data,"final-data/final_data_long.csv")
 #Summary statistics###
 
 #Drop if no gdp or rate data
-complete.cases(final_data)
 complete_data <- final_data[complete.cases(final_data),]
 
 #Creating the 2019 dataset that includes only countries for which we have gdp data
@@ -796,7 +793,6 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
 #Top, Bottom, and Zero Rates
     
     #Top
-    using(plyr)
     toprate<-arrange(data2019_gdp_mis, desc(rate))
     toprate<-toprate[1:21,]
     
@@ -816,7 +812,6 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
     toprate <- toprate[order(-toprate$Rate, toprate$Country),]
     
     #bottom
-    using(plyr)
     bottomrate<-arrange(data2019_gdp_mis, rate)
     bottomrate<-subset(bottomrate, rate > 0)
     bottomrate <- bottomrate[1:21,]
