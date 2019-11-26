@@ -588,6 +588,10 @@ all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "TGO",] <- 29
 #TJK - Tajikistan
 all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TJK",] <- 23
 
+#TKM - Turkmenistan
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TKM",] <- 8
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "TKM",] <- 8
+
 #TLS - Timor-Leste
 all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TLS",] <- 10
 
@@ -815,7 +819,7 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
     using(plyr)
     bottomrate<-arrange(data2019_gdp_mis, rate)
     bottomrate<-subset(bottomrate, rate > 0)
-    bottomrate <- bottomrate[1:20,]
+    bottomrate <- bottomrate[1:21,]
     
     bottomrate$continent <- if_else(bottomrate$continent == "EU","Europe",bottomrate$continent)
     bottomrate$continent <- if_else(bottomrate$continent == "OC","Oceania",bottomrate$continent)
