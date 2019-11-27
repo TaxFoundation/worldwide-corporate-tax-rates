@@ -58,7 +58,15 @@ country_iso_cont$continent <- as.character(country_iso_cont$continent)
 country_iso_cont$continent <- if_else(is.na(country_iso_cont$continent),"NO",country_iso_cont$continent)
 
 #Drop the jurisdiction "Sark" (the island is fiscally autonomous but has no company registry, no company law, and also no ISO-code)
-country_iso_cont<-subset(country_iso_cont, country_iso_cont$country != "Sark")
+country_iso_cont <- subset(country_iso_cont, country_iso_cont$country != "Sark")
+
+#Add the jurisdictions Netherland Antilles (was split into different jurisdictions in 2010) and Kosovo (has not yet officially been assigned a country code)
+country_iso_cont$country <- as.character(country_iso_cont$country)
+country_iso_cont$iso_2 <- as.character(country_iso_cont$iso_2)
+country_iso_cont$iso_3 <- as.character(country_iso_cont$iso_3)
+
+country_iso_cont[nrow(country_iso_cont) + 1,] = list("Kosovo, Republic of", "XK", "XKX", "EU")
+country_iso_cont[nrow(country_iso_cont) + 1,] = list("Netherlands Antilles", "AN", "ANT", "NO")
 
 #Correct country names that were read in incorrectly (mostly because R does not recognize accents)
 
@@ -357,23 +365,6 @@ previous_years$country[previous_years$country == "Wallis and Futuna"] <- "Wallis
 #Add ISO-Code to Previous Year's Data
 
 previous_years_iso <- merge(previous_years,country_iso_cont,by="country", all=T)
-
-#Add ISO-Code for Kosovo (Kosovo has not been officially assigned its ISO-code)
-
-previous_years_iso$country <- as.character(previous_years_iso$country)
-previous_years_iso$iso_2 <- as.character(previous_years_iso$iso_2)
-previous_years_iso$iso_3 <- as.character(previous_years_iso$iso_3)
-previous_years_iso$continent <- as.character(previous_years_iso$continent)
-
-previous_years_iso$iso_2[previous_years_iso$country == "Kosovo, Republic of"] <- "XK"
-previous_years_iso$iso_3[previous_years_iso$country == "Kosovo, Republic of"] <- "XKX"
-previous_years_iso$continent[previous_years_iso$country == "Kosovo, Republic of"] <- "EU"
-
-#Add ISO-Code for Netherlands Antilles (in 2010, the Netherlands Antilles were split: Curaçao and St Maarten each became separate countries within the Kingdom of the Netherlands and the Islands of Bonaire, Saba and St Eustatia became special municipalities of the Netherlands)
-
-previous_years_iso$iso_2[previous_years_iso$country == "Netherlands Antilles"] <- "AN"
-previous_years_iso$iso_3[previous_years_iso$country == "Netherlands Antilles"] <- "ANT"
-previous_years_iso$continent[previous_years_iso$country == "Netherlands Antilles"] <- "NO"
 
 
 #Combine 2019 data ("oecd_kpmg_2019") with data from previous years ("previous_years_iso")
@@ -777,11 +768,11 @@ write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
   #2019 weighted mean (including only countries with gdp data)
   weighted_mean_19 <- weighted.mean(data2019$rate, data2019$gdp, na.rm = TRUE)
   
-  #2019 number of rates (-- fix for Kosovo??) (including only countries with gdp data)
+  #2019 number of rates (including only countries with gdp data)
   numrates_19 <- NROW(data2019$rate)
   numgdp_19 <- NROW(data2019$gdp)
   
-  #2019 number of rates (-- fix for Kosovo??) (including countries with missing gdp data)
+  #2019 number of rates (including countries with missing gdp data)
   numrates_19_gdp_mis <- NROW(data2019_gdp_mis$rate)
   numgdp_19_gdp_mis <- NROW(data2019_gdp_mis$gdp)
   
