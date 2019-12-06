@@ -13,7 +13,7 @@
 
 ### For corporate income tax rates from 1980 to 2018:
 
-* Tax Foundation, "data_rates_1980-2018," GitHub, [LINK].
+* Tax Foundation, "data_rates_1980-2018," GitHub, https://github.com/TaxFoundation/worldwide-corporate-tax-rates. Tax Foundation has built this dataset in stages since 2015. These historic rates come from multiple sources: PwC, “Worldwide Tax Summaries – Corporate Taxes,” 2010-2018; KPMG, “Corporate Tax Rate Survey,” 1998- 2003; KPMG, “Corporate tax rates table,” 2003-2018; EY, “Worldwide Corporate Tax Guide,” 2004-2018; OECD, “Historical Table II.1 – Statutory corporate income tax rate,” 1999, http://www.oecd.org/tax/tax-policy/tax-database.htm#C_CorporateCaptial; the University of Michigan - Ross School of Business, “World Tax Database,” https://www.bus.umich.edu/otpr/otpr/default.asp; and numerous government websites.
 
 
 ## Sources/details on countries that are not part of the KPMG or OECD datasets (rates apply to the year 2019 unless otherwise noted)
@@ -189,7 +189,8 @@ et des Contributions Publiques, "Section V : Calcul de l'impôt," http://www.imp
 ____________________________________________________
 ## **GROSS DOMESTIC PRODUCT (GDP)**
 
-* Economic Research Service, "International Macroeconomic Data Set," United States Department of Agriculture, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
+* U.S. Department of Agriculture, “International Macroeconomics Data Set,” December 2018, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
+
 
 ____________________________________________________
 ## **COUNTRY CODES**

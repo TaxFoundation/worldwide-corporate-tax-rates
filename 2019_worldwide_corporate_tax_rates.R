@@ -749,12 +749,12 @@ complete_data <- final_data[complete.cases(final_data),]
 
 #Creating the 2019 dataset that includes only countries for which we have gdp data
 data2019 <- subset(complete_data, year==2019, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu, gseven, gtwenty, brics))
-write.csv(data2019, "final-outputs/final_data_2019.csv")
+write.csv(data2019, "final-data/final_data_2019.csv")
 
 #Creating the 2019 dataset that includes countries with missing gdp data as well
 data2019_gdp_mis <- subset(final_data, year==2019, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu, gseven, gtwenty, brics))
 data2019_gdp_mis <- subset(data2019_gdp_mis, !is.na(data2019_gdp_mis$rate))
-write.csv(data2019_gdp_mis, "final-outputs/final_data_2019_gdp_incomplete.csv")
+write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
 
 
 #2019 simple mean (including only countries with gdp data)
