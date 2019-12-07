@@ -33,7 +33,7 @@ Location of **input** files to .R code file including:
 
 - `country_codes.csv` Dataset that includes all 249 sovereign states and dependent territories that have been assigned a country code by the International Organization for Standardization (ISO). Includes official country names in various languages, ISO country codes, continents, and further geographical information.
 
-- `data_rates_1980-2018.csv` Tax Foundation's dataset of statutory corporate income tax rates for the years 1980 to 2018. This dataset has been built in stages since 2015.
+- `data_rates_1980_2018.csv` Tax Foundation's dataset of statutory corporate income tax rates for the years 1980 to 2018. This dataset has been built in stages since 2015.
 
 - `gdp_historical.xlsx` U.S. Department of Agriculture's dataset of historical real Gross Domestic Product (GDP) and growth rates of GDP for 176 countries and various regions (in billions of 2010 dollars) for the years 1980 to 2017.
 
