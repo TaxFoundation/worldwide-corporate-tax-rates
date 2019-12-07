@@ -63,26 +63,26 @@ Location of **final output** files of .R code file including
 ### /final-outputs
 Location of **output tables** that are included in the publication.
 
-- `bottomrates.csv` Table of the 21 countries with the lowest corporate income tax rates in the world in 2019 (excluding countries without a corporate tax).
+- `bottom_rates.csv` Table of the 21 countries with the lowest corporate income tax rates in the world in 2019 (excluding countries without a corporate tax).
 
-- `distribution1980.csv` Table showing the distribution of corporate income tax rates in 1980.
+- `distribution_1980.csv` Table showing the distribution of corporate income tax rates in 1980.
 
-- `distribution1990.csv` Table showing the distribution of corporate income tax rates in 1990.
+- `distribution_1990.csv` Table showing the distribution of corporate income tax rates in 1990.
 
-- `distribution2000.csv` Table showing the distribution of corporate income tax rates in 2000.
+- `distribution_2000.csv` Table showing the distribution of corporate income tax rates in 2000.
 
-- `distribution2010.csv` Table showing the distribution of corporate income tax rates in 2010.
+- `distribution_2010.csv` Table showing the distribution of corporate income tax rates in 2010.
 
-- `distribution2019.csv` Table showing the distribution of corporate income tax rates in 2019.
+- `distribution_2019.csv` Table showing the distribution of corporate income tax rates in 2019.
 
 - `rate_changes.csv` Table showing by how much the corporate income tax rates changed between 2000 and 2019 by country.
 
-- `rate_timeseries.csv` Table showing the weighted and unweighted worldwide average of corporate income tax rates by year between 1980 and 2019.
+- `rate_time_series.csv` Table showing the weighted and unweighted worldwide average of corporate income tax rates by year between 1980 and 2019.
 
 - `rates_regional.csv` Table showing the weighted and unweighted averages of corporate income tax rates by continent and country groups for the year 2019.
 
 - `regional_all_data.csv` Table showing the weighted and unweighted averages of corporate income tax rates by continent and country groups for the years 1980, 1990, 2000, 2010, and 2019.
 
-- `toprates.csv` Table of the 21 countries with the highest corporate income tax rates in the world in 2019.
+- `top_rates.csv` Table of the 21 countries with the highest corporate income tax rates in the world in 2019.
 
-- `zerorates.csv` Table of countries without a corporate income tax in 2019.
+- `zero_rates.csv` Table of countries without a corporate income tax in 2019.

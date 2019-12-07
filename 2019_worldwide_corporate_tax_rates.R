@@ -779,7 +779,7 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
   #2019 distribution (including countries with missing gdp data)
   dist <- hist(data2019_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2019 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
   distdata <- data.frame(dist$counts,dist$breaks[1:12])
-  write.csv(distdata, "final-outputs/distribution2019.csv")
+  write.csv(distdata, "final-outputs/distribution_2019.csv")
   
 #Top, Bottom, and Zero Rates
     
@@ -842,9 +842,9 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
     zerorate <- zerorate[order(zerorate$Country),]
       
     #exporting top, bottom, and zero rate
-    write.csv(toprate, "final-outputs/toprates.csv")
-    write.csv(bottomrate, "final-outputs/bottomrates.csv")
-    write.csv(zerorate, "final-outputs/zerorates.csv")
+    write.csv(toprate, "final-outputs/top_rates.csv")
+    write.csv(bottomrate, "final-outputs/bottom_rates.csv")
+    write.csv(zerorate, "final-outputs/zero_rates.csv")
       
     
     
@@ -1061,7 +1061,7 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
       #distribution graph
       dist10 <- hist(data2010$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2010 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
       dist10data <- data.frame(dist10$counts,dist10$breaks[1:12])
-      write.csv(dist10data, "final-outputs/distribution2010.csv")
+      write.csv(dist10data, "final-outputs/distribution_2010.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
@@ -1171,7 +1171,7 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
       #distribution graph
       dist00 <- hist(data2000$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2000 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
       dist00data <- data.frame(dist00$counts,dist00$breaks[1:12])
-      write.csv(dist00data, "final-outputs/distribution2000.csv")
+      write.csv(dist00data, "final-outputs/distribution_2000.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
@@ -1280,7 +1280,7 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
       #distribution graph
       dist90 <- hist(data1990$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80), main="1990 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
       dist90data <- data.frame(dist90$counts,dist90$breaks[1:16])
-      write.csv(dist90data, "final-outputs/distribution1990.csv")
+      write.csv(dist90data, "final-outputs/distribution_1990.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
@@ -1392,7 +1392,7 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
       #distribution graph
       dist80 <- hist(data1980$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65), main="1980 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
       dist80data <- data.frame(dist80$counts,dist80$breaks[1:13])
-      write.csv(dist80data, "final-outputs/distribution1980.csv")
+      write.csv(dist80data, "final-outputs/distribution_1980.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
@@ -1437,4 +1437,4 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
       complete_data$gdp <- as.numeric(complete_data$gdp)
       
       timeseries<-ddply(complete_data, .(year),summarize, weighted.average = weighted.mean(rate,gdp, na.rm = TRUE), average = mean(rate, na.rm = TRUE),n = length(rate[is.na(rate) == FALSE]))
-      write.csv(timeseries, "final-outputs/rate_timeseries.csv")
+      write.csv(timeseries, "final-outputs/rate_time_series.csv")
