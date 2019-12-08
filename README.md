@@ -33,7 +33,7 @@ Location of **input** files to .R code file including:
 
 - `country_codes.csv` Dataset that includes all 249 sovereign states and dependent territories that have been assigned a country code by the International Organization for Standardization (ISO). Includes official country names in various languages, ISO country codes, continents, and further geographical information.
 
-- `data_rates_1980-2018.csv` Tax Foundation's dataset of statutory corporate income tax rates for the years 1980 to 2018. This dataset has been built in stages since 2015.
+- `data_rates_1980_2018.csv` Tax Foundation's dataset of statutory corporate income tax rates for the years 1980 to 2018. This dataset has been built in stages since 2015.
 
 - `gdp_historical.xlsx` U.S. Department of Agriculture's dataset of historical real Gross Domestic Product (GDP) and growth rates of GDP for 176 countries and various regions (in billions of 2010 dollars) for the years 1980 to 2017.
 
@@ -63,26 +63,26 @@ Location of **final output** files of .R code file including
 ### /final-outputs
 Location of **output tables** that are included in the publication.
 
-- `bottomrates.csv` Table of the 21 countries with the lowest corporate income tax rates in the world in 2019 (excluding countries without a corporate tax).
+- `bottom_rates.csv` Table of the 21 countries with the lowest corporate income tax rates in the world in 2019 (excluding countries without a corporate tax).
 
-- `distribution1980.csv` Table showing the distribution of corporate income tax rates in 1980.
+- `distribution_1980.csv` Table showing the distribution of corporate income tax rates in 1980.
 
-- `distribution1990.csv` Table showing the distribution of corporate income tax rates in 1990.
+- `distribution_1990.csv` Table showing the distribution of corporate income tax rates in 1990.
 
-- `distribution2000.csv` Table showing the distribution of corporate income tax rates in 2000.
+- `distribution_2000.csv` Table showing the distribution of corporate income tax rates in 2000.
 
-- `distribution2010.csv` Table showing the distribution of corporate income tax rates in 2010.
+- `distribution_2010.csv` Table showing the distribution of corporate income tax rates in 2010.
 
-- `distribution2019.csv` Table showing the distribution of corporate income tax rates in 2019.
+- `distribution_2019.csv` Table showing the distribution of corporate income tax rates in 2019.
 
 - `rate_changes.csv` Table showing by how much the corporate income tax rates changed between 2000 and 2019 by country.
 
-- `rate_timeseries.csv` Table showing the weighted and unweighted worldwide average of corporate income tax rates by year between 1980 and 2019.
+- `rate_time_series.csv` Table showing the weighted and unweighted worldwide average of corporate income tax rates by year between 1980 and 2019.
 
 - `rates_regional.csv` Table showing the weighted and unweighted averages of corporate income tax rates by continent and country groups for the year 2019.
 
 - `regional_all_data.csv` Table showing the weighted and unweighted averages of corporate income tax rates by continent and country groups for the years 1980, 1990, 2000, 2010, and 2019.
 
-- `toprates.csv` Table of the 21 countries with the highest corporate income tax rates in the world in 2019.
+- `top_rates.csv` Table of the 21 countries with the highest corporate income tax rates in the world in 2019.
 
-- `zerorates.csv` Table of countries without a corporate income tax in 2019.
+- `zero_rates.csv` Table of countries without a corporate income tax in 2019.
