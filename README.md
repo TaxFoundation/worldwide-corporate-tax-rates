@@ -1,6 +1,6 @@
-# Corporate Tax Rates Around the World, 2019
+# Corporate Tax Rates around the World, 2019
 
-The Tax Foundation’s publication [Corporate Tax Rates Around the World](https://taxfoundation.org/publications/corporate-tax-rates-around-the-world/) shows how statutory corporate income tax rates have developed since 1980, with data for over 200 jurisdictions for the year 2019. The dataset we compiled for the years 1980 to 2019 is made available as a resource for research.
+The Tax Foundation’s publication [Corporate Tax Rates around the World](https://taxfoundation.org/publications/corporate-tax-rates-around-the-world/) shows how statutory corporate income tax rates have developed since 1980, with data for over 200 jurisdictions for the year 2019. The dataset we compiled for the years 1980 to 2019 is made available as a resource for research.
 
 ## The Dataset
 

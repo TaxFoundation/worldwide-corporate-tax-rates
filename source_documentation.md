@@ -1,4 +1,4 @@
-# Source Documentation for _Corporate Tax Rates Around the World_
+# Source Documentation for _Corporate Tax Rates around the World_
 
 ## **CORPORATE TAX RATES**
 
