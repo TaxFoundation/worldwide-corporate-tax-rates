@@ -739,7 +739,7 @@ rates_gdp <- merge(rates_gdp, country_iso_cont_groups, by =c("iso_2","iso_3", "c
 final_data <- rates_gdp[order(rates_gdp$iso_3, rates_gdp$year),]
 
 #Write as final data file
-write.csv(final_data,"final-data/final_data_long.csv")
+write.csv(final_data,"final-data/final_data_long.csv", row.names = FALSE)
 
 
 #Summary statistics###
@@ -1436,5 +1436,7 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
       complete_data$rate <- as.numeric(complete_data$rate)
       complete_data$gdp <- as.numeric(complete_data$gdp)
       
-      timeseries<-ddply(complete_data, .(year),summarize, weighted.average = weighted.mean(rate,gdp, na.rm = TRUE), average = mean(rate, na.rm = TRUE),n = length(rate[is.na(rate) == FALSE]))
-      write.csv(timeseries, "final-outputs/rate_time_series.csv")
+      timeseries <- ddply(complete_data, .(year),summarize, weighted.average = weighted.mean(rate,gdp, na.rm = TRUE), average = mean(rate, na.rm = TRUE),n = length(rate[is.na(rate) == FALSE]))
+      colnames(timeseries)[colnames(timeseries)=="n"] <- "country_count"
+    
+      write.csv(timeseries, "final-outputs/rate_time_series.csv", row.names = FALSE)
