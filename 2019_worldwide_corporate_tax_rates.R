@@ -1,4 +1,4 @@
-###Worldwide Corporate Tax Rates - 2019###
+###Worldwide Corporate Tax Rates - 2020###
 
 #general set-up
 using<-function(...,prompt=TRUE){
@@ -93,6 +93,7 @@ country_iso_cont_groups$oecd <- ifelse(country_iso_cont$iso_3 == "AUS"
                                   | country_iso_cont$iso_3 == "BEL"
                                   | country_iso_cont$iso_3 == "CAN"
                                   | country_iso_cont$iso_3 == "CHL"
+                                  | country_iso_cont$iso_3 == "COL"
                                   | country_iso_cont$iso_3 == "CZE"
                                   | country_iso_cont$iso_3 == "DNK"
                                   | country_iso_cont$iso_3 == "EST"
@@ -206,15 +207,15 @@ str(dstruc, max.level = 1)
 dstruc$VAR_DESC
 dstruc$CORP_TAX
 
-oecd_data_2019 <- get_dataset("TABLE_II1", start_time = 2019, end_time = 2019)
+oecd_data_2020 <- get_dataset("TABLE_II1", start_time = 2020, end_time = 2020)
 
 #Keep and rename selected columns
 
-oecd_data_2019<-subset(oecd_data_2019,oecd_data_2019$CORP_TAX=="COMB_CIT_RATE")
-oecd_data_2019<-subset(oecd_data_2019, select = -c(CORP_TAX,TIME_FORMAT,obsTime))
+oecd_data_2020 <- subset(oecd_data_2020, oecd_data_2020$CORP_TAX=="COMB_CIT_RATE")
+oecd_data_2020 <- subset(oecd_data_2020, select = -c(CORP_TAX,TIME_FORMAT,obsTime))
 
-colnames(oecd_data_2019)[colnames(oecd_data_2019)=="obsValue"] <- "2019"
-colnames(oecd_data_2019)[colnames(oecd_data_2019)=="COU"] <- "iso_3"
+colnames(oecd_data_2020)[colnames(oecd_data_2020)=="obsValue"] <- "2020"
+colnames(oecd_data_2020)[colnames(oecd_data_2020)=="COU"] <- "iso_3"
 
 
 #KPMG Data####
