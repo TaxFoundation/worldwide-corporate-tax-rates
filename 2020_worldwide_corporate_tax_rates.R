@@ -221,55 +221,55 @@ colnames(oecd_data_2020)[colnames(oecd_data_2020)=="COU"] <- "iso_3"
 #KPMG Data####
 
 #Read in dataset
-kpmg_data_2019 <- read_excel("source-data/kpmg_dataset.xlsx")
+kpmg_data_2020 <- read_excel("source-data/kpmg_dataset_2010_2020.xlsx")
 
 #Keep and rename selected columns
-kpmg_data_2019<-kpmg_data_2019[,-c(2:17)]
-colnames(kpmg_data_2019)[colnames(kpmg_data_2019)=="LOCATION"]<-"country"
+kpmg_data_2020 <- kpmg_data_2020[,-c(2:11)]
+colnames(kpmg_data_2020)[colnames(kpmg_data_2020)=="LOCATION"]<-"country"
 
 #Change KPMG country names to match official ISO-names
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Bolivia"] <- "Bolivia (Plurinational State of)"
+kpmg_data_2020$country[kpmg_data_2020$country == "Bolivia"] <- "Bolivia (Plurinational State of)"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Bonaire, Saint Eustatius and Saba"] <- "Bonaire, Sint Eustatius and Saba"
+kpmg_data_2020$country[kpmg_data_2020$country == "Bonaire, Saint Eustatius and Saba"] <- "Bonaire, Sint Eustatius and Saba"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Ivory Coast"] <- "Cote d'Ivoire"
+kpmg_data_2020$country[kpmg_data_2020$country == "Ivory Coast"] <- "Cote d'Ivoire"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Hong Kong SAR"] <- "China, Hong Kong Special Administrative Region"
+kpmg_data_2020$country[kpmg_data_2020$country == "Hong Kong SAR"] <- "China, Hong Kong Special Administrative Region"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Macau"] <- "China, Macao Special Administrative Region"
+kpmg_data_2020$country[kpmg_data_2020$country == "Macau"] <- "China, Macao Special Administrative Region"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Congo (Democratic Republic of the)"] <- "Democratic Republic of the Congo"
+kpmg_data_2020$country[kpmg_data_2020$country == "Congo (Democratic Republic of the)"] <- "Democratic Republic of the Congo"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Czech Republic"] <- "Czechia"
+kpmg_data_2020$country[kpmg_data_2020$country == "Czech Republic"] <- "Czechia"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Korea, Republic of"] <- "Republic of Korea"
+kpmg_data_2020$country[kpmg_data_2020$country == "Korea, Republic of"] <- "Republic of Korea"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Macedonia"] <- "The former Yugoslav Republic of Macedonia"
+kpmg_data_2020$country[kpmg_data_2020$country == "Macedonia"] <- "The former Yugoslav Republic of Macedonia"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Moldova"] <- "Republic of Moldova"
+kpmg_data_2020$country[kpmg_data_2020$country == "Moldova"] <- "Republic of Moldova"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Palestinian Territory"] <- "State of Palestine"
+kpmg_data_2020$country[kpmg_data_2020$country == "Palestinian Territory"] <- "State of Palestine"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Russia"] <- "Russian Federation"
+kpmg_data_2020$country[kpmg_data_2020$country == "Russia"] <- "Russian Federation"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "St Maarten"] <- "Saint Martin (French Part)"
+kpmg_data_2020$country[kpmg_data_2020$country == "St Maarten"] <- "Saint Martin (French Part)"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Syria"] <- "Syrian Arab Republic"
+kpmg_data_2020$country[kpmg_data_2020$country == "Syria"] <- "Syrian Arab Republic"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Tanzania"] <- "United Republic of Tanzania"
+kpmg_data_2020$country[kpmg_data_2020$country == "Tanzania"] <- "United Republic of Tanzania"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "United Kingdom"] <- "United Kingdom of Great Britain and Northern Ireland"
+kpmg_data_2020$country[kpmg_data_2020$country == "United Kingdom"] <- "United Kingdom of Great Britain and Northern Ireland"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "United States"] <- "United States of America"
+kpmg_data_2020$country[kpmg_data_2020$country == "United States"] <- "United States of America"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Venezuela"] <- "Venezuela (Bolivarian Republic of)"
+kpmg_data_2020$country[kpmg_data_2020$country == "Venezuela"] <- "Venezuela (Bolivarian Republic of)"
 
-kpmg_data_2019$country[kpmg_data_2019$country == "Vietnam"] <- "Viet Nam"
+kpmg_data_2020$country[kpmg_data_2020$country == "Vietnam"] <- "Viet Nam"
 
 #Add ISO-Code to KPMG Data
 
-kpmg_data_iso<-merge(kpmg_data_2019,country_iso_cont,by="country", all=T)
+kpmg_data_iso <- merge(kpmg_data_2020, country_iso_cont, by="country", all=T)
 
 #Remove continent averages
 kpmg_data_iso <- kpmg_data_iso[!grepl("average", kpmg_data_iso$country),]
@@ -277,104 +277,31 @@ kpmg_data_iso <- kpmg_data_iso[!grepl("average", kpmg_data_iso$country),]
 
 #Merge OECD and KPMG Data####
 
-oecd_kpmg_2019 <- merge(oecd_data_2019,kpmg_data_iso,by="iso_3", all=T)
-oecd_kpmg_2019$`2019.x`<-if_else(is.na(oecd_kpmg_2019$`2019.x`),oecd_kpmg_2019$`2019.y`,oecd_kpmg_2019$`2019.x`)
-oecd_kpmg_2019<-subset(oecd_kpmg_2019, select = -c(`2019.y`,iso_2))
+oecd_kpmg_2020 <- merge(oecd_data_2020, kpmg_data_iso, by="iso_3", all=T)
+oecd_kpmg_2020$`2020.x` <- if_else(is.na(oecd_kpmg_2020$`2020.x`), oecd_kpmg_2020$`2020.y`, oecd_kpmg_2020$`2020.x`)
+oecd_kpmg_2020 <- subset(oecd_kpmg_2020, select = -c(`2020.y`,iso_2))
 
-colnames(oecd_kpmg_2019)[colnames(oecd_kpmg_2019)=="2019.x"] <- "2019"
+colnames(oecd_kpmg_2020)[colnames(oecd_kpmg_2020)=="2020.x"] <- "2020"
 
-oecd_kpmg_2019 <- oecd_kpmg_2019[, c("2019", "iso_3", "country", "continent")]
+oecd_kpmg_2020 <- oecd_kpmg_2020[, c("2020", "iso_3", "country", "continent")]
 
 
 #Dataset for previous years####
 
 #Read in dataset
-previous_years <- read_csv("source-data/data_rates_1980_2018.csv")
+previous_years <- read_csv("source-data/data_rates_1980_2019.csv")
 
 #Keep and rename selected columns
-colnames(previous_years)[colnames(previous_years)=="CountryName"] <- "country"
-previous_years<-subset(previous_years, select = -c(X1,CountryID))
-
-#Change country names to match official ISO-country names
-
-previous_years$country[previous_years$country == "Bangladesh*"] <- "Bangladesh"
-
-previous_years$country[previous_years$country == "Bolivia"] <- "Bolivia (Plurinational State of)"
-
-previous_years$country[previous_years$country == "Bonaire, Saint Eustatius and Saba"] <- "Bonaire, Sint Eustatius and Saba"
-
-previous_years$country[previous_years$country == "Cape Verde"] <- "Cabo Verde"
-
-previous_years$country[previous_years$country == "Congo, Republic of"] <- "Congo"
-
-previous_years$country[previous_years$country == "Congo, The Democratic Republic of The"] <- "Democratic Republic of the Congo"
-
-previous_years$country[previous_years$country == "Cote D'Ivoire"] <- "Cote d'Ivoire"
-
-previous_years$country[previous_years$country == "Czech Republic"] <- "Czechia"
-
-previous_years$country[previous_years$country == "Heard Island and Mcdonald Islands"] <- "Heard Island and McDonald Islands"
-
-previous_years$country[previous_years$country == "Holy See (Vatican City State)"] <- "Holy See"
-
-previous_years$country[previous_years$country == "Hong Kong"] <- "China, Hong Kong Special Administrative Region"
-
-previous_years$country[previous_years$country == "Iran, Islamic Republic of"] <- "Iran (Islamic Republic of)"
-
-previous_years$country[previous_years$country == "Korea, Democratic People's Republic of"] <- "Democratic People's Republic of Korea"
-
-previous_years$country[previous_years$country == "Korea, Republic of"] <- "Republic of Korea"
-
-previous_years$country[previous_years$country == "Libyan Arab Jamahiriya"] <- "Libya"
-
-previous_years$country[previous_years$country == "Macao"] <- "China, Macao Special Administrative Region"
-
-previous_years$country[previous_years$country == "Macedonia, The Former Yugoslav Republic of"] <- "The former Yugoslav Republic of Macedonia"
-
-previous_years$country[previous_years$country == "Micronesia, Federated States of"] <- "Micronesia (Federated States of)"
-
-previous_years$country[previous_years$country == "Moldova, Republic of"] <- "Republic of Moldova"
-
-previous_years$country[previous_years$country == "Palestinian Territory, Occupied"] <- "State of Palestine"
-
-previous_years$country[previous_years$country == "Saint Maarten"] <- "Saint Martin (French Part)"
-
-previous_years$country[previous_years$country == "Saint Vincent and The Grenadines"] <- "Saint Vincent and the Grenadines"
-
-previous_years$country[previous_years$country == "Samoa*"] <- "Samoa"
-
-previous_years$country[previous_years$country == "South Georgia and The South Sandwich Islands"] <- "South Georgia and the South Sandwich Islands"
-
-previous_years$country[previous_years$country == "Svalbard and Jan Mayen"] <- "Svalbard and Jan Mayen Islands"
-
-previous_years$country[previous_years$country == "Taiwan, Province of China"] <- "Taiwan"
-
-previous_years$country[previous_years$country == "Tanzania, United Republic of"] <- "United Republic of Tanzania"
-
-previous_years$country[previous_years$country == "United Kingdom"] <- "United Kingdom of Great Britain and Northern Ireland"
-
-previous_years$country[previous_years$country == "United States"] <- "United States of America"
-
-previous_years$country[previous_years$country == "Venezuela"] <- "Venezuela (Bolivarian Republic of)"
-
-previous_years$country[previous_years$country == "Virgin Islands, British"] <- "British Virgin Islands"
-
-previous_years$country[previous_years$country == "Virgin Islands, U.S."] <- "United States Virgin Islands"
-
-previous_years$country[previous_years$country == "Wallis and Futuna"] <- "Wallis and Futuna Islands"
-
-#Add ISO-Code to Previous Year's Data
-
-previous_years_iso <- merge(previous_years,country_iso_cont,by="country", all=T)
+previous_years <- subset(previous_years, select = -c(X1))
 
 
-#Combine 2019 data ("oecd_kpmg_2019") with data from previous years ("previous_years_iso")
+#Combine 2020 data ("oecd_kpmg_2020") with data from previous years ("previous_years")
 
-oecd_kpmg_2019 <- subset(oecd_kpmg_2019, select = -c(country,continent))
+oecd_kpmg_2020 <- subset(oecd_kpmg_2020, select = -c(country, continent))
 
-all_years_preliminary <- merge(previous_years_iso,oecd_kpmg_2019,by="iso_3",all=T)
+all_years_preliminary <- merge(previous_years, oecd_kpmg_2020, by="iso_3", all=T)
 
-all_years_preliminary <- all_years_preliminary[, c("iso_2", "iso_3", "continent", "country", 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019)]
+all_years_preliminary <- all_years_preliminary[, c("iso_2", "iso_3", "continent", "country", 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020)]
 
 write.csv(all_years_preliminary,"intermediate-outputs/rates_preliminary.csv")
 
