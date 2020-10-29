@@ -53,9 +53,8 @@ colnames(country_iso_cont)[colnames(country_iso_cont)=="ISO3166.1.Alpha.3"] <- "
 colnames(country_iso_cont)[colnames(country_iso_cont)=="Continent"] <- "continent"
 
 #Replace continent abbreviation 'NA' (North America) to 'NO' (R does not recognize 'NA' as a character)
-
 country_iso_cont$continent <- as.character(country_iso_cont$continent)
-country_iso_cont$continent <- if_else(is.na(country_iso_cont$continent),"NO",country_iso_cont$continent)
+country_iso_cont$continent <- if_else(is.na(country_iso_cont$continent),"NO", country_iso_cont$continent)
 
 #Drop the jurisdiction "Sark" (the island is fiscally autonomous but has no company registry, no company law, and also no ISO-code)
 country_iso_cont <- subset(country_iso_cont, country_iso_cont$country != "Sark")
@@ -127,7 +126,7 @@ country_iso_cont_groups$oecd <- ifelse(country_iso_cont$iso_3 == "AUS"
                                   | country_iso_cont$iso_3 == "USA"
                                   ,1,0)
 
-country_iso_cont_groups$eu <- ifelse(country_iso_cont$iso_3 == "AUT"
+country_iso_cont_groups$eu28 <- ifelse(country_iso_cont$iso_3 == "AUT"
                                 | country_iso_cont$iso_3 == "BEL"
                                 | country_iso_cont$iso_3 == "BGR"
                                 | country_iso_cont$iso_3 == "CZE"
@@ -201,8 +200,8 @@ country_iso_cont_groups$brics <- ifelse(country_iso_cont$iso_3 == "BRA"
 #Read in dataset
 dataset_list<-get_datasets()
 search_dataset("Corporate", data= dataset_list)
-dataset<-("TABLE_II1")
-dstruc<-get_data_structure(dataset)
+dataset <- ("TABLE_II1")
+dstruc <- get_data_structure(dataset)
 str(dstruc, max.level = 1)
 dstruc$VAR_DESC
 dstruc$CORP_TAX
@@ -225,7 +224,7 @@ kpmg_data_2020 <- read_excel("source-data/kpmg_dataset_2010_2020.xlsx")
 
 #Keep and rename selected columns
 kpmg_data_2020 <- kpmg_data_2020[,-c(2:11)]
-colnames(kpmg_data_2020)[colnames(kpmg_data_2020)=="LOCATION"]<-"country"
+colnames(kpmg_data_2020)[colnames(kpmg_data_2020)=="LOCATION"] <- "country"
 
 #Change KPMG country names to match official ISO-names
 
@@ -268,7 +267,6 @@ kpmg_data_2020$country[kpmg_data_2020$country == "Venezuela"] <- "Venezuela (Bol
 kpmg_data_2020$country[kpmg_data_2020$country == "Vietnam"] <- "Viet Nam"
 
 #Add ISO-Code to KPMG Data
-
 kpmg_data_iso <- merge(kpmg_data_2020, country_iso_cont, by="country", all=T)
 
 #Remove continent averages
@@ -288,12 +286,11 @@ oecd_kpmg_2020 <- oecd_kpmg_2020[, c("2020", "iso_3", "country", "continent")]
 
 #Dataset for previous years####
 
-#Read in dataset
+#Read in dataset Tax Foundation has compiled over the years for 1980-2019
 previous_years <- read_csv("source-data/data_rates_1980_2019.csv")
 
 #Keep and rename selected columns
 previous_years <- subset(previous_years, select = -c(X1))
-
 
 #Combine 2020 data ("oecd_kpmg_2020") with data from previous years ("previous_years")
 
