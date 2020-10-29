@@ -20,20 +20,21 @@
 
 * **ALA - Aland Islands:** Corporate income tax rate of 20 percent, see Alands landskapsregering, "Beskattning av företag och samfund," updated on Feb. 7, 2018, https://www.regeringen.ax/ekonomi/skattesystemet/beskattning-foretag-samfund.
 
-* **ANT - Netherlands Antilles:** In 2010, the Netherlands Antilles were split: Curaçao and St Maarten each became separate countries within the Kingdom of the Netherlands and the Islands of Bonaire, Saba and St Eustatia became special municipalities of the Netherlands. As a result, there is no corporate tax rate starting in 2010. 
+* **ANT - Netherlands Antilles:** In 2010, the Netherlands Antilles were split: Curaçao and St Maarten each became separate countries within the Kingdom of the Netherlands and the Islands of Bonaire, Saba and St Eustatia became special municipalities of the Netherlands. As a result, there is no corporate tax rate starting in 2010.
 
-* **ASM - American Samoa:** No data found.
+* **ASM - American Samoa:** Top corporate income tax rate of 44% (tax rate varies by taxable income) in the years 2014, 2015, and 2016, see Office of the Governor: American Samoa Government, "American Samoa Investment Guide 2014," http://www.doc.as/wp-content/uploads/2014/02/Investment-Guide-2014-reduced.pdf. It was changed to 34% in 2017, see Pacific Islands Report, "American Samoa Legislature Approves Reduced Corporate Tax Bill," Sep. 7, 2016, http://www.pireport.org/articles/2016/09/07/american-samoa-legislature-approves-reduced-corporate-tax-bill. No data found after 2017.
 
 * **ATA - Antarctica:** No tax system.
 
 * **ATF - French Southern Territories:** No one lives permanently in these territories of France, hence no tax system.
 
-* **BLM - Saint Barthelemy:** No evidence of a corporate income tax (only lump-sum tax of €300 plus €100 per employee), hence 0 percent rate, see Community of St Barthelemy, "Formulaires de la Collectivité: Fiscalité," http://www.comstbarth.fr/formulaires_collectivite.aspx#.
+* **BES	- Bonaire, Sint Eustatius and Saba:** 0 percent corporate income tax for the years 2012-2016 and 25 percent since 2017, see KPMG, "Corporate tax rates table," https://home.kpmg/xx/en/home/services/tax/tax-tools-and-resources/tax-rates-online/corporate-tax-rates-table.html.
+
+* **BLM - Saint Barthelemy:** No evidence of a corporate income tax (only lump-sum tax of €350 plus €100 per employee), hence 0 percent rate, see Community of St Barthelemy, "Formulaires de la Collectivité: Fiscalité: Déclaration Contribution Forfaitaire Annuelle des Entreprises - CFAE," http://www.comstbarth.fr/formulaires_collectivite.aspx#.
 
 * **BLZ - Belize:** Switched from a corporate income tax to a gross receipts tax in 1999, see Income Tax Department, "The Business Tax," http://incometaxbelize.gov.bz/wp-content/uploads/2016/07/business_tax_guide2009.pdf. Since the rates of a corporate income tax and a gross receipts tax are not comparable, it is shown as 'N/A' starting in 1999.
 
-* **BTN - Bhutan:** Corporate income tax rate of 30 percent, see World Bank, "Doing Business 2020: Economy Profile Bhutan," page 42, https://www.doingbusiness.org/content/dam/doingBusiness/country/b/bhutan/BTN.pdf and Ministry of Finance Royal Government of Bhutan, "Rules on the
-Income Tax Act of the Kingdom of Bhutan 2001," updated January 2017, https://www.mof.gov.bt/wp-content/uploads/2014/07/RulesIncomeTax2017.pdf.
+* **BTN - Bhutan:** Corporate income tax rate of 30 percent, see Ministry of Finance (Royal Government of Bhutan), "FAQ: Business Income Tax (BIT)/Corporate Income Tax (CIT)," https://www.mof.gov.bt/faq/.
 
 * **BVT - Bouvet Island:** Uninhabited dependency of Norway, hence no tax system.
 
@@ -41,15 +42,13 @@ Income Tax Act of the Kingdom of Bhutan 2001," updated January 2017, https://www
 
 * **CCK - Cocos (Keeling) Islands:** As an external territory of Australia, the Cocos (Keeling) Islands are subject to the Australian tax system (except there is no goods and services tax (GST)), hence shown as 'N/A,' see Island Studies, "Cocos (Keeling) Islands," https://www.islandstudies.ca/sites/islandstudies.ca/files/jurisdiction/Cocos%20(Keeling)%20Islands.html and Australian Government: Department of Infrastructure, Transport, Cities and Regional Development, "Cocos (Keeling) Islands," https://www.regional.gov.au/territories/Cocos_Keeling/.
 
-* **COG - Congo:** Corporate income tax rate of 30 percent, see Deloitte, "Corporate Tax Rates 2019," https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Tax/dttl-tax-corporate-tax-rates.pdf.
-
 * **COK - Cook Islands:** Corporate income tax rate of 20 percent, see Ministry of Finance & Economic Management, "Company Tax," Government of the Cook Islands, http://www.mfem.gov.ck/rmd-tax/rmd-tax-types/rmd-company-tax.
 
-* **COM - Comoros:** Corporate income tax rate of 50 percent (regular rate of 35 percent and top rate of 50 percent for businesses with turnover above KMF 500 million), see Societe Generale, "Presentation of the Comoros: Taxation," updated Oct. 2019, https://import-export.societegenerale.fr/en/country/comoros/presentation-taxation and World Bank, Doing Business 2020: Data," https://www.doingbusiness.org/en/data/exploreeconomies/comoros/paying-taxes#DB_tax.
+* **COM - Comoros:** Corporate income tax rate of 50 percent (regular rate of 35 percent and top rate of 50 percent for businesses with turnover above KMF 500 million), see Societe Generale, "Presentation of the Comoros: Taxation," updated Oct. 2019, https://import-export.societegenerale.fr/en/country/comoros/presentation-taxation and Comoros National Investment Promotion Agency, "About Country," http://www.comesaria.org/site/en/comoros.17.html.
 
 * **CPV - Cabo Verde:** Corporate income tax rate of 22 percent, see PwC, "Cabo Verde: Corporate - Taxes on corporate income," http://taxsummaries.pwc.com/ID/Cabo-Verde-Corporate-Taxes-on-corporate-income.
 
-* **CUB - Cuba:** Cuba seems to have a corporate tax, see The Federation of International Trade Associations, "Cuba: Taxes - Accounting," http://www.fita.org/countries/cuba.html?ma_rubrique=fiscalite and Nordea, "Cuba: Business Environment," https://www.nordeatrade.com/en/explore-new-market/cuba/taxes. But it does not show up in any tax guide, hence Cuba's corporate income tax rate continues to be 'N/A.'
+* **CUB - Cuba:** Cuba seems to have a corporate tax, see The Federation of International Trade Associations, "Cuba: Taxes - Accounting," http://www.fita.org/countries/cuba.html?ma_rubrique=fiscalite and Nordea, "Cuba: Business Environment," https://www.nordeatrade.com/en/explore-new-market/cuba/taxes. An EY guide shows CIT on foreign investors and joint ventures but not for domestic businesses, see EY, "The Legal, Regulatory & Fiscal Framework for Investment in Cuba," August 2015, http://www.iberglobal.com/files/2017/cuba_ey_investment.pdf. But there is no clear information on domestic corporate tax in any tax guide, hence Cuba's corporate income tax rate continues to be 'N/A.'
 
 * **CXR - Christmas Island:** As an external territory of Australia, Christmas Island seems to be subject to the Australian tax system (if any taxes are levied), hence shown as 'N/A,' see Australian Government: Department of Infrastructure, Transport, Cities and Regional Development, "Christmas Island," https://www.regional.gov.au/territories/christmas/.
 
@@ -57,7 +56,7 @@ Income Tax Act of the Kingdom of Bhutan 2001," updated January 2017, https://www
 
 * **ESH - Western Sahara:**  Is a disputed territory partially controlled by the self-proclaimed Sahrawi Arab Democratic Republic and partially occupied by neighboring Morocco, with businesses apparently not paying taxes, see Wikipedia, "Western Sahara," https://en.wikipedia.org/wiki/Western_Sahara#cite_note-leak1-86. But since no official information can be found on this, the corporate income tax rate continues to be 'N/A.'
 
-* **FLK - Falkland Islands (Malvinas):** Corporate income tax rate of 26 percent, see Treasury, Tax & Pensions, "General Taxation Downloads: 2019 New Rates," Falkland Islands Government, http://www.fig.gov.fk/treasury/taxation/general-taxation-downloads/2018-rates.
+* **FLK - Falkland Islands (Malvinas):** Corporate income tax rate of 26 percent, see Treasury, Tax & Pensions, "Tax Quick Links: 2020 New Rates," Falkland Islands Government, https://www.fig.gov.fk/treasury/images/PDFs/New_Rates_2020_for_public.pdf.
 
 * **FRO - Faroe Islands:** Corporate income tax rate of 18 percent, see Faroeislands.fo, "Invest in the Faroe Islands," https://www.faroeislands.fo/economy-business/invest/.
 

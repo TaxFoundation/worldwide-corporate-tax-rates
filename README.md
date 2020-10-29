@@ -16,6 +16,7 @@ The dataset captures standard top statutory corporate income tax rates levied on
 - The dataset does not reflect special tax regimes, including but not limited to patent boxes, offshore regimes, or special rates for specific industries. 
 - A number of countries levy lower rates for businesses below a certain revenue threshold. The dataset does not capture these lower rates.
 - A few countries levy gross revenue taxes on businesses instead of corporate income taxes. Since the tax rates of a corporate income tax and a gross revenue tax are not comparable, these countries are excluded from the dataset.
+- Some countries have a different tax rate for non-resident companies. This dataset does not consider non-resident tax rates.
 
 ## Explanation of Files in Repository
 
