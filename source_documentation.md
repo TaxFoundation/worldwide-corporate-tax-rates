@@ -22,7 +22,7 @@
 
 * **ANT - Netherlands Antilles:** In 2010, the Netherlands Antilles were split: Curaçao and St Maarten each became separate countries within the Kingdom of the Netherlands and the Islands of Bonaire, Saba and St Eustatia became special municipalities of the Netherlands. As a result, there is no corporate tax rate starting in 2010.
 
-* **ASM - American Samoa:** Top corporate income tax rate of 44% (tax rate varies by taxable income) in the years 2014, 2015, and 2016, see Office of the Governor: American Samoa Government, "American Samoa Investment Guide 2014," http://www.doc.as/wp-content/uploads/2014/02/Investment-Guide-2014-reduced.pdf. It was changed to 34% in 2017, see Pacific Islands Report, "American Samoa Legislature Approves Reduced Corporate Tax Bill," Sep. 7, 2016, http://www.pireport.org/articles/2016/09/07/american-samoa-legislature-approves-reduced-corporate-tax-bill. No data found after 2017.
+* **ASM - American Samoa:** Top corporate income tax rate of 44% (tax rate varies by taxable income) in the years 2014, 2015, and 2016, see Office of the Governor: American Samoa Government, "American Samoa Investment Guide 2014," http://www.doc.as/wp-content/uploads/2014/02/Investment-Guide-2014-reduced.pdf. It was changed to 34% in 2017, see Pacific Islands Report, "American Samoa Legislature Approves Reduced Corporate Tax Bill," Sep. 7, 2016, http://www.pireport.org/articles/2016/09/07/american-samoa-legislature-approves-reduced-corporate-tax-bill, and currently stands at 34%, see Bloomberg Tax, “Country Guides - American Samoa - Corporate Tax Rates,” https://www.bloomberglaw.com/product/tax/document/25590951976.
 
 * **ATA - Antarctica:** No tax system.
 
@@ -38,13 +38,13 @@
 
 * **BVT - Bouvet Island:** Uninhabited dependency of Norway, hence no tax system.
 
-* **CAF - Central African Republic:** Corporate income tax rate of 30 percent, see World Bank, "Doing Business 2020: Economy Profile Central African Republic," page 39, https://www.doingbusiness.org/content/dam/doingBusiness/country/c/central-african-republic/CAF.pdf and for previous years, see World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?filtertype_1=title&filter_relational_operator_1=contains&filter_1=&filtertype_2=country&filter_relational_operator_2=equals&filter_2=Central+African+Republic&scope=10986%2F12192.
+* **CAF - Central African Republic:** Corporate income tax rate of 30 percent, see Bloomberg Tax, “Country Guides - Central African Republic - Corporate Tax Rates,” https://www.bloomberglaw.com/product/tax/document/25590813224.
 
 * **CCK - Cocos (Keeling) Islands:** As an external territory of Australia, the Cocos (Keeling) Islands are subject to the Australian tax system (except there is no goods and services tax (GST)), hence shown as 'N/A,' see Island Studies, "Cocos (Keeling) Islands," https://www.islandstudies.ca/sites/islandstudies.ca/files/jurisdiction/Cocos%20(Keeling)%20Islands.html and Australian Government: Department of Infrastructure, Transport, Cities and Regional Development, "Cocos (Keeling) Islands," https://www.regional.gov.au/territories/Cocos_Keeling/.
 
 * **COK - Cook Islands:** Corporate income tax rate of 20 percent, see Ministry of Finance & Economic Management, "Company Tax," Government of the Cook Islands, http://www.mfem.gov.ck/rmd-tax/rmd-tax-types/rmd-company-tax.
 
-* **COM - Comoros:** Corporate income tax rate of 50 percent (regular rate of 35 percent and top rate of 50 percent for businesses with turnover above KMF 500 million), see Societe Generale, "Presentation of the Comoros: Taxation," updated Oct. 2019, https://import-export.societegenerale.fr/en/country/comoros/presentation-taxation and Comoros National Investment Promotion Agency, "About Country," http://www.comesaria.org/site/en/comoros.17.html.
+* **COM - Comoros:** Corporate income tax rate of 50 percent (regular rate of 35 percent and top rate of 50 percent for businesses with turnover above KMF 500 million), see Bloomberg Tax, “Country Guides: Comoros,” https://www.bloomberglaw.com/product/tax/document/25590833704 and Comoros National Investment Promotion Agency, "About Country," http://www.comesaria.org/site/en/comoros.17.html.
 
 * **CPV - Cabo Verde:** Corporate income tax rate of 22 percent, see PwC, "Cabo Verde: Corporate - Taxes on corporate income," http://taxsummaries.pwc.com/ID/Cabo-Verde-Corporate-Taxes-on-corporate-income.
 
@@ -52,7 +52,7 @@
 
 * **CXR - Christmas Island:** As an external territory of Australia, Christmas Island seems to be subject to the Australian tax system (if any taxes are levied), hence shown as 'N/A,' see Australian Government: Department of Infrastructure, Transport, Cities and Regional Development, "Christmas Island," https://www.regional.gov.au/territories/christmas/.
 
-* **ERI - Eritrea:** Corporate income tax rate of 30 percent, see World Bank, "Doing Business 2020: Economy Profile Eritrea," page 38, https://www.doingbusiness.org/content/dam/doingBusiness/country/e/eritrea/ERI.pdf and for previous years, see World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?scope=10986%2F12192&query=eritrea&submit=&filtertype_0=title&filter_relational_operator_0=contains&filter_0=.
+* **ERI - Eritrea:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Eritrea," https://www.bloomberglaw.com/product/tax/document/26317091880.
 
 * **ESH - Western Sahara:**  Is a disputed territory partially controlled by the self-proclaimed Sahrawi Arab Democratic Republic and partially occupied by neighboring Morocco, with businesses apparently not paying taxes, see Wikipedia, "Western Sahara," https://en.wikipedia.org/wiki/Western_Sahara#cite_note-leak1-86. But since no official information can be found on this, the corporate income tax rate continues to be 'N/A.'
 
@@ -60,48 +60,47 @@
 
 * **FRO - Faroe Islands:** Corporate income tax rate of 18 percent, see Faroeislands.fo, "Invest in the Faroe Islands," https://www.faroeislands.fo/economy-business/invest/.
 
-* **FSM - Micronesia (Federated States of):** Have gross receipts tax, see Division of Customs and Tax Administration, "Federated States of Micronesia Tax Information," Department of Finance and Administration, http://www.dofa.gov.fm/wp-content/uploads/2019/06/CTA-BOOKLET.pdf. Since the rates of a corporate income tax and a gross receipts tax are not comparable, it is shown as 'N/A'.
+* **FSM - Micronesia (Federated States of):** A progressive corporate income tax with top rate of 30% was introduced as of 2020 (there was a flat 21% rate between 2011 and 2019), see Bloomberg Tax, "Country Guides - Micronesia," https://www.bloomberglaw.com/product/tax/document/25902500392. In addition, there is a gross receipts tax, see Division of Customs and Tax Administration, "Federated States of Micronesia Tax Information," Department of Finance and Administration, http://www.dofa.gov.fm/wp-content/uploads/2019/06/CTA-BOOKLET.pdf.
 
-* **GIN - Guinea:** Corporate income tax rate of 35 percent, Deloitte, "Corporate Tax Rates 2019," https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Tax/dttl-tax-corporate-tax-rates.pdf.
+* **GIN - Guinea:** Corporate income tax rate of 35 percent, see Bloomberg Tax, "Country Guides - Guinea," https://www.bloomberglaw.com/product/tax/document/26537016872.
 
 * **GLP - Guadeloupe:** As an overseas départements of France, Guadeloupe does not seem to have its own tax system, hence shown as 'N/A,' see Ministere de l'Economie, "Overview of the French Tax System," https://www.impots.gouv.fr/portail/files/media/1_metier/5_international/french_tax_system.pdf.
 
-* **GNB - Guinea-Bissau:** Corporate income tax rate of 25 percent, see World Bank, "Doing Business 2020: Economy Profile Guinea-Bissau," page 40," https://www.doingbusiness.org/content/dam/doingBusiness/country/g/guinea-bissau/GNB.pdf and for previous years, see World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?scope=10986/12192&filtertype_1=country&filter_relational_operator_1=equals&filter_1=Guinea-Bissau.
+* **GNB - Guinea-Bissau:** Corporate income tax rate of 25 percent, see Bloomberg Tax, “Country Guides - Guinea-Bissau - Corporate Tax Rates,” https://www.bloomberglaw.com/product/tax/document/26183650856.
 
-* **GNQ - Equatorial Guinea:** Corporate income tax rate of 35 percent, see World Bank, "Doing Business 2020: Economy Profile Equatorial Guinea," https://www.doingbusiness.org/content/dam/doingBusiness/country/e/equatorial-guinea/GNQ.pdf.
+* **GNQ - Equatorial Guinea:** Corporate income tax rate of 35 percent, see Bloomberg Tax, "Country Guides - Equatorial Guinea," https://www.bloomberglaw.com/product/tax/document/25906374184.
 
-* **GRL - Greenland:** Corporate income tax rate of 31.8 percent, see Akileraartarnermut Aqutsisoqarfik, "Tax rates 2016/17," https://int.aka.gl/en/Tax-Greenland/Tax-rates-2017.
+* **GRL - Greenland:** Corporate income tax rate of 25 percent plus 6% surtax (equals 26.5%) since 2000 (previously it was 30% plus 6% surtax, equaling 31.8%), see Akileraartarnermut Aqutsisoqarfik, "Tax rates 2016/17," https://int.aka.gl/en/Tax-Greenland/Tax-rates-2017 and Bloomberg Tax, "Country Guides - Greenland," https://www.bloomberglaw.com/product/tax/document/25996985384#A0R5U0U6G0A0R5U0U6G0.
 
 * **GUF - French Guiana:** As an overseas départements of France, French Guiana does not seem to have its own tax system, hence shown as 'N/A,' see Ministere de l'Economie, "Overview of the French Tax System," https://www.impots.gouv.fr/portail/files/media/1_metier/5_international/french_tax_system.pdf.
 
-* **GUM - Guam:** Corporate income tax rate of 21 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **GUM - Guam:** Corporate income tax rate of 21 percent, see Bloomberg Tax, "Country Guides - Guam," https://www.bloomberglaw.com/product/tax/document/25590956584.
 
-* **GUY - Guyana:** Corporate income tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **GUY - Guyana:** Corporate income tax rate of 25 percent for noncommercial companies and 40 percent for commercial company (other than a telephone company), see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=666?download and Bloomberg Tax, "Country Guides - Guyana," https://www.bloomberglaw.com/product/tax/document/25590526504.
 
 * **HMD - Heard Island and McDonald Islands:** Uninhabited external territory of Australia, hence no tax system.
 
-* **HTI - Haiti:** Corporate income tax rate of 30 percent, see World Bank, "Doing Business 2020: Economy Profile Haiti," page 41, https://www.doingbusiness.org/content/dam/doingBusiness/country/h/haiti/HTI.pdf and for previous years, see World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?filtertype_1=title&filter_relational_operator_1=contains&filter_1=&filtertype_2=country&filter_relational_operator_2=equals&filter_2=Haiti&query=&scope=10986%2F12192.
+* **HTI - Haiti:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Haiti," https://www.bloomberglaw.com/product/tax/document/25590597672.
 
 * **IOT - British Indian Ocean Territory:** As an overseas territory of the UK with no permanent population (the only inhabitants of the territory are US and British military personnel and associated contractors), there does not seem to be a tax system, hence shown as 'N/A.'
 
-* **IRN - Iran (Islamic Republic of):** Corporate income tax rate of 25 percent, see Iranian Ministry of Economic Affairs and Finance, "Corporate Income Tax," http://en.intamedia.ir/pages/default.aspx?mode=show&lan=en&id=corporate_income_tax and for previous years, see World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?filtertype_1=title&filter_relational_operator_1=contains&filter_1=&query=Iran&scope=10986%2F12192.
+* **IRN - Iran (Islamic Republic of):** Corporate income tax rate of 25 percent, see Iranian Ministry of Economic Affairs and Finance, "Corporate Income Tax," http://en.intamedia.ir/pages/default.aspx?mode=show&lan=en&id=corporate_income_tax and Bloomberg Tax, "Country Guides - Iran," https://www.bloomberglaw.com/product/tax/document/25590805032.
 
-* **KIR - Kiribati:** Corporate income tax rate of 35 percent, see
-Ministry of Finance & Economic Development, "Tax rates and depreciation rates," Government of Kiribati, http://www.mfed.gov.ki/our-work/taxation/business and for previous years, see World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?scope=10986%2F12192&query=Kiribati&submit=&filtertype_0=title&filter_relational_operator_0=contains&filter_0=.
+* **KIR - Kiribati:** Corporate income tax rate of 35 percent, see Ministry of Finance & Economic Development, "Tax rates and depreciation rates," Government of Kiribati, http://www.mfed.gov.ki/our-work/taxation/business and Bloomberg Tax, "Country Guides - Kiribati," https://www.bloomberglaw.com/product/tax/document/25902495272.
 
-* **LAO - Lao People's Democratic Republic:** Corporate income tax rate of 24 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **LAO - Lao People's Democratic Republic:** Corporate income tax rate of 24 percent, see Bloomberg Tax, "Country Guides - Laos," https://www.bloomberglaw.com/product/tax/document/25590979624.
 
-* **LBR - Liberia:** Corporate income tax rate of 25 percent, see "Doing Business 2020: Economy Profile Liberia," page 41, https://www.doingbusiness.org/content/dam/doingBusiness/country/l/liberia/LBR.pdf.
+* **LBR - Liberia:** Corporate income tax rate of 25 percent, see Bloomberg Tax, "Country Guides - Liberia," https://www.bloomberglaw.com/product/tax/document/25590857256.
 
-* **LSO - Lesotho:** Corporate income tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **LSO - Lesotho:** Corporate income tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=966?download and Bloomberg Tax, "Country Guides - Lesotho," https://www.bloomberglaw.com/product/tax/document/25590841896.
 
-* **MCO - Monaco:** Corporate income tax rate of 31 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf. Monaco plans to further reduce its rate over the next years.
+* **MCO - Monaco:** Corporate income tax rate of 28 percent for 2020, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1125?download and Bloomberg Tax, "Country Guides - Monaco," https://www.bloomberglaw.com/product/tax/document/25591240744. Monaco plans to further reduce its rate over the next years (to 26.5 percent in 2021 and to 25 percent in 2022).
 
-* **MDV - Maldives:** Corporate income tax rate of 15 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **MDV - Maldives:** Corporate income tax rate of 15 percent, see Bloomberg Tax, "Country Guides - Maldives," https://www.bloomberglaw.com/product/tax/document/25590962216.
 
-* **MHL - Marshall Islands:** Levy gross revenue tax, see "Doing Business 2020: Economy Profile Marshall Islands," page 38, https://www.doingbusiness.org/content/dam/doingBusiness/country/m/marshall-islands/MHL.pdf. Since the rates of a corporate income tax and a gross revenue tax are not comparable, it is shown as 'N/A'.
+* **MHL - Marshall Islands:** Levy gross revenue tax, see "Doing Business 2020: Economy Profile Marshall Islands," page 38, https://www.doingbusiness.org/content/dam/doingBusiness/country/m/marshall-islands/MHL.pdf and Bloomberg Tax, "Country Guides - Marshall Islands," https://www.bloomberglaw.com/product/tax/document/25906388520. Since the rates of a corporate income tax and a gross revenue tax are not comparable, it is shown as 'N/A'.
 
-* **MLI - Mali:** Corporate income tax rate of 30 percent, see "Doing Business 2020: Economy Profile Mali," page 41, https://www.doingbusiness.org/content/dam/doingBusiness/country/m/mali/MLI.pdf and, for previous years, see World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?scope=10986%2F12192&query=mali&submit=&filtertype_0=title&filter_relational_operator_0=contains&filter_0=.
+* **MLI - Mali:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Mali," https://www.bloomberglaw.com/product/tax/document/25894814248.
 
 * **MNP - Northern Mariana Islands:** Corporate income tax rate of 21 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
 
