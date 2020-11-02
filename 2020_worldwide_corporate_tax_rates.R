@@ -414,32 +414,30 @@ all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "MDV",] <- 15
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "MLI",] <- 30
 
 #MNP - Northern Mariana Islands
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "MNP",] <- 21
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "MNP",] <- 21
 
 #MRT - Mauritania
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "MRT",] <- 25
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "MRT",] <- 25
+
+#MSR - Montserrat
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "MSR",] <- 30
 
 #NCL - New Caledonia
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "NCL",] <- 30
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "NCL",] <- 30
 
 #NER - Niger
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "NER",] <- 30
-all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "NER",] <- 30
-all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "NER",] <- 30
-all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "NER",] <- 30
-all_years_preliminary[c("2014")][all_years_preliminary$iso_3 == "NER",] <- 30
-all_years_preliminary[c("2013")][all_years_preliminary$iso_3 == "NER",] <- 30
-all_years_preliminary[c("2012")][all_years_preliminary$iso_3 == "NER",] <- 30
-all_years_preliminary[c("2011")][all_years_preliminary$iso_3 == "NER",] <- 30
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "NER",] <- 30
+
+#NIU - Niue
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "NIU",] <- 30
 
 #NPL - Nepal
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "NPL",] <- 25
-all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "NPL",] <- 25
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "NPL",] <- 25
 
 #NRU - Nauru
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "NRU",] <- 10
-all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "NRU",] <- 10
-all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "NRU",] <- 10
+#!!all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "NRU",] <- 10
+#!!all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "NRU",] <- 10
+#!!all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "NRU",] <- 10
 
 #PLW - Palau
 #change values to NA for previous years

@@ -102,23 +102,23 @@
 
 * **MLI - Mali:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Mali," https://www.bloomberglaw.com/product/tax/document/25894814248.
 
-* **MNP - Northern Mariana Islands:** Corporate income tax rate of 21 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **MNP - Northern Mariana Islands:** Corporate income tax rate of 21 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1247?download, and Bloomberg Tax, "Country Guides - Northern Mariana Islands," https://www.bloomberglaw.com/product/tax/document/25906380840.
 
-* **MRT - Mauritania:** Corporate income tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **MRT - Mauritania:** Corporate income tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1078?download, and Bloomberg Tax, "Country Guides - Mauritania," https://www.bloomberglaw.com/product/tax/document/25590742056.
 
-* **MSR - Montserrat:** Have not been able to find data, only one source from 2002 that says the corporate income tax is 20 percent, see Inland Revenue Department, "Income Tax Act," http://ird.gov.ms/?page_id=30. 
+* **MSR - Montserrat:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Montserrat," https://www.bloomberglaw.com/product/tax/document/25901040680.
 
 * **MTQ - Martinique:** As an overseas départements of France, Martinique does not seem to have its own tax system, hence shown as 'N/A,' see Ministere de l'Economie, "Overview of the French Tax System," https://www.impots.gouv.fr/portail/files/media/1_metier/5_international/french_tax_system.pdf.
 
 * **MYT - Mayotte:** As an overseas départements of France, Mayotte does not seem to have its own tax system, hence shown as 'N/A,' see Ministere de l'Economie, "Overview of the French Tax System," https://www.impots.gouv.fr/portail/files/media/1_metier/5_international/french_tax_system.pdf.
 
-* **NCL - New Caledonia:** Corporate income tax rate of 30 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **NCL - New Caledonia:** Corporate income tax rate of 30 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1201?download, and Bloomberg Tax, "Country Guides - New Caledonia," https://www.bloomberglaw.com/product/tax/document/25590899752.
 
-* **NER - Niger:** Corporate income tax rate of 30 percent, see "Doing Business 2020: Economy Profile Niger," page 41, https://www.doingbusiness.org/content/dam/doingBusiness/country/n/niger/NER.pdf and, for previous years, see World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?filtertype_1=title&filter_relational_operator_1=contains&filter_1=&filtertype_2=country&filter_relational_operator_2=equals&filter_2=Niger&query=&scope=10986%2F12192.
+* **NER - Niger:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Niger," https://www.bloomberglaw.com/product/tax/document/26183621160.
 
 * **NFK - Norfolk Island:** As an external territory of Australia, Norfolk Island is subject to the Australian tax system (with the exception of indirect taxes, including goods and services tax, luxury car tax, wine equalisation tax, excise duties and customs duties), hence shown as 'N/A,' see Australian Government: Department of Infrastructure, Transport, Cities and Regional Development, "Norfolk Island," https://www.regional.gov.au/territories/norfolk_island/governance/arrangements.aspx.
 
-* **NIU - Niue:** No data found.
+* **NIU - Niue:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Niue," https://www.bloomberglaw.com/product/tax/document/25896796200.
 
 * **NPL - Nepal:** Corporate income tax rate of 25 percent, see PKF, "International Worldwide Tax Guide 2019-20," https://www.pkf.com/publications/tax-guides/pkf-international-worldwide-tax-guide-2019-20/.
 
