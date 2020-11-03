@@ -120,34 +120,33 @@
 
 * **NIU - Niue:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Niue," https://www.bloomberglaw.com/product/tax/document/25896796200.
 
-* **NPL - Nepal:** Corporate income tax rate of 25 percent, see PKF, "International Worldwide Tax Guide 2019-20," https://www.pkf.com/publications/tax-guides/pkf-international-worldwide-tax-guide-2019-20/.
+* **NPL - Nepal:** Corporate income tax rate of 25 percent, see Bloomberg Tax, "Country Guides - Nepal," https://www.bloomberglaw.com/product/tax/document/25590947368.
 
-* **NRU - Nauru:** Introduced a business profits tax in 2016 at a rate of 10 percent, see Republic of Nauru, "Business Tax Act," http://ronlaw.gov.nr/nauru_lpms/files/acts/8d6361e522125cf978b97318afcb5c69.pdf.
+* **NRU - Nauru:** Top corporate income tax rate of 25 percent, see Republic of Nauru, "Business Tax Act," http://www.naurugov.nr/media/117911/business_tax_act__consolidation_to_20_jan_2020.pdf (also see history of Schedule 1 for previous years) and Bloomberg Tax, "Country Guides - Nauru," https://www.bloomberglaw.com/product/tax/document/25901048360.
 
 * **PCN - Pitcairn:** There does not seem to be a tax system on Pitcairn, hence shown as 'N/A,' see Pitcairn Island South Pacific, "Pitcairn Today," http://www.young.pn/pitcairn-today.html.
 
-* **PLW - Palau:** Levy gross revenue tax, see "Doing Business 2020: Economy Profile Palau," page 35, https://www.doingbusiness.org/content/dam/doingBusiness/country/p/palau/PLW.pdf. Since the rates of a corporate income tax and a gross revenue tax are not comparable, it is shown as 'N/A'.
+* **PLW - Palau:** Levy gross revenue tax, see Palau National Government: Bureau of Revenue and Taxation, "Tax Forms," https://www.palaugov.pw/executive-branch/ministries/finance/bureau-of-revenue-customs-taxation/tax-forms/ and Bloomberg Tax, "Country Guides - Palau," https://www.bloomberglaw.com/product/tax/document/25996978728. Since the rates of a corporate income tax and a gross revenue tax are not comparable, it is shown as 'N/A'.
 
-* **PRI - Puerto Rico:** Corporate income tax rate of 37.5 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **PRI - Puerto Rico:** Top corporate income tax rate of 37.5 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1411?download and Bloomberg Tax, "Country Guides - Puerto Rico," https://www.bloomberglaw.com/product/tax/document/25590420008.
 
-* **PRK - Democratic People's Republic of Korea:** No tax system, hence shown as 'N/A.'
+* **PRK - Democratic People's Republic of Korea:** No tax system for domestic businesses (only for foreign businesses), see Bloomberg Tax, "Country Guides - North Korea," https://www.bloomberglaw.com/product/tax/document/25590925864. Hence shown as 'N/A.'
 
-* **PYF - French Polynesia:** Direction des Impôts
-et des Contributions Publiques, "Section V : Calcul de l'impôt," http://www.impot-polynesie.gov.pf/code/14-section-v-calcul-de-limpot.
+* **PYF - French Polynesia:** Corporate income tax rate of 25 percent, see Bloomberg Tax, "Country Guides - French Polynesia," https://www.bloomberglaw.com/product/tax/document/25591087144.
 
 * **REU - Reunion:** As an overseas départements of France, Reunion does not seem to have its own tax system, hence shown as 'N/A,' see Ministere de l'Economie, "Overview of the French Tax System," https://www.impots.gouv.fr/portail/files/media/1_metier/5_international/french_tax_system.pdf.
 
-* **SGS - South Georgia and the South Sandwich Islands:** The tax system is administered by the Falkland Islands Government Taxation Office but there does not seem to be a corporate income tax system the South Georgia and the South Sandwich Islands, hence shown as 'N/A,' see Falkland Islands Government, "Taxation," https://www.fig.gov.fk/treasury/taxation/gsgssi-tax-system.
+* **SGS - South Georgia and the South Sandwich Islands:** The tax system is administered by the Falkland Islands Government Taxation Office but there does not seem to be a corporate income tax system in the South Georgia and the South Sandwich Islands, hence shown as 'N/A,' see Falkland Islands Government, "Taxation," https://www.fig.gov.fk/treasury/taxation/gsgssi-tax-system.
 
 * **SHN - Saint Helena:** Corporate income tax rate of 25 percent, see St Helena Government, "Tax Guide 12 (2019)," https://www.sainthelena.gov.sh/public-services/income-tax/.
 
 * **SJM - Svalbard and Jan Mayen Islands:** Although both are dependencies of Norway, the islands seem to have tax systems (partly) independent from Norway but no data found on their tax rates, hence shown as 'N/A,' see The Norwegian Tax Administration, "Jan Mayen and the Norwegian dependencies in the Antarctic," https://www.skatteetaten.no/en/business-and-organisation/employer/the-a-melding/the-a-melding-guide/special-groups/jan-mayen-and-the-norwegian-dependencies-in-the-antarctic/.
 
-* **SMR - San Marino:** Corporate income tax rate of 17 percent, see Economic Development Agency, "Tax system," https://www.agency.sm/en/invest-in-san-marino/tax-system and, for previous years, see World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?scope=10986%2F12192&query=san+marino&submit=&filtertype_0=title&filter_relational_operator_0=contains&filter_0=.
+* **SMR - San Marino:** Corporate income tax rate of 17 percent, see Economic Development Agency, "Tax system," https://www.agency.sm/en/invest-in-san-marino/tax-system and Bloomberg Tax, "Country Guides - San Marino," https://www.bloomberglaw.com/product/tax/document/25902505000#A0R5R1Q8D0.
 
-* **SOM - Somalia:** According to the World Bank Doing Business report, there is no data available/there is no corporate tax, see Corporate income tax rate of 30 percent, see "Doing Business 2020: Economy Profile Somalia," page 40, https://www.doingbusiness.org/content/dam/doingBusiness/country/s/somalia/SOM.pdf.
+* **SOM - Somalia:** According to the World Bank Doing Business report, there is no data available/there is no corporate tax, see "Doing Business 2020: Economy Profile Somalia," page 40, https://www.doingbusiness.org/content/dam/doingBusiness/country/s/somalia/SOM.pdf and Somalian Ministry of Finance, "Revenue explorer," https://mof.gov.so/fiscal/REVexplorer.html (does not show any corporate income tax revenue).
 
-* **SPM - Saint Pierre and Miquelon:** No data found.
+* **SPM - Saint Pierre and Miquelon:** Saint Pierre and Miquelon is a French overseas collectivity and is partially part of the French tax system. Corporate income tax seems to be the same as in France, see Saint Pierre and Miquelon Tax Service Directorate, "Dues and taxes," https://www.services-fiscaux975.fr/fr/38.html. Due to the French dependency, the tax rate is shown as N/A.
 
 * **SSD - South Sudan:** Corporate tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide," https://www.ey.com/gl/en/services/tax/global-tax-guide-archive.
 

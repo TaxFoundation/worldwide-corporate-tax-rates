@@ -434,36 +434,32 @@ all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "NIU",] <- 30
 #NPL - Nepal
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "NPL",] <- 25
 
-#NRU - Nauru
-#!!all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "NRU",] <- 10
-#!!all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "NRU",] <- 10
-#!!all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "NRU",] <- 10
+#NRU - Nauru (correct previous years and set 2016 to NA as we don't have a source)
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "NRU",] <- 25
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "NRU",] <- 25
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "NRU",] <- 25
+all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "NRU",] <- 20
+all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "NRU",] <- NA
 
-#PLW - Palau
-#change values to NA for previous years
+#PLW - Palau (set previous years to NA as Palau has a gross receipts tax)
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "PLW",] <- NA
+all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "PLW",] <- NA
+all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "PLW",] <- NA
 
 #PRI - Puerto Rico
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "PRI",] <- 37.5
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "PRI",] <- 37.5
 
 #PYF - French Polynesia
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "PYF",] <- 26
-all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "PYF",] <- 27
-all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "PYF",] <- 28
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "PYF",] <- 25
 
-#REU - Reunion
-#change values to NA for previous years
+#REU - Reunion (set previous year to NA as Reunion is an overseas départements of France)
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "REU",] <- NA
 
 #SHN - Saint Helena
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "SHN",] <- 25
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "SHN",] <- 25
   
 #SMR - San Marino
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "SMR",] <- 17
-all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "SMR",] <- 17
-all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "SMR",] <- 17
-all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "SMR",] <- 17
-all_years_preliminary[c("2015")][all_years_preliminary$iso_3 == "SMR",] <- 17
-all_years_preliminary[c("2014")][all_years_preliminary$iso_3 == "SMR",] <- 17
-all_years_preliminary[c("2013")][all_years_preliminary$iso_3 == "SMR",] <- 17
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "SMR",] <- 17
 
 #SSD - 	South Sudan
 all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "SSD",] <- 25
