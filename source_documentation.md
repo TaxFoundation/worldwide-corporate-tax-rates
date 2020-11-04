@@ -82,6 +82,8 @@
 
 * **HTI - Haiti:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Haiti," https://www.bloomberglaw.com/product/tax/document/25590597672.
 
+* **IMN - Isle of Man:** Correction: Corporate income tax rate of 15 percent between 2003 and 2006, see OECD, "Corporate Tax Statistics: Statutory Corporate Tax Rate Explanatory Annex for Non-OECD Jurisdictions," http://www.oecd.org/tax/tax-policy/explanatory-annex-non-oecd-statutory-cit-rates.pdf.
+
 * **IOT - British Indian Ocean Territory:** As an overseas territory of the UK with no permanent population (the only inhabitants of the territory are US and British military personnel and associated contractors), there does not seem to be a tax system, hence shown as 'N/A.'
 
 * **IRN - Iran (Islamic Republic of):** Corporate income tax rate of 25 percent, see Iranian Ministry of Economic Affairs and Finance, "Corporate Income Tax," http://en.intamedia.ir/pages/default.aspx?mode=show&lan=en&id=corporate_income_tax and Bloomberg Tax, "Country Guides - Iran," https://www.bloomberglaw.com/product/tax/document/25590805032.
@@ -148,39 +150,45 @@
 
 * **SPM - Saint Pierre and Miquelon:** Saint Pierre and Miquelon is a French overseas collectivity and is partially part of the French tax system. Corporate income tax seems to be the same as in France, see Saint Pierre and Miquelon Tax Service Directorate, "Dues and taxes," https://www.services-fiscaux975.fr/fr/38.html. Due to the French dependency, the tax rate is shown as N/A.
 
-* **SSD - South Sudan:** Corporate tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide," https://www.ey.com/gl/en/services/tax/global-tax-guide-archive.
+* **SSD - South Sudan:** Corporate tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1603?download and Bloomberg Tax, "Country Guides - South Sudan," https://www.bloomberglaw.com/product/tax/document/25903709736.
 
-* **STP - Sao Tome and Principe:** Corporate tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide," https://www.ey.com/gl/en/services/tax/global-tax-guide-archive.
+* **STP - Sao Tome and Principe:** Corporate tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1492?download and Bloomberg Tax, "Country Guides - Sao Tome And Principe, https://www.bloomberglaw.com/product/tax/document/25590843432.
 
-* **SYC - Seychelles:** Corporate tax rate of 33 percent, see Seychelles Revenue Commissions, "Business Tax," https://www.src.gov.sc/pages/businesstax/businesstax.aspx.
+* **SYC - Seychelles:** Corporate tax rate of 33 percent, see Seychelles Revenue Commissions, "Business Tax Rates," https://www.src.gov.sc/pages/businesstax/BusinessTaxRates.aspx. Corporate tax rate of 40 percent for the years 2000-2006, see OECD, "Corporate Tax Statistics: Statutory Corporate Tax Rate Explanatory Annex for Non-OECD Jurisdictions," http://www.oecd.org/tax/tax-policy/explanatory-annex-non-oecd-statutory-cit-rates.pdf.
 
-* **TCD - Chad:** Corporate income tax rate of 35 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **TCD - Chad:** Corporate income tax rate of 35 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=312?download and Bloomberg Tax, "Country Guides - Chad," https://www.bloomberglaw.com/product/tax/document/25590853672.
 
-* **TGO - Togo:** Corporate income tax rate of 28 percent, see "Doing Business 2020: Economy Profile Togo," page 41, https://www.doingbusiness.org/content/dam/doingBusiness/country/t/togo/TGO.pdf and World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?filtertype_1=title&filter_relational_operator_1=contains&filter_1=&query=togo&scope=10986%2F12192.
+* **TGO - Togo:** Corporate income tax rate of 27 percent, see Office Togolais des Recettes (Togolaise Tax Office) "Le Guide Fiscal OTR 2020," https://www.otr.tg/index.php/en/documentation/sur-les-impots/code-general-des-impots/199-le-guide-fiscal-otr-2020/file.html and Bloomberg Tax, "Country Guides - Togo," https://www.bloomberglaw.com/product/tax/document/25590797352.
 
-* **TJK - Tajikistan:** Corporate income tax rate of 23 percent, see PwC, "Tajikistan: Corporate - Taxes on corporate income," http://taxsummaries.pwc.com/ID/Tajikistan-Corporate-Taxes-on-corporate-income.
+* **TJK - Tajikistan:** Corporate income tax rate of 23 percent, see PwC, "Tajikistan: Corporate - Taxes on corporate income," http://taxsummaries.pwc.com/ID/Tajikistan-Corporate-Taxes-on-corporate-income and Bloomberg Tax, "Country Guides - Tajikistan," https://www.bloomberglaw.com/product/tax/document/25591004200.
 
-* **TKL - Tokelau:** No data found.
+* **TKL - Tokelau:** There is no corporate income tax in Tokelau, hence shown as 0 percent, see OECD, "Corporate Tax Statistics - Second Edition," page  - footnote 3, 2020, https://www.oecd.org/tax/tax-policy/corporate-tax-statistics-second-edition.pdf#page=8. Same applies to 2019, see OECD, "Corporate Tax Statistics - First Edition," page 5 - footnote 3, 2019, https://www.oecd.org/tax/tax-policy/corporate-tax-statistics-database-first-edition.pdf#page=7.
 
-* **TKM - Turkmenistan:** Corporate tax rate of 8 percent, see Deloitte, "International Tax - Turkmenistan Highlights," 2019, https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Tax/dttl-tax-turkmenistanhighlights-2019.pdf. The 20 percent rate shown in the KPMG dataset only applies to _other_ residents, including contractors/subcontractors under the Petroleum law.
+* **TKM - Turkmenistan:** Corporate tax rate of 8 percent; the 20 percent rate shown in the KPMG dataset only applies to _other_ residents, including contractors/subcontractors under the Petroleum law, see Bloomberg Tax, "Country Guides - Turkmenistan," https://www.bloomberglaw.com/product/tax/document/25737399336.
 
-* **TLS - Timor-Leste:** Corporate income tax rate of 10 percent, see PwC, "Timor-Leste: Corporate - Taxes on corporate income," http://taxsummaries.pwc.com/ID/Timor-Leste-Corporate-Taxes-on-corporate-income.
+* **TLS - Timor-Leste:** Corporate income tax rate of 10 percent, see PwC, "Timor-Leste: Corporate - Taxes on corporate income," http://taxsummaries.pwc.com/ID/Timor-Leste-Corporate-Taxes-on-corporate-income and Bloomberg Tax, "Country Guides - Timor-Leste," https://www.bloomberglaw.com/product/tax/document/25590970408.
 
-* **TON - Tonga:** Corporate income tax rate of 25 percent, see "Doing Business 2020: Economy Profile Tonga," page 41, https://www.doingbusiness.org/content/dam/doingBusiness/country/t/tonga/TON.pdf and World Bank, "Doing business subreports," Open Knowledge Repository, https://openknowledge.worldbank.org/discover?scope=10986%2F12192&query=tonga&submit=&filtertype_0=title&filter_relational_operator_0=contains&filter_0=.
+* **TON - Tonga:** Corporate income tax rate of 25 percent, see Bloomberg Tax, "Country Guides - Tonga," https://www.bloomberglaw.com/product/tax/document/25591092264.
 
-* **TUV - Tuvalu:** No data found.
+* **Trinidad & Tobago:** Corporate income tax rate of 30 percent since 2017, see Trinidad & Tobago Ministry of Finance, "Budget Statement 2017," https://www.finance.gov.tt/wp-content/uploads/2016/09/Budget-Statement-2017-for-web.pdf#page=45 and Bloomberg Tax, "Country Guides - Trinidad and Tobago," https://www.bloomberglaw.com/product/tax/document/25590439976.
+
+* **TUV - Tuvalu:** Tuvalu Government - Ministry of Finance and Economic Development shows 30 percent corporate income tax rate in their Income Tax Act from 2009, see Tuvalu Government - Ministry of Finance and Economic Development, "Income Tax Act," https://mfed.tv/inland-revenue-department/. However, no more recent data can be found, thus Tuvalu continues to be shown as N/A for all years.
 
 * **UMI - United States Minor Outlying Islands:** No data found.
 
 * **VAT - Holy See:** No data found, there does not seem to be a corporate income tax, hence shown as 'N/A.'
 
-* **VGB - British Virgin Islands:** Corporate tax rate of 0 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **VGB - British Virgin Islands:** Corporate tax rate of 0 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=231?download and Bloomberg Tax, "Country Guides - British Virgin Islands," https://www.bloomberglaw.com/product/tax/document/25590602280.
 
 * **VIR - 	United States Virgin Islands:** Corporate tax rate of 21 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
 
+* **VUT - Vanuatu:** Corporate tax rate of 0 percent at least since 2010, see KPMG, "Corporate tax rates table," https://home.kpmg/xx/en/home/services/tax/tax-tools-and-resources/tax-rates-online/corporate-tax-rates-table.html.
+
 * **WLF - Wallis and Futuna Islands:** Corporate tax rate of 0 percent, see Wallis & Futuna, "Investing in Wallis & Futuna," https://www.wallis-et-futuna.wf/en/investing.
 
-* **XKX - Kosovo, Republic of:** Corporate tax rate of 10 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **XKX - Kosovo, Republic of:** Corporate tax rate of 10 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=919?download and Bloomberg Tax, "Country Guides - Kosovo," https://www.bloomberglaw.com/product/tax/document/25591303208.
+
+* **ZWE - Zimbabwe:** Corporate tax rate of 24% plus a 3% AIDS levy (=24.72%) as of 2020 (25% + 3% AIDS levy prior), see PwC, "Worldwide Tax Summaries - Corporate - Taxes on corporate income - Zimbabwe," https://taxsummaries.pwc.com/zimbabwe/corporate/taxes-on-corporate-income.
 
 
 ____________________________________________________

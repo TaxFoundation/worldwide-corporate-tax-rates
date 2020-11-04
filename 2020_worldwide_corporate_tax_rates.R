@@ -385,6 +385,12 @@ all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "GUY",] <- 25
 #HTI - Haiti
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "HTI",] <- 30
 
+#IMN - Isle of Man (correction: rate was 15% between 2003-2006)
+all_years_preliminary[c("2003")][all_years_preliminary$iso_3 == "IMN",] <- 15
+all_years_preliminary[c("2004")][all_years_preliminary$iso_3 == "IMN",] <- 15
+all_years_preliminary[c("2005")][all_years_preliminary$iso_3 == "IMN",] <- 15
+all_years_preliminary[c("2006")][all_years_preliminary$iso_3 == "IMN",] <- 15
+
 #IRN - Iran (Islamic Republic of)
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "IRN",] <- 25
 
@@ -462,51 +468,72 @@ all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "SHN",] <- 25
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "SMR",] <- 17
 
 #SSD - 	South Sudan
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "SSD",] <- 25
-all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "SSD",] <- 20
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "SSD",] <- 25
 
 #STP - Sao Tome and Principe
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "STP",] <- 25
-all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "STP",] <- 25
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "STP",] <- 25
 
 #SYC - Seychelles
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "SYC",] <- 33
-all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "SYC",] <- 33  
-  
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "SYC",] <- 33
+all_years_preliminary[c("2003")][all_years_preliminary$iso_3 == "SYC",] <- 40
+all_years_preliminary[c("2000")][all_years_preliminary$iso_3 == "SYC",] <- 40
+
 #TCD - Chad
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TCD",] <- 35
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "TCD",] <- 35
 
 #TGO - Togo
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TGO",] <- 28
-all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "TGO",] <- 29 
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "TGO",] <- 27
   
 #TJK - Tajikistan
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TJK",] <- 23
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "TJK",] <- 23
+
+#TKL - Tokelau
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "TKL",] <- 0
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TKL",] <- 0
 
 #TKM - Turkmenistan
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TKM",] <- 8
-all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "TKM",] <- 8
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "TKM",] <- 8
 
 #TLS - Timor-Leste
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TLS",] <- 10
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "TLS",] <- 10
 
 #TON - Tonga
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TON",] <- 25
-all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "TON",] <- 25
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "TON",] <- 25
+
+#TTO - Trinidad and Tobago (correction: rate was increased to 30% in 2017 already)
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "TTO",] <- 30
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "TTO",] <- 30
+all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "TTO",] <- 30
 
 #VGB - British Virgin Islands
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "VGB",] <- 0
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "VGB",] <- 0
 
-#VIR - 	United States Virgin Islands
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "VIR",] <- 21
+#VIR - 	United States Virgin Islands (correction: 10% surtax imposed)
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "VIR",] <- 23.1
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "VIR",] <- 23.1
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "VIR",] <- 23.1
+all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "VIR",] <- 38.5
+all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "VIR",] <- 38.5
+all_years_preliminary[c("2015")][all_years_preliminary$iso_3 == "VIR",] <- 38.5
+all_years_preliminary[c("2014")][all_years_preliminary$iso_3 == "VIR",] <- 38.5
+
+#VUT - Vanuatu
+all_years_preliminary[c("2013")][all_years_preliminary$iso_3 == "VUT",] <- 0
+all_years_preliminary[c("2012")][all_years_preliminary$iso_3 == "VUT",] <- 0
+all_years_preliminary[c("2011")][all_years_preliminary$iso_3 == "VUT",] <- 0
+all_years_preliminary[c("2010")][all_years_preliminary$iso_3 == "VUT",] <- 0
 
 #WLF - Wallis and Futuna Islands
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "WLF",] <- 0
-all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "WLF",] <- 0
-all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "WLF",] <- 0
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "WLF",] <- 0
 
 #XKX - Kosovo, Republic of
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "XKX",] <- 10
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "XKX",] <- 10
+
+#ZWE - Zimbabwe (correction: tax change in 2020; years 2018 and 2019 did not include 3% surtax)
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "ZWE",] <- 24.72
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "ZWE",] <- 25.75
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "ZWE",] <- 25.75
+
 
 #Define final corporate tax rate data###
 all_years_final <- all_years_preliminary
