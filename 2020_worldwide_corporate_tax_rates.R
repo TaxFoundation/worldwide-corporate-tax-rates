@@ -447,6 +447,10 @@ all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "NRU",] <- 25
 all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "NRU",] <- 20
 all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "NRU",] <- NA
 
+#PAK - Pakistan (correction: rate was 29% in 2019 and 2020)
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "PAK",] <- 29
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "PAK",] <- 29
+
 #PLW - Palau (set previous years to NA as Palau has a gross receipts tax)
 all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "PLW",] <- NA
 all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "PLW",] <- NA
