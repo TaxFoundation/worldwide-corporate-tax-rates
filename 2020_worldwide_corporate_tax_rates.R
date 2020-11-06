@@ -37,6 +37,7 @@ using(tidyverse)
 using(stringr)
 using(dplyr)
 using(naniar)
+using(IMFData)
 
 
 #ISO-Codes####
@@ -266,6 +267,7 @@ kpmg_data_2020$country[kpmg_data_2020$country == "Venezuela"] <- "Venezuela (Bol
 
 kpmg_data_2020$country[kpmg_data_2020$country == "Vietnam"] <- "Viet Nam"
 
+
 #Add ISO-Code to KPMG Data
 kpmg_data_iso <- merge(kpmg_data_2020, country_iso_cont, by="country", all=T)
 
@@ -289,7 +291,7 @@ oecd_kpmg_2020 <- oecd_kpmg_2020[, c("2020", "iso_3", "country", "continent")]
 #Read in dataset Tax Foundation has compiled over the years for 1980-2019
 previous_years <- read_csv("source-data/data_rates_1980_2019.csv")
 
-#Keep and rename selected columns
+#Drop column that is not needed
 previous_years <- subset(previous_years, select = -c(X1))
 
 #Combine 2020 data ("oecd_kpmg_2020") with data from previous years ("previous_years")
@@ -298,7 +300,7 @@ oecd_kpmg_2020 <- subset(oecd_kpmg_2020, select = -c(country, continent))
 
 all_years_preliminary <- merge(previous_years, oecd_kpmg_2020, by="iso_3", all=T)
 
-all_years_preliminary <- all_years_preliminary[, c("iso_2", "iso_3", "continent", "country", 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020)]
+all_years_preliminary <- all_years_preliminary[, c("iso_2", "iso_3", "continent", "country", 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020)]
 
 write.csv(all_years_preliminary,"intermediate-outputs/rates_preliminary.csv")
 
@@ -307,6 +309,9 @@ write.csv(all_years_preliminary,"intermediate-outputs/rates_preliminary.csv")
 
 #ALA - Aland Islands
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "ALA",] <- 20
+
+#ARE - United Arab Emirates (correction: rate set to zero for all years as CIT only levied on certain industries and this dataset captures general corporate tax systems)
+all_years_preliminary[c("1980", 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020)][all_years_preliminary$iso_3 == "ARE",] <- 0
 
 #ASM - American Samoa
 all_years_preliminary[c("2014")][all_years_preliminary$iso_3 == "ASM",] <- 44
@@ -372,6 +377,9 @@ all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "GNB",] <- 25
 
 #GNQ - Equatorial Guinea
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "GNQ",] <- 35
+
+#GRC - Greece (correction: 1992 rate is "46 -- 35," it should be 40.5%)
+all_years_preliminary[c("1992")][all_years_preliminary$iso_3 == "GRC",] <- 40.5
 
 #GRL - Greenland
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "GRL",] <- 26.5
@@ -533,7 +541,7 @@ all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "WLF",] <- 0
 #XKX - Kosovo, Republic of
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "XKX",] <- 10
 
-#ZWE - Zimbabwe (correction: tax change in 2020; years 2018 and 2019 did not include 3% surtax)
+#ZWE - Zimbabwe (correction: tax change in 2020; years 2018 and 2019 were missing 3% surtax)
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "ZWE",] <- 24.72
 all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "ZWE",] <- 25.75
 all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "ZWE",] <- 25.75
@@ -547,6 +555,42 @@ write.csv(all_years_final,"intermediate-outputs/rates_final.csv")
 
 
 #GDP Data####
+#using(imfr)
+#imf_ids(return_raw = FALSE, times = 3)
+#imf_codelist(database_id, return_raw = FALSE, times = 3)
+
+
+#databaseID <- 'IFS'
+#checkquery = FALSE
+#IFS.available.codes <- DataStructureMethod('IFS')
+## All OECD Countries Gross Fixed Capital Formation Millions in National Currency
+#queryfilter <- list(CL_FREQ="A", CL_INDICATOR_IFS =c("NGDP_USD"))
+
+#gdp_usd <- data.frame(CompactDataMethod(databaseID, queryfilter, '01-01-2000', '01-01-2020', checkquery))
+
+#IFS.available.codes <- DataStructureMethod("IFS")
+
+#databaseID <- "IFS"
+#queryfilter <- list(CL_FREQ="A", CL_AREA_IFS="W00", CL_INDICATOR_IFS = c("NGDP_USD"))
+#startdate = "2000"
+#enddate = "2017"
+#checkquery = FALSE
+
+## Germany, Norminal GDP in Euros, Norminal GDP in National Currency
+
+#GR.NGDP.query <- data.frame(CompactDataMethod(databaseID, queryfilter, startdate, enddate, 
+#                                   checkquery))
+
+#GFCF_2018<- data.frame(CompactDataMethod(databaseID, queryfilter, '2018-01-01', '2018-12-31', checkquery))
+#GFCF_2018<-data.frame(GFCF_2018$X.REF_AREA,unnest(GFCF_2018$Obs))
+
+#GR.NGDP.query[, 1:5]
+
+#, CL_AREA_IFS=ISO_2
+#NGDP_USD
+
+#gdp_imf <- 
+#  WEO
 
 #Reading in GDP data
 gdp_historical <- read_excel("source-data/gdp_historical.xlsx", range = "A11:AM232")
