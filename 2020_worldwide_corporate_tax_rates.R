@@ -555,95 +555,54 @@ write.csv(all_years_final,"intermediate-outputs/rates_final.csv")
 
 
 #GDP Data####
-#using(imfr)
-#imf_ids(return_raw = FALSE, times = 3)
-#imf_codelist(database_id, return_raw = FALSE, times = 3)
-
-
-#databaseID <- 'IFS'
-#checkquery = FALSE
-#IFS.available.codes <- DataStructureMethod('IFS')
-## All OECD Countries Gross Fixed Capital Formation Millions in National Currency
-#queryfilter <- list(CL_FREQ="A", CL_INDICATOR_IFS =c("NGDP_USD"))
-
-#gdp_usd <- data.frame(CompactDataMethod(databaseID, queryfilter, '01-01-2000', '01-01-2020', checkquery))
-
-#IFS.available.codes <- DataStructureMethod("IFS")
-
-#databaseID <- "IFS"
-#queryfilter <- list(CL_FREQ="A", CL_AREA_IFS="W00", CL_INDICATOR_IFS = c("NGDP_USD"))
-#startdate = "2000"
-#enddate = "2017"
-#checkquery = FALSE
-
-## Germany, Norminal GDP in Euros, Norminal GDP in National Currency
-
-#GR.NGDP.query <- data.frame(CompactDataMethod(databaseID, queryfilter, startdate, enddate, 
-#                                   checkquery))
-
-#GFCF_2018<- data.frame(CompactDataMethod(databaseID, queryfilter, '2018-01-01', '2018-12-31', checkquery))
-#GFCF_2018<-data.frame(GFCF_2018$X.REF_AREA,unnest(GFCF_2018$Obs))
-
-#GR.NGDP.query[, 1:5]
-
-#, CL_AREA_IFS=ISO_2
-#NGDP_USD
-
-#gdp_imf <- 
-#  WEO
 
 #Reading in GDP data
-gdp_historical <- read_excel("source-data/gdp_historical.xlsx", range = "A11:AM232")
-gdp_projected <- read_excel("source-data/gdp_projected.xlsx", range = "A11:K232")
+gdp_historical <- read_excel("source-data/gdp_historical.xlsx", range = "A12:AN230")
+gdp_projected <- read_excel("source-data/gdp_projected.xlsx", range = "A11:K229")
 
 #Merging historical and projected data
 gdp_projected <- gdp_projected[,-c(2:9)]
-gdp <- merge(gdp_historical,gdp_projected,by="Country")
+
+gdp_historical$Country[gdp_historical$Country == "Antigua Barbuda"] <- "Antigua and Barbuda"
+gdp_historical$Country[gdp_historical$Country == "Dominican Rep"] <- "Dominican Republic"
+gdp_historical$Country[gdp_historical$Country == "St Kitts Nevis"] <- "St. Kitts and Nevis"
+gdp_historical$Country[gdp_historical$Country == "St Lucia"] <- "St. Lucia"
+gdp_historical$Country[gdp_historical$Country == "St Vincent Grenadines"] <- "St. Vincent and Grenadines"
+gdp_historical$Country[gdp_historical$Country == "UK"] <- "United Kingdom"
+gdp_historical$Country[gdp_historical$Country == "Bosnia Herzegovina"] <- "Bosnia and Herzegovina"
+gdp_projected$Country[gdp_projected$Country == "Côte d'Ivoire"] <- "Cote d'Ivoire"
+gdp_historical$Country[gdp_historical$Country == "Guinea Bissau"] <- "Guinea-Bissau"
+gdp_historical$Country[gdp_historical$Country == "Central Afr Rep"] <- "Central African Republic"
+gdp_historical$Country[gdp_historical$Country == "Dem Rep Congo"] <- "Democratic Republic of the Congo"
+gdp_historical$Country[gdp_historical$Country == "Rep Congo"] <- "Republic of the Congo"
+gdp_historical$Country[gdp_historical$Country == "Sao Tome Principe"] <- "Sao Tome and Principe"
+gdp_projected$Country[gdp_projected$Country == "São Tomé and Príncipe"] <- "Sao Tome and Principe"
+gdp_projected$Country[gdp_projected$Country == "Swaziland/Eswatini"] <- "Swaziland"
+
+
+gdp <- merge(gdp_historical, gdp_projected, by="Country")
 colnames(gdp)[colnames(gdp)=="Country"] <- "country"
 
 #Renaming countries in gdp dataset to match iso-codes
-gdp$country[gdp$country == "AntiguaBarbuda"] <- "Antigua and Barbuda"
 gdp$country[gdp$country == "Bolivia"] <- "Bolivia (Plurinational State of)"
-gdp$country[gdp$country == "BosniaHerzegovina"] <- "Bosnia and Herzegovina"
 gdp$country[gdp$country == "Brunei"] <- "Brunei Darussalam"
-gdp$country[gdp$country == "BurkinaFaso"] <- "Burkina Faso"
-gdp$country[gdp$country == "CaboVerde"] <- "Cabo Verde"
-gdp$country[gdp$country == "CentralAfrRep"] <- "Central African Republic"
-gdp$country[gdp$country == "HongKong"] <- "China, Hong Kong Special Administrative Region"
+gdp$country[gdp$country == "Hong Kong"] <- "China, Hong Kong Special Administrative Region"
 gdp$country[gdp$country == "Macau"] <- "China, Macao Special Administrative Region"
-gdp$country[gdp$country == "CostaRica"] <- "Costa Rica"
-gdp$country[gdp$country == "CotedIvoire"] <- "Cote d'Ivoire"
-gdp$country[gdp$country == "CzechRepublic"] <- "Czechia"
-gdp$country[gdp$country == "DemRepCongo"] <- "Democratic Republic of the Congo"
-gdp$country[gdp$country == "DominicanRep"] <- "Dominican Republic"
-gdp$country[gdp$country == "ElSalvador"] <- "El Salvador"
-gdp$country[gdp$country == "EquatorialGuinea"] <- "Equatorial Guinea"
-gdp$country[gdp$country == "GuineaBissau"] <- "Guinea-Bissau"
+gdp$country[gdp$country == "Czech Republic"] <- "Czechia"
 gdp$country[gdp$country == "Iran"] <- "Iran (Islamic Republic of)"
 gdp$country[gdp$country == "Korea"] <- "Republic of Korea"
 gdp$country[gdp$country == "Laos"] <- "Lao People's Democratic Republic"
 gdp$country[gdp$country == "Macedonia"] <- "The former Yugoslav Republic of Macedonia"
 gdp$country[gdp$country == "Moldova"] <- "Republic of Moldova"
-gdp$country[gdp$country == "NewZealand"] <- "New Zealand"
-gdp$country[gdp$country == "PapuaNewGuinea"] <- "Papua New Guinea"
-gdp$country[gdp$country == "PuertoRico"] <- "Puerto Rico"
-gdp$country[gdp$country == "RepCongo"] <- "Congo"
+gdp$country[gdp$country == "Republic of the Congo"] <- "Congo"
 gdp$country[gdp$country == "Russia"] <- "Russian Federation"
-gdp$country[gdp$country == "SaoTomePrincipe"] <- "Sao Tome and Principe"
-gdp$country[gdp$country == "SaudiArabia"] <- "Saudi Arabia"
-gdp$country[gdp$country == "SierraLeone"] <- "Sierra Leone"
-gdp$country[gdp$country == "SolomonIslands"] <- "Solomon Islands"
-gdp$country[gdp$country == "SouthAfrica"] <- "South Africa"
-gdp$country[gdp$country == "SriLanka"] <- "Sri Lanka"
-gdp$country[gdp$country == "StKittsNevis"] <- "Saint Kitts and Nevis"
-gdp$country[gdp$country == "StLucia"] <- "Saint Lucia"
-gdp$country[gdp$country == "StVincentGrenadines"] <- "Saint Vincent and the Grenadines"
+gdp$country[gdp$country == "St. Kitts and Nevis"] <- "Saint Kitts and Nevis"
+gdp$country[gdp$country == "St. Lucia"] <- "Saint Lucia"
+gdp$country[gdp$country == "St. Vincent and Grenadines"] <- "Saint Vincent and the Grenadines"
 gdp$country[gdp$country == "Syria"] <- "Syrian Arab Republic"
 gdp$country[gdp$country == "Tanzania"] <- "United Republic of Tanzania"
-gdp$country[gdp$country == "TrinTobago"] <- "Trinidad and Tobago"
-gdp$country[gdp$country == "UK"] <- "United Kingdom of Great Britain and Northern Ireland"
-gdp$country[gdp$country == "UnitedArabEmirates"] <- "United Arab Emirates"
-gdp$country[gdp$country == "UnitedStates"] <- "United States of America"
+gdp$country[gdp$country == "United Kingdom"] <- "United Kingdom of Great Britain and Northern Ireland"
+gdp$country[gdp$country == "United States"] <- "United States of America"
 gdp$country[gdp$country == "Venezuela"] <- "Venezuela (Bolivarian Republic of)"
 gdp$country[gdp$country == "Vietnam"] <- "Viet Nam"
 
@@ -652,46 +611,46 @@ gdp$country[gdp$country == "Vietnam"] <- "Viet Nam"
 gdp$country <- as.character(gdp$country)
 gdp <- subset(gdp, gdp$country != "Africa"
               & gdp$country != "Asia"
-              & gdp$country != "AsiaandOceania"
-              & gdp$country != "AsiaLessJapan"
-              & gdp$country != "BelgiumLuxembourg"
-              & gdp$country != "EastAsia"
-              & gdp$country != "EastAsiaLessJapan"
+              & gdp$country != "Asia and Oceania"
+              & gdp$country != "Asia Less Japan"
+              & gdp$country != "Belgium Luxembourg"
+              & gdp$country != "East Asia"
+              & gdp$country != "East Asia Less Japan"
               & gdp$country != "Europe"
-              & gdp$country != "EuropeanUnion15"
-              & gdp$country != "EuropeanUnion28"
-              & gdp$country != "EuroZone"
-              & gdp$country != "FormerSovietUnion"
-              & gdp$country != "LatinAmerica"
-              & gdp$country != "MiddleEast"
-              & gdp$country != "NorthAfrica"
-              & gdp$country != "NorthAmerica"
+              & gdp$country != "European Union 15"
+              & gdp$country != "European Union 28"
+              & gdp$country != "Euro Zone"
+              & gdp$country != "Former Soviet Union"
+              & gdp$country != "Latin America"
+              & gdp$country != "Middle East"
+              & gdp$country != "North Africa"
+              & gdp$country != "North America"
               & gdp$country != "Oceania"
-              & gdp$country != "OtherAsiaOceania"
-              & gdp$country != "OtherCaribbeanCentralAmerica"
-              & gdp$country != "OtherCentralEurope"
-              & gdp$country != "OtherEastAsia"
-              & gdp$country != "OtherEurope"
-              & gdp$country != "OtherFormerSovietUnion"
-              & gdp$country != "OtherMiddleEast"
-              & gdp$country != "OtherNorthAfrica"
-              & gdp$country != "OtherOceania"
-              & gdp$country != "OtherSouthAmerica"
-              & gdp$country != "OtherSouthAsia"
-              & gdp$country != "OtherSoutheastAsia"
-              & gdp$country != "OtherSubSaharanAfrica"
-              & gdp$country != "OtherWestAfricanCommunity"
-              & gdp$country != "OtherWesternEurope"
-              & gdp$country != "RecentlyAccededCountries"
-              & gdp$country != "SouthAmerica"
-              & gdp$country != "SouthAsia"
-              & gdp$country != "SoutheastAsia"
-              & gdp$country != "SubSaharanAfrica"
+              & gdp$country != "Other Asia Oceania"
+              & gdp$country != "Other Caribbean Central America"
+              & gdp$country != "Other Central Europe"
+              & gdp$country != "Other East Asia"
+              & gdp$country != "Other Europe"
+              & gdp$country != "Other Former Soviet Union"
+              & gdp$country != "Other Middle East"
+              & gdp$country != "Other North Africa"
+              & gdp$country != "Other Oceania"
+              & gdp$country != "Other South America"
+              & gdp$country != "Other South Asia"
+              & gdp$country != "Other Southeast Asia"
+              & gdp$country != "Other Sub-Saharan Africa"
+              & gdp$country != "Other West African Community"
+              & gdp$country != "Other Western Europe"
+              & gdp$country != "Recently Acceded Countries"
+              & gdp$country != "South America"
+              & gdp$country != "South Asia"
+              & gdp$country != "Southeast Asia"
+              & gdp$country != "Sub-Saharan Africa"
               & gdp$country != "World"
-              & gdp$country != "WorldLessUSA")
+              & gdp$country != "World Less USA")
 
 #Merge gdp data with iso-codes
-gdp_iso <- merge(country_iso_cont,gdp,by="country")
+gdp_iso <- merge(country_iso_cont, gdp, by="country")
 
 #Write gdp data
 write.csv(gdp_iso,"intermediate-outputs/gdp_iso.csv")
