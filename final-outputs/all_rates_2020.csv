@@ -1,0 +1,224 @@
+"Country","Continent","Corporate Tax Rate"
+"Afghanistan","AS",20
+"Aland Islands","EU",20
+"Albania","EU",15
+"Algeria","AF",26
+"American Samoa","OC",34
+"Andorra","EU",10
+"Angola","AF",30
+"Anguilla","NO",0
+"Antigua and Barbuda","NO",25
+"Argentina","SA",30
+"Armenia","AS",18
+"Aruba","NO",25
+"Australia","OC",30
+"Austria","EU",25
+"Azerbaijan","AS",20
+"Bahamas","NO",0
+"Bahrain","AS",0
+"Bangladesh","AS",25
+"Barbados","NO",5.5
+"Belarus","EU",18
+"Belgium","EU",25
+"Benin","AF",30
+"Bermuda","NO",0
+"Bhutan","AS",30
+"Bolivia (Plurinational State of)","SA",25
+"Bonaire, Sint Eustatius and Saba","NO",25
+"Bosnia and Herzegovina","EU",10
+"Botswana","AF",22
+"Brazil","SA",34
+"British Virgin Islands","NO",0
+"Brunei Darussalam","AS",18.5
+"Bulgaria","EU",10
+"Burkina Faso","AF",28
+"Burundi","AF",30
+"Cabo Verde","AF",22
+"Cambodia","AS",20
+"Cameroon","AF",33
+"Canada","NO",26.47
+"Cayman Islands","NO",0
+"Central African Republic","AF",30
+"Chad","AF",35
+"Chile","SA",25
+"China","AS",25
+"China, Hong Kong Special Administrative Region","AS",16.5
+"China, Macao Special Administrative Region","AS",12
+"Colombia","SA",32
+"Comoros","AF",50
+"Congo","AF",30
+"Cook Islands","OC",20
+"Costa Rica","NO",30
+"Cote d'Ivoire","AF",25
+"Croatia","EU",18
+"Curacao","NO",22
+"Cyprus","EU",12.5
+"Czechia","EU",19
+"Democratic Republic of the Congo","AF",35
+"Denmark","EU",22
+"Djibouti","AF",25
+"Dominica","NO",25
+"Dominican Republic","NO",27
+"Ecuador","SA",25
+"Egypt","AF",22.5
+"El Salvador","NO",30
+"Equatorial Guinea","AF",35
+"Eritrea","AF",30
+"Estonia","EU",20
+"Ethiopia","AF",30
+"Falkland Islands (Malvinas)","SA",26
+"Faroe Islands","EU",18
+"Fiji","OC",20
+"Finland","EU",20
+"France","EU",32.02
+"French Polynesia","OC",25
+"Gabon","AF",30
+"Gambia","AF",31
+"Georgia","AS",15
+"Germany","EU",29.897059
+"Ghana","AF",25
+"Gibraltar","EU",10
+"Greece","EU",24
+"Greenland","NO",26.5
+"Grenada","NO",28
+"Guam","OC",21
+"Guatemala","NO",25
+"Guernsey","EU",0
+"Guinea","AF",35
+"Guinea-Bissau","AF",25
+"Guyana","SA",25
+"Haiti","NO",30
+"Honduras","NO",25
+"Hungary","EU",9
+"Iceland","EU",20
+"India","AS",30
+"Indonesia","AS",25
+"Iran (Islamic Republic of)","AS",25
+"Iraq","AS",15
+"Ireland","EU",12.5
+"Isle of Man","EU",0
+"Israel","AS",23
+"Italy","EU",27.81
+"Jamaica","NO",25
+"Japan","AS",29.74
+"Jersey","EU",0
+"Jordan","AS",20
+"Kazakhstan","AS",20
+"Kenya","AF",30
+"Kiribati","OC",35
+"Kosovo, Republic of","EU",10
+"Kuwait","AS",15
+"Kyrgyzstan","AS",10
+"Lao People's Democratic Republic","AS",24
+"Latvia","EU",20
+"Lebanon","AS",17
+"Lesotho","AF",25
+"Liberia","AF",25
+"Libya","AF",20
+"Liechtenstein","EU",12.5
+"Lithuania","EU",15
+"Luxembourg","EU",24.94
+"Madagascar","AF",20
+"Malawi","AF",30
+"Malaysia","AS",24
+"Maldives","AS",15
+"Mali","AF",30
+"Malta","EU",35
+"Mauritania","AF",25
+"Mauritius","AF",15
+"Mexico","NO",30
+"Micronesia (Federated States of)","OC",30
+"Monaco","EU",28
+"Mongolia","AS",25
+"Montenegro","EU",9
+"Montserrat","NO",30
+"Morocco","AF",31
+"Mozambique","AF",32
+"Myanmar","AS",25
+"Namibia","AF",32
+"Nauru","OC",25
+"Nepal","AS",25
+"Netherlands","EU",25
+"New Caledonia","OC",30
+"New Zealand","OC",28
+"Nicaragua","NO",30
+"Niger","AF",30
+"Nigeria","AF",30
+"Niue","OC",30
+"Northern Mariana Islands","OC",21
+"Norway","EU",22
+"Oman","AS",15
+"Pakistan","AS",29
+"Panama","NO",25
+"Papua New Guinea","OC",30
+"Paraguay","SA",10
+"Peru","SA",29.5
+"Philippines","AS",30
+"Poland","EU",19
+"Portugal","EU",31.5
+"Puerto Rico","NO",37.5
+"Qatar","AS",10
+"Republic of Korea","AS",27.5
+"Republic of Moldova","EU",12
+"Romania","EU",16
+"Russian Federation","EU",20
+"Rwanda","AF",30
+"Saint Barthelemy","NO",0
+"Saint Helena","AF",25
+"Saint Kitts and Nevis","NO",33
+"Saint Lucia","NO",30
+"Saint Martin (French Part)","NO",35
+"Saint Vincent and the Grenadines","NO",30
+"Samoa","OC",27
+"San Marino","EU",17
+"Sao Tome and Principe","AF",25
+"Saudi Arabia","AS",20
+"Senegal","AF",30
+"Serbia","EU",15
+"Seychelles","AF",33
+"Sierra Leone","AF",30
+"Singapore","AS",17
+"Sint Maarten (Dutch part)","NO",35
+"Slovakia","EU",21
+"Slovenia","EU",19
+"Solomon Islands","OC",30
+"South Africa","AF",28
+"South Sudan","AF",25
+"Spain","EU",25
+"Sri Lanka","AS",28
+"State of Palestine","AS",15
+"Sudan","AF",35
+"Suriname","SA",36
+"Swaziland","AF",27.5
+"Sweden","EU",21.4
+"Switzerland","EU",21.148581
+"Syrian Arab Republic","AS",28
+"Taiwan","AS",20
+"Tajikistan","AS",23
+"Thailand","AS",20
+"The former Yugoslav Republic of Macedonia","EU",10
+"Timor-Leste","OC",10
+"Togo","AF",27
+"Tokelau","OC",0
+"Tonga","OC",25
+"Trinidad and Tobago","NO",30
+"Tunisia","AF",25
+"Turkey","AS",22
+"Turkmenistan","AS",8
+"Turks and Caicos Islands","NO",0
+"Uganda","AF",30
+"Ukraine","EU",18
+"United Arab Emirates","AS",0
+"United Kingdom of Great Britain and Northern Ireland","EU",19
+"United Republic of Tanzania","AF",30
+"United States of America","NO",25.766571
+"United States Virgin Islands","NO",23.1
+"Uruguay","SA",25
+"Uzbekistan","AS",7.5
+"Vanuatu","OC",0
+"Venezuela (Bolivarian Republic of)","SA",34
+"Viet Nam","AS",20
+"Wallis and Futuna Islands","OC",0
+"Yemen","AS",20
+"Zambia","AF",35
+"Zimbabwe","AF",24.72
