@@ -662,12 +662,10 @@ write.csv(gdp_iso,"intermediate-outputs/gdp_iso.csv")
 rates_final_long <- (melt(all_years_final, id=c("iso_2","iso_3","continent","country")))
 colnames(rates_final_long)[colnames(rates_final_long)=="variable"] <- "year"
 colnames(rates_final_long)[colnames(rates_final_long)=="value"] <- "rate"
-rates_final_long <- subset(rates_final_long, year != 1996.1)
 
 gdp_iso_long <- (melt(gdp_iso, id=c("iso_2","iso_3","continent","country")))
 colnames(gdp_iso_long)[colnames(gdp_iso_long)=="variable"] <- "year"
 colnames(gdp_iso_long)[colnames(gdp_iso_long)=="value"] <- "gdp"
-gdp_iso_long <- subset(gdp_iso_long, year != 1996.1)
 
 #Merge rates and gdp###
 rates_gdp <- merge(rates_final_long, gdp_iso_long, by =c("iso_2","iso_3", "continent","country", "year"), all=T)
@@ -685,52 +683,51 @@ write.csv(final_data,"final-data/final_data_long.csv", row.names = FALSE)
 #Drop if no gdp or rate data
 complete_data <- final_data[complete.cases(final_data),]
 
-#Creating the 2019 dataset that includes only countries for which we have gdp data
-data2019 <- subset(complete_data, year==2019, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu, gseven, gtwenty, brics))
-write.csv(data2019, "final-data/final_data_2019.csv")
+#Creating the 2020 dataset that includes only countries for which we have gdp data
+data2020 <- subset(complete_data, year==2020, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu28, gseven, gtwenty, brics))
+write.csv(data2020, "final-data/final_data_2020.csv")
 
-#Creating the 2019 dataset that includes countries with missing gdp data as well
-data2019_gdp_mis <- subset(final_data, year==2019, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu, gseven, gtwenty, brics))
-data2019_gdp_mis <- subset(data2019_gdp_mis, !is.na(data2019_gdp_mis$rate))
-write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
+#Creating the 2020 dataset that includes countries with missing gdp data as well
+data2020_gdp_mis <- subset(final_data, year==2020, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu28, gseven, gtwenty, brics))
+data2020_gdp_mis <- subset(data2020_gdp_mis, !is.na(data2020_gdp_mis$rate))
+write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
 
-
-#2019 simple mean (including only countries with gdp data)
-  data2019$rate <- as.numeric(data2019$rate)
-  simple_mean_19 <- mean(data2019$rate, na.rm = TRUE)
+#2020 simple mean (including only countries with gdp data)
+  data2020$rate <- as.numeric(data2020$rate)
+  simple_mean_20 <- mean(data2020$rate, na.rm = TRUE)
   
-  #2019 simple mean (including countries with missing gdp data)
-  data2019_gdp_mis$rate <- as.numeric(data2019_gdp_mis$rate)
-  simple_mean_19_gdp_mis <- mean(data2019_gdp_mis$rate, na.rm = TRUE)
+  #2020 simple mean (including countries with missing gdp data)
+  data2020_gdp_mis$rate <- as.numeric(data2020_gdp_mis$rate)
+  simple_mean_20_gdp_mis <- mean(data2020_gdp_mis$rate, na.rm = TRUE)
   
-  #2019 weighted mean (including only countries with gdp data)
-  weighted_mean_19 <- weighted.mean(data2019$rate, data2019$gdp, na.rm = TRUE)
+  #2020 weighted mean (including only countries with gdp data)
+  weighted_mean_20 <- weighted.mean(data2020$rate, data2020$gdp, na.rm = TRUE)
   
-  #2019 number of rates (including only countries with gdp data)
-  numrates_19 <- NROW(data2019$rate)
-  numgdp_19 <- NROW(data2019$gdp)
+  #2020 number of rates (including only countries with gdp data)
+  numrates_20 <- NROW(data2020$rate)
+  numgdp_20 <- NROW(data2020$gdp)
   
-  #2019 number of rates (including countries with missing gdp data)
-  numrates_19_gdp_mis <- NROW(data2019_gdp_mis$rate)
-  numgdp_19_gdp_mis <- NROW(data2019_gdp_mis$gdp)
+  #2020 number of rates (including countries with missing gdp data)
+  numrates_20_gdp_mis <- NROW(data2020_gdp_mis$rate)
+  numgdp_20_gdp_mis <- NROW(data2020_gdp_mis$gdp)
   
-  #2019 distribution (including countries with missing gdp data)
-  dist <- hist(data2019_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2019 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+  #2020 distribution (including countries with missing gdp data)
+  dist <- hist(data2020_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2020 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
   distdata <- data.frame(dist$counts,dist$breaks[1:12])
-  write.csv(distdata, "final-outputs/distribution_2019.csv")
+  write.csv(distdata, "final-outputs/distribution_2020.csv")
   
 #Top, Bottom, and Zero Rates
     
     #Top
-    toprate<-arrange(data2019_gdp_mis, desc(rate))
-    toprate<-toprate[1:21,]
+    toprate <- arrange(data2020_gdp_mis, desc(rate))
+    toprate <- toprate[1:20,]
     
-    toprate$continent <- if_else(toprate$continent == "EU","Europe",toprate$continent)
-    toprate$continent <- if_else(toprate$continent == "OC","Oceania",toprate$continent)
-    toprate$continent <- if_else(toprate$continent == "AF","Africa",toprate$continent)
-    toprate$continent <- if_else(toprate$continent == "AS","Asia",toprate$continent)
-    toprate$continent <- if_else(toprate$continent == "NO","North America",toprate$continent)
-    toprate$continent <- if_else(toprate$continent == "SA","South America",toprate$continent)
+    toprate$continent <- if_else(toprate$continent == "EU", "Europe", toprate$continent)
+    toprate$continent <- if_else(toprate$continent == "OC", "Oceania", toprate$continent)
+    toprate$continent <- if_else(toprate$continent == "AF", "Africa", toprate$continent)
+    toprate$continent <- if_else(toprate$continent == "AS", "Asia", toprate$continent)
+    toprate$continent <- if_else(toprate$continent == "NO", "North America", toprate$continent)
+    toprate$continent <- if_else(toprate$continent == "SA", "South America", toprate$continent)
     
     toprate <- subset(toprate, select = c(country, continent, rate))
     
@@ -741,16 +738,16 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
     toprate <- toprate[order(-toprate$Rate, toprate$Country),]
     
     #bottom
-    bottomrate<-arrange(data2019_gdp_mis, rate)
-    bottomrate<-subset(bottomrate, rate > 0)
-    bottomrate <- bottomrate[1:21,]
+    bottomrate <- arrange(data2020_gdp_mis, rate)
+    bottomrate <- subset(bottomrate, rate > 0)
+    bottomrate <- bottomrate[1:20,]
     
-    bottomrate$continent <- if_else(bottomrate$continent == "EU","Europe",bottomrate$continent)
-    bottomrate$continent <- if_else(bottomrate$continent == "OC","Oceania",bottomrate$continent)
-    bottomrate$continent <- if_else(bottomrate$continent == "AF","Africa",bottomrate$continent)
-    bottomrate$continent <- if_else(bottomrate$continent == "AS","Asia",bottomrate$continent)
-    bottomrate$continent <- if_else(bottomrate$continent == "NO","North America",bottomrate$continent)
-    bottomrate$continent <- if_else(bottomrate$continent == "SA","South America",bottomrate$continent)
+    bottomrate$continent <- if_else(bottomrate$continent == "EU", "Europe", bottomrate$continent)
+    bottomrate$continent <- if_else(bottomrate$continent == "OC", "Oceania", bottomrate$continent)
+    bottomrate$continent <- if_else(bottomrate$continent == "AF", "Africa", bottomrate$continent)
+    bottomrate$continent <- if_else(bottomrate$continent == "AS", "Asia", bottomrate$continent)
+    bottomrate$continent <- if_else(bottomrate$continent == "NO", "North America", bottomrate$continent)
+    bottomrate$continent <- if_else(bottomrate$continent == "SA", "South America", bottomrate$continent)
     
     bottomrate <- subset(bottomrate, select = c(country, continent, rate))
     
@@ -761,15 +758,15 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
     bottomrate <- bottomrate[order(bottomrate$Rate, bottomrate$Country),]
     
     #zero
-    zerorate <- arrange(data2019_gdp_mis, rate)
+    zerorate <- arrange(data2020_gdp_mis, rate)
     zerorate <- subset(zerorate, rate==0)
     
-    zerorate$continent <- if_else(zerorate$continent == "EU","Europe",zerorate$continent)
-    zerorate$continent <- if_else(zerorate$continent == "OC","Oceania",zerorate$continent)
-    zerorate$continent <- if_else(zerorate$continent == "AF","Africa",zerorate$continent)
-    zerorate$continent <- if_else(zerorate$continent == "AS","Asia",zerorate$continent)
-    zerorate$continent <- if_else(zerorate$continent == "NO","North America",zerorate$continent)
-    zerorate$continent <- if_else(zerorate$continent == "SA","South America",zerorate$continent)
+    zerorate$continent <- if_else(zerorate$continent == "EU", "Europe", zerorate$continent)
+    zerorate$continent <- if_else(zerorate$continent == "OC", "Oceania", zerorate$continent)
+    zerorate$continent <- if_else(zerorate$continent == "AF", "Africa", zerorate$continent)
+    zerorate$continent <- if_else(zerorate$continent == "AS", "Asia", zerorate$continent)
+    zerorate$continent <- if_else(zerorate$continent == "NO", "North America", zerorate$continent)
+    zerorate$continent <- if_else(zerorate$continent == "SA", "South America", zerorate$continent)
     
     zerorate <- subset(zerorate, select = c(country, continent, rate))
     
@@ -788,7 +785,7 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
     
 #Regional distribution###
     
-#2019 by region
+#2020 by region
       #Creating regional sets (including only countries with gdp data)
       africa <- subset(data2019, continent=="AF")
       africa$rate <- as.numeric(africa$rate)
@@ -841,7 +838,7 @@ write.csv(data2019_gdp_mis, "final-data/final_data_2019_gdp_incomplete.csv")
       northa_gdp_mis <- subset(data2019_gdp_mis, continent=="NO")
       southa_gdp_mis <- subset(data2019_gdp_mis, continent=="SA")
       oceania_gdp_mis <- subset(data2019_gdp_mis, continent=="OC")
-      eu_gdp_mis <- subset(data2019_gdp_mis, eu==1)
+      eu_gdp_mis <- subset(data2019_gdp_mis, eu28==1)
       brics_gdp_mis <- subset(data2019_gdp_mis, brics==1)
       g7_gdp_mis <- subset(data2019_gdp_mis, gseven==1)
       g20_gdp_mis <- subset(data2019_gdp_mis, gtwenty==1)
