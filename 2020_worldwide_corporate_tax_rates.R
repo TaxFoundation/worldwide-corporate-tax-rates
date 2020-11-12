@@ -715,7 +715,41 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
   dist <- hist(data2020_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2020 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
   distdata <- data.frame(dist$counts,dist$breaks[1:12])
   write.csv(distdata, "final-outputs/distribution_2020.csv")
+
   
+#Table showing rate changes between 2019 and 2020
+rate_changes <- all_years_final
+rate_changes <- subset(rate_changes, select = c("iso_3", "country", "continent", 2019, 2020))
+rate_changes <- rate_changes[complete.cases(rate_changes),]
+
+rate_changes$change <- (rate_changes$'2020' - rate_changes$'2019')
+
+#Drop countries with no changes
+rate_changes <- subset(rate_changes, change!=0)
+
+#Drop countries with only minor changes
+rate_changes <- subset(rate_changes, rate_changes$change > 0.5 | rate_changes$change < -0.5)
+
+#Rename continents and column names
+rate_changes$continent <- if_else(rate_changes$continent == "EU", "Europe", rate_changes$continent)
+rate_changes$continent <- if_else(rate_changes$continent == "OC", "Oceania", rate_changes$continent)
+rate_changes$continent <- if_else(rate_changes$continent == "AF", "Africa", rate_changes$continent)
+rate_changes$continent <- if_else(rate_changes$continent == "AS", "Asia", rate_changes$continent)
+rate_changes$continent <- if_else(rate_changes$continent == "NO", "North America", rate_changes$continent)
+rate_changes$continent <- if_else(rate_changes$continent == "SA", "South America", rate_changes$continent)
+
+colnames(rate_changes)[colnames(rate_changes)=="iso_3"] <- "ISO_3"
+colnames(rate_changes)[colnames(rate_changes)=="country"] <- "Country"
+colnames(rate_changes)[colnames(rate_changes)=="continent"] <- "Continent"
+colnames(rate_changes)[colnames(rate_changes)=="2019"] <- "2019 Tax Rate"
+colnames(rate_changes)[colnames(rate_changes)=="2020"] <- "2020 Tax Rate"
+colnames(rate_changes)[colnames(rate_changes)=="change"] <- "Change from 2019 to 2020"
+
+#Order and write table
+rate_changes <- rate_changes[order(rate_changes$Continent, rate_changes$Country),]
+
+write.csv(rate_changes, "final-outputs/rate_changes.csv")
+
 #Top, Bottom, and Zero Rates
     
     #Top
@@ -787,62 +821,62 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
     
 #2020 by region
       #Creating regional sets (including only countries with gdp data)
-      africa <- subset(data2019, continent=="AF")
+      africa <- subset(data2020, continent=="AF")
       africa$rate <- as.numeric(africa$rate)
       africa$gdp <- as.numeric(africa$gdp)
       
-      asia <- subset(data2019, continent=="AS")
+      asia <- subset(data2020, continent=="AS")
       asia$rate <- as.numeric(asia$rate)
       asia$gdp <- as.numeric(asia$gdp)
       
-      europe <- subset(data2019, continent=="EU")
+      europe <- subset(data2020, continent=="EU")
       europe$rate <- as.numeric(europe$rate)
       europe$gdp <- as.numeric(europe$gdp)
       
-      northa <- subset(data2019, continent=="NO")
+      northa <- subset(data2020, continent=="NO")
       northa$rate <- as.numeric(northa$rate)
       northa$gdp <- as.numeric(northa$gdp)
       
-      southa <- subset(data2019, continent=="SA")
+      southa <- subset(data2020, continent=="SA")
       southa$rate <- as.numeric(southa$rate)
       southa$gdp <- as.numeric(southa$gdp)
       
-      oceania <- subset(data2019, continent=="OC")
+      oceania <- subset(data2020, continent=="OC")
       oceania$rate <- as.numeric(oceania$rate)
       oceania$gdp <- as.numeric(oceania$gdp)
       
-      eu <- subset(data2019, eu==1)
-      eu$rate <- as.numeric(eu$rate)
-      eu$gdp <- as.numeric(eu$gdp)
+      eu28 <- subset(data2020, eu28==1)
+      eu28$rate <- as.numeric(eu28$rate)
+      eu28$gdp <- as.numeric(eu28$gdp)
       
-      brics <- subset(data2019, brics==1)
+      brics <- subset(data2020, brics==1)
       brics$rate <- as.numeric(brics$rate)
       brics$gdp <- as.numeric(brics$gdp)
       
-      g7 <- subset(data2019, gseven==1)
+      g7 <- subset(data2020, gseven==1)
       g7$rate <- as.numeric(g7$rate)
       g7$gdp <- as.numeric(g7$gdp)
       
-      g20 <- subset(data2019, gtwenty==1)
+      g20 <- subset(data2020, gtwenty==1)
       g20$rate <- as.numeric(g20$rate)
       g20$gdp <- as.numeric(g20$gdp)
       
-      oecd <- subset(data2019, oecd==1)
+      oecd <- subset(data2020, oecd==1)
       oecd$rate <- as.numeric(oecd$rate)
       oecd$gdp <- as.numeric(oecd$gdp)
       
       #Creating regional sets (including countries with missing gdp data)
-      africa_gdp_mis <- subset(data2019_gdp_mis, continent=="AF")
-      asia_gdp_mis <- subset(data2019_gdp_mis, continent=="AS")
-      europe_gdp_mis <- subset(data2019_gdp_mis, continent=="EU")
-      northa_gdp_mis <- subset(data2019_gdp_mis, continent=="NO")
-      southa_gdp_mis <- subset(data2019_gdp_mis, continent=="SA")
-      oceania_gdp_mis <- subset(data2019_gdp_mis, continent=="OC")
-      eu_gdp_mis <- subset(data2019_gdp_mis, eu28==1)
-      brics_gdp_mis <- subset(data2019_gdp_mis, brics==1)
-      g7_gdp_mis <- subset(data2019_gdp_mis, gseven==1)
-      g20_gdp_mis <- subset(data2019_gdp_mis, gtwenty==1)
-      oecd_gdp_mis <- subset(data2019_gdp_mis, oecd==1)
+      africa_gdp_mis <- subset(data2020_gdp_mis, continent=="AF")
+      asia_gdp_mis <- subset(data2020_gdp_mis, continent=="AS")
+      europe_gdp_mis <- subset(data2020_gdp_mis, continent=="EU")
+      northa_gdp_mis <- subset(data2020_gdp_mis, continent=="NO")
+      southa_gdp_mis <- subset(data2020_gdp_mis, continent=="SA")
+      oceania_gdp_mis <- subset(data2020_gdp_mis, continent=="OC")
+      eu_gdp_mis <- subset(data2020_gdp_mis, eu28==1)
+      brics_gdp_mis <- subset(data2020_gdp_mis, brics==1)
+      g7_gdp_mis <- subset(data2020_gdp_mis, gseven==1)
+      g20_gdp_mis <- subset(data2020_gdp_mis, gtwenty==1)
+      oecd_gdp_mis <- subset(data2020_gdp_mis, oecd==1)
       
       #Simple Means
       africa_mean <- mean(africa$rate, na.rm=TRUE)
@@ -851,7 +885,7 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       northa_mean <- mean(northa$rate, na.rm=TRUE)
       southa_mean <- mean(southa$rate, na.rm=TRUE)
       oceania_mean <- mean(oceania$rate, na.rm=TRUE)
-      eu_mean <- mean(eu$rate, na.rm=TRUE)
+      eu_mean <- mean(eu28$rate, na.rm=TRUE)
       brics_mean <- mean(brics$rate, na.rm = TRUE)
       g7_mean <- mean(g7$rate, na.rm = TRUE)
       g20_mean <- mean(g20$rate, na.rm=TRUE)
@@ -864,7 +898,7 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       northa_wmean <- weighted.mean(northa$rate, northa$gdp, na.rm=TRUE)
       southa_wmean <- weighted.mean(southa$rate, southa$gdp, na.rm=TRUE)
       oceania_wmean <- weighted.mean(oceania$rate, oceania$gdp, na.rm=TRUE)
-      eu_wmean <- weighted.mean(eu$rate, eu$gdp, na.rm=TRUE)
+      eu_wmean <- weighted.mean(eu28$rate, eu28$gdp, na.rm=TRUE)
       brics_wmean <- weighted.mean(brics$rate, brics$gdp, na.rm = TRUE)
       g7_wmean <- weighted.mean(g7$rate, g7$gdp, na.rm = TRUE)
       g20_wmean <- weighted.mean(g20$rate, g20$gdp, na.rm=TRUE)
@@ -878,7 +912,7 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       northa_count <- NROW(northa$gdp)
       southa_count <- NROW(southa$gdp)
       oceania_count <- NROW(oceania$gdp)
-      eu_count <- NROW(eu$gdp)
+      eu_count <- NROW(eu28$gdp)
       brics_count <- NROW(brics$gdp)
       g7_count <- NROW(g7$gdp)
       g20_count <- NROW(g20$gdp)
@@ -886,23 +920,23 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
-                  "BRICS","EU","G20","World")
-      avgrate19 <- c(africa_mean,asia_mean,europe_mean,northa_mean,
+                  "BRICS","EU28","G20","World")
+      avgrate20 <- c(africa_mean,asia_mean,europe_mean,northa_mean,
                           oceania_mean,southa_mean, g7_mean,oecd_mean,brics_mean,
-                          eu_mean,g20_mean,simple_mean_19)
-      wavgrate19 <-c(africa_wmean,asia_wmean,europe_wmean,northa_wmean,
+                          eu_mean,g20_mean,simple_mean_20)
+      wavgrate20 <-c(africa_wmean,asia_wmean,europe_wmean,northa_wmean,
                              oceania_wmean,southa_wmean,g7_wmean,oecd_wmean,brics_wmean,
-                             eu_wmean,g20_wmean,weighted_mean_19)
-      count19 <-c(africa_count,asia_count,europe_count,northa_count,oceania_count,southa_count,
-                                g7_count,oecd_count,brics_count,eu_count,g20_count, numgdp_19)
-      regional19 <- data.frame(region,avgrate19,wavgrate19,count19)
+                             eu_wmean,g20_wmean,weighted_mean_20)
+      count20 <-c(africa_count,asia_count,europe_count,northa_count,oceania_count,southa_count,
+                                g7_count,oecd_count,brics_count,eu_count,g20_count, numgdp_20)
+      regional20 <- data.frame(region,avgrate20,wavgrate20,count20)
       
       
       
 #Historical rates by every decade
       
 #2010 by region
-      data2010 <- subset(complete_data, year==2010, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu, gseven, gtwenty, brics))
+      data2010 <- subset(complete_data, year==2010, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu28, gseven, gtwenty, brics))
       data2010$rate <- as.numeric(data2010$rate)
       data2010$gdp <- as.numeric(data2010$gdp)
       mean10 <- mean(data2010$rate, na.rm = TRUE)
@@ -934,7 +968,7 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       oceania10$rate <- as.numeric(oceania10$rate)
       oceania10$gdp <- as.numeric(oceania10$gdp)
       
-      eu10 <- subset(data2010, eu==1)
+      eu10 <- subset(data2010, eu28==1)
       eu10$rate <- as.numeric(eu10$rate)
       eu10$gdp <- as.numeric(eu10$gdp)
       
@@ -996,23 +1030,25 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       #distribution graph
       dist10 <- hist(data2010$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2010 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
       dist10data <- data.frame(dist10$counts,dist10$breaks[1:12])
+      dist10data$dist10.counts <- dist10data$dist10.counts / numgdp_10
+      
       write.csv(dist10data, "final-outputs/distribution_2010.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
-                  "BRICS","EU","G20","World")
+                  "BRICS","EU28","G20","World")
       avgrate10 <- c(africa_mean10,asia_mean10,europe_mean10,northa_mean10,
                      oceania_mean10,southa_mean10, g7_mean10,oecd_mean10,brics_mean10,
                      eu_mean10,g20_mean10,mean10)
-      wavgrate10 <-c(africa_wmean10,asia_wmean10,europe_wmean10,northa_wmean10,
+      wavgrate10 <- c(africa_wmean10,asia_wmean10,europe_wmean10,northa_wmean10,
                      oceania_wmean10,southa_wmean10,g7_wmean10,oecd_wmean10,brics_wmean10,
                      eu_wmean10,g20_wmean10,wmean10)
-      count10 <-c(africa_count10,asia_count10,europe_count10,northa_count10,oceania_count10,southa_count10,
+      count10 <- c(africa_count10,asia_count10,europe_count10,northa_count10,oceania_count10,southa_count10,
                   g7_count10,oecd_count10,brics_count10,eu_count10,g20_count10, numgdp_10)
-      regional10<-data.frame(region,avgrate10,wavgrate10,count10)
+      regional10 <- data.frame(region,avgrate10,wavgrate10,count10)
       
 #2000 by region
-      data2000 <- subset(complete_data, year==2000, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu, gseven, gtwenty, brics))
+      data2000 <- subset(complete_data, year==2000, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu28, gseven, gtwenty, brics))
       data2000$rate <- as.numeric(data2000$rate)
       mean00 <- mean(data2000$rate, na.rm = TRUE)
       wmean00 <- weighted.mean(data2000$rate, data2000$gdp, na.rm = TRUE)
@@ -1043,7 +1079,7 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       oceania00$rate <- as.numeric(oceania00$rate)
       oceania00$gdp <- as.numeric(oceania00$gdp)
       
-      eu00 <- subset(data2000, eu==1)
+      eu00 <- subset(data2000, eu28==1)
       eu00$rate <- as.numeric(eu00$rate)
       eu00$gdp <- as.numeric(eu00$gdp)
       
@@ -1106,11 +1142,13 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       #distribution graph
       dist00 <- hist(data2000$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2000 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
       dist00data <- data.frame(dist00$counts,dist00$breaks[1:12])
+      dist00data$dist00.counts <- dist00data$dist00.counts / numgdp_00
+      
       write.csv(dist00data, "final-outputs/distribution_2000.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
-                  "BRICS","EU","G20","World")
+                  "BRICS","EU28","G20","World")
       avgrate00 <- c(africa_mean00,asia_mean00,europe_mean00,northa_mean00,
                      oceania_mean00,southa_mean00, g7_mean00,oecd_mean00,brics_mean00,
                      eu_mean00,g20_mean00,mean00)
@@ -1122,7 +1160,7 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       regional00<-data.frame(region,avgrate00,wavgrate00,count00)
       
 #1990 by region
-      data1990 <- subset(complete_data, year==1990, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu, gseven, gtwenty, brics))
+      data1990 <- subset(complete_data, year==1990, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu28, gseven, gtwenty, brics))
       data1990$rate <- as.numeric(data1990$rate)
       mean90 <- mean(data1990$rate, na.rm = TRUE)
       wmean90 <- weighted.mean(data1990$rate, data1990$gdp, na.rm = TRUE)
@@ -1153,7 +1191,7 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       oceania90$rate <- as.numeric(oceania90$rate)
       oceania90$gdp <- as.numeric(oceania90$gdp)
       
-      eu90 <- subset(data1990, eu==1)
+      eu90 <- subset(data1990, eu28==1)
       eu90$rate <- as.numeric(eu90$rate)
       eu90$gdp <- as.numeric(eu90$gdp)
       
@@ -1215,25 +1253,27 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       #distribution graph
       dist90 <- hist(data1990$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80), main="1990 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
       dist90data <- data.frame(dist90$counts,dist90$breaks[1:16])
+      dist90data$dist90.counts <- dist90data$dist90.counts / numgdp_90
+      
       write.csv(dist90data, "final-outputs/distribution_1990.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
-                  "BRICS","EU","G20","World")
+                  "BRICS","EU28","G20","World")
       avgrate90 <- c(africa_mean90,asia_mean90,europe_mean90,northa_mean90,
                      oceania_mean90,southa_mean90, g7_mean90,oecd_mean90,brics_mean90,
                      eu_mean90,g20_mean90,mean90)
-      wavgrate90 <-c(africa_wmean90,asia_wmean90,europe_wmean90,northa_wmean90,
+      wavgrate90 <- c(africa_wmean90,asia_wmean90,europe_wmean90,northa_wmean90,
                      oceania_wmean90,southa_wmean90,g7_wmean90,oecd_wmean90,brics_wmean90,
                      eu_wmean90,g20_wmean90,wmean90)
-      count90 <-c(africa_count90,asia_count90,europe_count90,northa_count90,oceania_count90,southa_count90,
+      count90 <- c(africa_count90,asia_count90,europe_count90,northa_count90,oceania_count90,southa_count90,
                   g7_count90,oecd_count90,brics_count90,eu_count90,g20_count90, numgdp_90)
-      regional90<-data.frame(region,avgrate90,wavgrate90,count90)
+      regional90 <- data.frame(region,avgrate90,wavgrate90,count90)
       
       
       
 #1980 by region
-      data1980 <- subset(complete_data, year==1980, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu, gseven, gtwenty, brics))
+      data1980 <- subset(complete_data, year==1980, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu28, gseven, gtwenty, brics))
       data1980$rate <- as.numeric(data1980$rate)
       mean80 <- mean(data1980$rate, na.rm = TRUE)
       wmean80 <- weighted.mean(data1980$rate, data1980$gdp, na.rm = TRUE)
@@ -1264,7 +1304,7 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       oceania80$rate <- as.numeric(oceania80$rate)
       oceania80$gdp <- as.numeric(oceania80$gdp)
       
-      eu80 <- subset(data1980, eu==1)
+      eu80 <- subset(data1980, eu28==1)
       eu80$rate <- as.numeric(eu80$rate)
       eu80$gdp <- as.numeric(eu80$gdp)
       
@@ -1327,24 +1367,26 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       #distribution graph
       dist80 <- hist(data1980$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65), main="1980 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
       dist80data <- data.frame(dist80$counts,dist80$breaks[1:13])
+      dist80data$dist80.counts <- dist80data$dist80.counts / numgdp_80
+      
       write.csv(dist80data, "final-outputs/distribution_1980.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
-                  "BRICS","EU","G20","World")
+                  "BRICS","EU28","G20","World")
       avgrate80 <- c(africa_mean80,asia_mean80,europe_mean80,northa_mean80,
                      oceania_mean80,southa_mean80, g7_mean80,oecd_mean80,brics_mean80,
                      eu_mean80,g20_mean80,mean80)
-      wavgrate80 <-c(africa_wmean80,asia_wmean80,europe_wmean80,northa_wmean80,
+      wavgrate80 <- c(africa_wmean80,asia_wmean80,europe_wmean80,northa_wmean80,
                      oceania_wmean80,southa_wmean80,g7_wmean80,oecd_wmean80,brics_wmean80,
                      eu_wmean80,g20_wmean80,wmean80)
-      count80 <-c(africa_count80,asia_count80,europe_count80,northa_count80,oceania_count80,southa_count80,
+      count80 <- c(africa_count80,asia_count80,europe_count80,northa_count80,oceania_count80,southa_count80,
                   g7_count80,oecd_count80,brics_count80,eu_count80,g20_count80, numgdp_80)
       regional80 <- data.frame(region,avgrate80,wavgrate80,count80)
   
       
 #Regional decade data
-      allregional <- data.frame(merge(regional19, regional10, by = c("region"), all = TRUE))
+      allregional <- data.frame(merge(regional20, regional10, by = c("region"), all = TRUE))
       allregional <- data.frame(merge(allregional, regional00, by = c("region"), all= TRUE))
       allregional <- data.frame(merge(allregional, regional90, by = c("region"), all = TRUE))
       allregional <- data.frame(merge(allregional, regional80, by = c("region"), all = TRUE))
@@ -1352,20 +1394,20 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
 
 
 #Data for world map showing increases/decreases
-      rate_changes <- all_years_final
-      rate_changes <- subset(rate_changes, select = c(iso_3, continent, country, `2000`, `2019`))
-      rate_changes <- rate_changes[complete.cases(rate_changes),]
-      rate_changes$rate_change <- (rate_changes$`2019` - rate_changes$`2000`)
-      rate_changes$change <- if_else(rate_changes$`2019` == rate_changes$`2000`,"No Change",if_else(rate_changes$`2019` > rate_changes$`2000`, "Increase", "Decrease"))
-      write.csv(rate_changes, "final-outputs/rate_changes.csv")
+#      rate_changes <- all_years_final
+#      rate_changes <- subset(rate_changes, select = c(iso_3, continent, country, `2000`, `2019`))
+#      rate_changes <- rate_changes[complete.cases(rate_changes),]
+#      rate_changes$rate_change <- (rate_changes$`2019` - rate_changes$`2000`)
+#      rate_changes$change <- if_else(rate_changes$`2019` == rate_changes$`2000`,"No Change",if_else(rate_changes$`2019` > rate_changes$`2000`, "Increase", "Decrease"))
+#      write.csv(rate_changes, "final-outputs/rate_changes.csv")
       
 
 #Rates by region table
-      colnames(regional19)[colnames(regional19)=="region"] <- "Region"
-      colnames(regional19)[colnames(regional19)=="avgrate19"] <- "Average Rate"
-      colnames(regional19)[colnames(regional19)=="wavgrate19"] <- "Weighted Average Rate"
-      colnames(regional19)[colnames(regional19)=="count19"] <- "Number of Countries"
-      write.csv(regional19, "final-outputs/rates_regional.csv")
+      colnames(regional20)[colnames(regional20)=="region"] <- "Region"
+      colnames(regional20)[colnames(regional20)=="avgrate20"] <- "Average Rate"
+      colnames(regional20)[colnames(regional20)=="wavgrate20"] <- "Weighted Average Rate"
+      colnames(regional20)[colnames(regional20)=="count20"] <- "Number of Countries"
+      write.csv(regional20, "final-outputs/rates_regional.csv")
       
 #Time series graph
       complete_data$rate <- as.numeric(complete_data$rate)
@@ -1375,3 +1417,15 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
       colnames(timeseries)[colnames(timeseries)=="n"] <- "country_count"
     
       write.csv(timeseries, "final-outputs/rate_time_series.csv", row.names = FALSE)
+      
+#Appendix: table with all 2020 tax rates
+      all_rates_2020 <- data2020_gdp_mis
+      
+      all_rates_2020 <- subset(all_rates_2020, year==2020, select = c(country, continent, rate))
+      all_rates_2020 <- all_rates_2020[order(all_rates_2020$country),]
+      
+      colnames(all_rates_2020)[colnames(all_rates_2020)=="country"] <- "Country"
+      colnames(all_rates_2020)[colnames(all_rates_2020)=="continent"] <- "Continent"
+      colnames(all_rates_2020)[colnames(all_rates_2020)=="rate"] <- "Corporate Tax Rate"
+      
+      write.csv(all_rates_2020, "final-outputs/all_rates_2020.csv", row.names = FALSE)
