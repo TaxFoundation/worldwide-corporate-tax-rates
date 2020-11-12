@@ -711,10 +711,6 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
   numrates_20_gdp_mis <- NROW(data2020_gdp_mis$rate)
   numgdp_20_gdp_mis <- NROW(data2020_gdp_mis$gdp)
   
-  #2020 distribution (including countries with missing gdp data)
-  dist <- hist(data2020_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2020 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
-  distdata <- data.frame(dist$counts,dist$breaks[1:12])
-  write.csv(distdata, "final-outputs/distribution_2020.csv")
 
   
 #Table showing rate changes between 2019 and 2020
@@ -1027,12 +1023,6 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       g20_count10 <- NROW(g2010$gdp)
       oecd_count10 <- NROW(oecd10$gdp)
       
-      #distribution graph
-      dist10 <- hist(data2010$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2010 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
-      dist10data <- data.frame(dist10$counts,dist10$breaks[1:12])
-      dist10data$dist10.counts <- dist10data$dist10.counts / numgdp_10
-      
-      write.csv(dist10data, "final-outputs/distribution_2010.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
@@ -1139,13 +1129,6 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       g20_count00 <- NROW(g2000$gdp)
       oecd_count00 <- NROW(oecd00$gdp)
       
-      #distribution graph
-      dist00 <- hist(data2000$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2000 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
-      dist00data <- data.frame(dist00$counts,dist00$breaks[1:12])
-      dist00data$dist00.counts <- dist00data$dist00.counts / numgdp_00
-      
-      write.csv(dist00data, "final-outputs/distribution_2000.csv")
-      
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
                   "BRICS","EU28","G20","World")
@@ -1249,13 +1232,6 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       g7_count90 <- NROW(g790$gdp)
       g20_count90 <- NROW(g2090$gdp)
       oecd_count90 <- NROW(oecd90$gdp)
-      
-      #distribution graph
-      dist90 <- hist(data1990$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80), main="1990 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
-      dist90data <- data.frame(dist90$counts,dist90$breaks[1:16])
-      dist90data$dist90.counts <- dist90data$dist90.counts / numgdp_90
-      
-      write.csv(dist90data, "final-outputs/distribution_1990.csv")
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
@@ -1364,13 +1340,6 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       g20_count80 <- NROW(g2080$gdp)
       oecd_count80 <- NROW(oecd80$gdp)
       
-      #distribution graph
-      dist80 <- hist(data1980$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65), main="1980 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
-      dist80data <- data.frame(dist80$counts,dist80$breaks[1:13])
-      dist80data$dist80.counts <- dist80data$dist80.counts / numgdp_80
-      
-      write.csv(dist80data, "final-outputs/distribution_1980.csv")
-      
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
                   "BRICS","EU28","G20","World")
@@ -1409,6 +1378,13 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       colnames(regional20)[colnames(regional20)=="count20"] <- "Number of Countries"
       write.csv(regional20, "final-outputs/rates_regional.csv")
       
+
+#Chart showing distribution of rates in 2020 (including countries with missing gdp data)
+      dist <- hist(data2020_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2020 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+      distdata <- data.frame(dist$counts,dist$breaks[1:12])
+      write.csv(distdata, "final-outputs/distribution_2020_count.csv")
+      
+  
 #Time series graph
       complete_data$rate <- as.numeric(complete_data$rate)
       complete_data$gdp <- as.numeric(complete_data$gdp)
@@ -1417,6 +1393,88 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       colnames(timeseries)[colnames(timeseries)=="n"] <- "country_count"
     
       write.csv(timeseries, "final-outputs/rate_time_series.csv", row.names = FALSE)
+      
+      
+#Chart showing how distribution has changed each decade (including countries with missing gdp data)
+      
+      #2020 distribution (in percent rather than country counts)
+      dist_percent <- hist(data2020_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="2020 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+      distdata_percent <- data.frame(dist_percent$counts, dist_percent$breaks[1:15])
+      colnames(distdata_percent)[colnames(distdata_percent)=="dist_percent.breaks.1.15."] <- "break"
+      
+      distdata_percent$dist_percent.counts <- distdata_percent$dist_percent.counts / numrates_20_gdp_mis
+
+      #2010 distribution
+      data2010_gdp_mis <- subset(final_data, year==2010, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu28, gseven, gtwenty, brics))
+      data2010_gdp_mis <- subset(data2010_gdp_mis, !is.na(data2010_gdp_mis$rate))
+      data2010_gdp_mis$rate <- as.numeric(data2010_gdp_mis$rate)
+      
+      dist10 <- hist(data2010_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="2010 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+      dist10data <- data.frame(dist10$counts,dist10$breaks[1:15])
+      numrates_10_gdp_mis <- NROW(data2010_gdp_mis$rate)
+      colnames(dist10data)[colnames(dist10data)=="dist10.breaks.1.15."] <- "break"
+      
+      dist10data$dist10.counts <- dist10data$dist10.counts / numrates_10_gdp_mis
+      
+      #2000 distribution
+      data2000_gdp_mis <- subset(final_data, year==2000, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu28, gseven, gtwenty, brics))
+      data2000_gdp_mis <- subset(data2000_gdp_mis, !is.na(data2000_gdp_mis$rate))
+      data2000_gdp_mis$rate <- as.numeric(data2000_gdp_mis$rate)
+      
+      dist00 <- hist(data2000_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="2000 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+      dist00data <- data.frame(dist00$counts,dist00$breaks[1:15])
+      numrates_00_gdp_mis <- NROW(data2000_gdp_mis$rate)
+      colnames(dist00data)[colnames(dist00data)=="dist00.breaks.1.15."] <- "break"
+      
+      dist00data$dist00.counts <- dist00data$dist00.counts / numrates_00_gdp_mis
+      
+      #1990 distribution
+      data1990_gdp_mis <- subset(final_data, year==1990, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu28, gseven, gtwenty, brics))
+      data1990_gdp_mis <- subset(data1990_gdp_mis, !is.na(data1990_gdp_mis$rate))
+      data1990_gdp_mis$rate <- as.numeric(data1990_gdp_mis$rate)
+      
+      dist90 <- hist(data1990_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="1990 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+      dist90data <- data.frame(dist90$counts,dist90$breaks[1:15])
+      colnames(dist90data)[colnames(dist90data)=="dist90.breaks.1.15."] <- "break"
+      
+      numrates_90_gdp_mis <- NROW(data1990_gdp_mis$rate)
+      
+      dist90data$dist90.counts <- dist90data$dist90.counts / numrates_90_gdp_mis
+      
+      #1980 distribution
+      data1980_gdp_mis <- subset(final_data, year==1980, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu28, gseven, gtwenty, brics))
+      data1980_gdp_mis <- subset(data1980_gdp_mis, !is.na(data1980_gdp_mis$rate))
+      data1980_gdp_mis$rate <- as.numeric(data1980_gdp_mis$rate)
+      
+      dist80 <- hist(data1980_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="1980 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+      dist80data <- data.frame(dist80$counts,dist80$breaks[1:15])
+      colnames(dist80data)[colnames(dist80data)=="dist80.breaks.1.15."] <- "break"
+      
+      numrates_80_gdp_mis <- NROW(data1980_gdp_mis$rate)
+      
+      dist80data$dist80.counts <- dist80data$dist80.counts / numrates_80_gdp_mis
+      
+      #Compile in one dataset
+      alldist <- data.frame(merge(distdata_percent, dist10data, by = c("break"), all = TRUE))
+      colnames(alldist )[colnames(alldist)=="break."] <- "break"
+      
+      alldist <- data.frame(merge(alldist, dist00data, by = c("break"), all= TRUE))
+      colnames(alldist )[colnames(alldist)=="break."] <- "break"
+      
+      alldist <- data.frame(merge(alldist, dist90data, by = c("break"), all= TRUE))
+      colnames(alldist )[colnames(alldist)=="break."] <- "break"
+      
+      alldist <- data.frame(merge(alldist, dist80data, by = c("break"), all= TRUE))
+      
+      colnames(alldist )[colnames(alldist)=="break."] <- "Rate Category"
+      colnames(alldist )[colnames(alldist)=="dist_percent.counts"] <- "2020"
+      colnames(alldist )[colnames(alldist)=="dist10.counts"] <- "2010"
+      colnames(alldist )[colnames(alldist)=="dist00.counts"] <- "2000"
+      colnames(alldist )[colnames(alldist)=="dist90.counts"] <- "1990"
+      colnames(alldist )[colnames(alldist)=="dist80.counts"] <- "1980"
+     
+      write.csv(alldist, "final-outputs/distribution_all_decades.csv")
+      
       
 #Appendix: table with all 2020 tax rates
       all_rates_2020 <- data2020_gdp_mis
