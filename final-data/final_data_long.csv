@@ -1,4 +1,4 @@
-"iso_2","iso_3","continent","country","year","rate","gdp","oecd","eu28","gseven","gtwenty","brics"
+"iso_2","iso_3","continent","country","year","rate","gdp","oecd","eu27","gseven","gtwenty","brics"
 "AW","ABW","NO","Aruba","1980",NA,NA,0,0,0,0,0
 "AW","ABW","NO","Aruba","1981",NA,NA,0,0,0,0,0
 "AW","ABW","NO","Aruba","1982",NA,NA,0,0,0,0,0
@@ -3279,47 +3279,47 @@
 "GA","GAB","AF","Gabon","2018","30",19.2396717071533,0,0,0,0,0
 "GA","GAB","AF","Gabon","2019","30",19.8553409576416,0,0,0,0,0
 "GA","GAB","AF","Gabon","2020","30",20.6892642974854,0,0,0,0,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1980","52",1231.31787109375,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1981","52",1221.82446289062,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1982","52",1246.39001464844,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1983","50",1299.01147460938,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1984","45",1328.580078125,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1985","40",1384.318359375,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1986","35",1427.568359375,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1987","35",1503.32312011719,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1988","35",1589.728515625,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1989","35",1630.57495117188,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1990","34",1642.50744628906,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1991","33",1624.66101074219,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1992","33",1630.73681640625,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1993","33",1671.9443359375,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1994","33",1736.81652832031,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1995","33",1779.71130371094,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1996","33",1824.89196777344,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1997","31",1898.58557128906,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1998","31",1958.15966796875,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1999","30",2021.14819335938,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2000","30",2095.20581054688,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2001","30",2148.51049804688,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2002","30",2201.318359375,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2003","30",2274.53198242188,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2004","30",2328.31225585938,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2005","30",2400.39868164062,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2006","30",2459.3525390625,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2007","30",2517.31225585938,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2008","28",2505.4169921875,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2009","28",2400.49633789062,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2010","28",2452.89990234375,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2011","26",2493.24438476562,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2012","24",2529.3232421875,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2013","23",2581.08227539062,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2014","21",2657.1611328125,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2015","20",2719.58129882812,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2016","20",2768.24096679688,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2017","19",2818.7041015625,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2018","19",2858.09838867188,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2019","19",2895.1728515625,1,1,1,1,0
-"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2020","19",2935.59790039062,1,1,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1980","52",1231.31787109375,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1981","52",1221.82446289062,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1982","52",1246.39001464844,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1983","50",1299.01147460938,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1984","45",1328.580078125,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1985","40",1384.318359375,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1986","35",1427.568359375,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1987","35",1503.32312011719,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1988","35",1589.728515625,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1989","35",1630.57495117188,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1990","34",1642.50744628906,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1991","33",1624.66101074219,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1992","33",1630.73681640625,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1993","33",1671.9443359375,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1994","33",1736.81652832031,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1995","33",1779.71130371094,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1996","33",1824.89196777344,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1997","31",1898.58557128906,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1998","31",1958.15966796875,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","1999","30",2021.14819335938,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2000","30",2095.20581054688,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2001","30",2148.51049804688,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2002","30",2201.318359375,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2003","30",2274.53198242188,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2004","30",2328.31225585938,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2005","30",2400.39868164062,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2006","30",2459.3525390625,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2007","30",2517.31225585938,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2008","28",2505.4169921875,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2009","28",2400.49633789062,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2010","28",2452.89990234375,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2011","26",2493.24438476562,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2012","24",2529.3232421875,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2013","23",2581.08227539062,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2014","21",2657.1611328125,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2015","20",2719.58129882812,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2016","20",2768.24096679688,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2017","19",2818.7041015625,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2018","19",2858.09838867188,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2019","19",2895.1728515625,1,0,1,1,0
+"GB","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2020","19",2935.59790039062,1,0,1,1,0
 "GE","GEO","AS","Georgia","1980",NA,17.5476264953613,0,0,0,0,0
 "GE","GEO","AS","Georgia","1981",NA,18.4719352722168,0,0,0,0,0
 "GE","GEO","AS","Georgia","1982",NA,18.8416576385498,0,0,0,0,0

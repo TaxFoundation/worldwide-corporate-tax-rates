@@ -1,4 +1,4 @@
-"","iso_3","continent","country","year","rate","gdp","oecd","eu28","gseven","gtwenty","brics"
+"","iso_3","continent","country","year","rate","gdp","oecd","eu27","gseven","gtwenty","brics"
 "615","ABW","NO","Aruba","2020","25",NA,0,0,0,0,0
 "123","AFG","AS","Afghanistan","2020","20",22.0304336547852,0,0,0,0,0
 "369","AGO","AF","Angola","2020","30",101.160400390625,0,0,0,0,0
@@ -70,7 +70,7 @@
 "3075","FRO","EU","Faroe Islands","2020","18",NA,0,0,0,0,0
 "3034","FSM","OC","Micronesia (Federated States of)","2020","30",NA,0,0,0,0,0
 "3157","GAB","AF","Gabon","2020","30",20.6892642974854,0,0,0,0,0
-"3198","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2020","19",2935.59790039062,1,1,1,1,0
+"3198","GBR","EU","United Kingdom of Great Britain and Northern Ireland","2020","19",2935.59790039062,1,0,1,1,0
 "3280","GEO","AS","Georgia","2020","15",17.9820785522461,0,0,0,0,0
 "3362","GGY","EU","Guernsey","2020","0",NA,0,0,0,0,0
 "3403","GHA","AF","Ghana","2020","25",60.4730758666992,0,0,0,0,0
