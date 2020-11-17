@@ -680,7 +680,8 @@ write.csv(final_data,"final-data/final_data_long.csv", row.names = FALSE)
 #Summary statistics####
 
 #Drop if no gdp or rate data
-complete_data <- final_data[complete.cases(final_data),]
+complete_data <- final_data[complete.cases(final_data$rate, final_data$gdp),]
+complete_data$rate <- as.numeric(complete_data$rate)
 
 #Creating the 2020 dataset that includes only countries for which we have gdp data
 data2020 <- subset(complete_data, year==2020, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
@@ -712,7 +713,7 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
   
 
   
-#Table showing rate changes between 2019 and 2020
+###Table showing rate changes between 2019 and 2020
 rate_changes <- all_years_final
 rate_changes <- subset(rate_changes, select = c("iso_3", "country", "continent", 2019, 2020))
 rate_changes <- rate_changes[complete.cases(rate_changes),]
@@ -1477,6 +1478,7 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       
 #Appendix: 
       #Chart showing number of corporate rates we have for each year
+      all_years_final$`1992` <- as.numeric(all_years_final$`1992`)
       all_years_final_count <- all_years_final
       all_years_final_count[all_years_final_count >= 0] <- 1
       all_years_final_count[is.na(all_years_final_count)] <- 0
