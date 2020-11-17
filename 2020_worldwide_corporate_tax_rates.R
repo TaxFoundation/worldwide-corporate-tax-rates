@@ -656,7 +656,7 @@ write.csv(gdp_iso,"intermediate-outputs/gdp_iso.csv")
 
 
 
-#Reshaping the data from wide to long###
+#Data reshape####
 
 rates_final_long <- (melt(all_years_final, id=c("iso_2","iso_3","continent","country")))
 colnames(rates_final_long)[colnames(rates_final_long)=="variable"] <- "year"
@@ -666,7 +666,7 @@ gdp_iso_long <- (melt(gdp_iso, id=c("iso_2","iso_3","continent","country")))
 colnames(gdp_iso_long)[colnames(gdp_iso_long)=="variable"] <- "year"
 colnames(gdp_iso_long)[colnames(gdp_iso_long)=="value"] <- "gdp"
 
-#Merge rates and gdp###
+#Merge rates and gdp
 rates_gdp <- merge(rates_final_long, gdp_iso_long, by =c("iso_2","iso_3", "continent","country", "year"), all=T)
 
 #Merge 'rate and gdp' dataset with country groups
@@ -711,9 +711,8 @@ write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
   numrates_20_gdp_mis <- NROW(data2020_gdp_mis$rate)
   numgdp_20_gdp_mis <- NROW(data2020_gdp_mis$gdp)
   
-
   
-###Table showing rate changes between 2019 and 2020
+#Table showing rate changes between 2019 and 2020
 rate_changes <- all_years_final
 rate_changes <- subset(rate_changes, select = c("iso_3", "country", "continent", 2019, 2020))
 rate_changes <- rate_changes[complete.cases(rate_changes),]
@@ -745,6 +744,7 @@ colnames(rate_changes)[colnames(rate_changes)=="change"] <- "Change from 2019 to
 rate_changes <- rate_changes[order(rate_changes$Continent, rate_changes$Country),]
 
 write.csv(rate_changes, "final-outputs/rate_changes.csv")
+
 
 #Top, Bottom, and Zero Rates
     
@@ -810,7 +810,6 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
     write.csv(toprate, "final-outputs/top_rates.csv")
     write.csv(bottomrate, "final-outputs/bottom_rates.csv")
     write.csv(zerorate, "final-outputs/zero_rates.csv")
-      
     
     
 #Regional distribution###
@@ -928,7 +927,6 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       regional20 <- data.frame(region,avgrate20,wavgrate20,count20)
       
       
-      
 #Historical rates by every decade
       
 #2010 by region
@@ -1022,7 +1020,6 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       g7_count10 <- NROW(g710$gdp)
       g20_count10 <- NROW(g2010$gdp)
       oecd_count10 <- NROW(oecd10$gdp)
-      
       
       #compile
       region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
@@ -1247,7 +1244,6 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       regional90 <- data.frame(region,avgrate90,wavgrate90,count90)
       
       
-      
 #1980 by region
       data1980 <- subset(complete_data, year==1980, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
       data1980$rate <- as.numeric(data1980$rate)
@@ -1371,7 +1367,7 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
 #      write.csv(rate_changes, "final-outputs/rate_changes.csv")
       
 
-#Rates by region table
+#Format and write table showing rates by region
       colnames(regional20)[colnames(regional20)=="region"] <- "Region"
       colnames(regional20)[colnames(regional20)=="avgrate20"] <- "Average Rate"
       colnames(regional20)[colnames(regional20)=="wavgrate20"] <- "Weighted Average Rate"
@@ -1385,7 +1381,7 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       write.csv(distdata, "final-outputs/distribution_2020_count.csv")
       
   
-#Time series graph
+#Time series graph (only includes countries for which we have GDP data)
       complete_data$rate <- as.numeric(complete_data$rate)
       complete_data$gdp <- as.numeric(complete_data$gdp)
       
@@ -1477,7 +1473,7 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       
       
 #Appendix: 
-      #Chart showing number of corporate rates we have for each year
+      #Data for chart showing number of corporate rates we have for each year
       all_years_final$`1992` <- as.numeric(all_years_final$`1992`)
       all_years_final_count <- all_years_final
       all_years_final_count[all_years_final_count >= 0] <- 1
