@@ -5,15 +5,15 @@
 ## General Sources
 ### *Apply to all countries unless otherwise noted.*
 
-### For corporate income tax rates in 2019:
+### For corporate income tax rates in 2020:
 
 * KPMG, "Corporate tax rates table," https://home.kpmg/xx/en/home/services/tax/tax-tools-and-resources/tax-rates-online/corporate-tax-rates-table.html.
 
-* OECD, "OECD Tax Database, Table II.1 Statutory corporate income tax rate," updated April 2019, https://stats.oecd.org/index.aspx?DataSetCode=Table_II1.
+* OECD, "OECD Tax Database, Table II.1 Statutory corporate income tax rate," updated April 2020, https://stats.oecd.org/index.aspx?DataSetCode=Table_II1.
 
-### For corporate income tax rates from 1980 to 2018:
+### For corporate income tax rates from 1980 to 2019:
 
-* Tax Foundation, "data_rates_1980-2018," GitHub, https://github.com/TaxFoundation/worldwide-corporate-tax-rates. Tax Foundation has built this dataset in stages since 2015. These historic rates come from multiple sources: PwC, “Worldwide Tax Summaries – Corporate Taxes,” 2010-2018; KPMG, “Corporate Tax Rate Survey,” 1998- 2003; KPMG, “Corporate tax rates table,” 2003-2018; EY, “Worldwide Corporate Tax Guide,” 2004-2018; OECD, “Historical Table II.1 – Statutory corporate income tax rate,” 1999, http://www.oecd.org/tax/tax-policy/tax-database.htm#C_CorporateCaptial; the University of Michigan - Ross School of Business, “World Tax Database,” https://www.bus.umich.edu/otpr/otpr/default.asp; and numerous government websites.
+* Tax Foundation, "data_rates_1980-2019," GitHub, https://github.com/TaxFoundation/worldwide-corporate-tax-rates. Tax Foundation has built this dataset in stages since 2015. These historic rates come from multiple sources: PwC, “Worldwide Tax Summaries – Corporate Taxes,” 2010-2019; KPMG, “Corporate Tax Rate Survey,” 1998- 2003; KPMG, “Corporate tax rates table,” 2003-2019; EY, “Worldwide Corporate Tax Guide,” 2004-2019; OECD, “Historical Table II.1 – Statutory corporate income tax rate,” 1999, http://www.oecd.org/tax/tax-policy/tax-database.htm#C_CorporateCaptial; the University of Michigan - Ross School of Business, “World Tax Database,” https://www.bus.umich.edu/otpr/otpr/default.asp; and numerous government websites.
 
 
 ## Sources/details on countries that are not part of the KPMG or OECD datasets or countries that changed their corporate tax rate in 2020 (rates apply to the year 2020 unless otherwise noted)
@@ -22,9 +22,7 @@
 
 * **ANT - Netherlands Antilles:** In 2010, the Netherlands Antilles were split: Curaçao and St Maarten each became separate countries within the Kingdom of the Netherlands and the Islands of Bonaire, Saba and St Eustatia became special municipalities of the Netherlands. As a result, there is no corporate tax rate starting in 2010.
 
-* **ARE	- United Arab Emirates:** The United Arab Emirates is a federation of seven Emirates: Abu Dhabi, Dubai, Sharjah, Ajman, Umm Al-Qaiwain, Ras Al-Khaimah, and Fujairah. Currently, the United Arab Emirates does not have a federal corporate income tax regime; however, most of the Emirates introduced income tax decrees in the late 1960s, and taxation is therefore determined on an Emirate-by-Emirate basis. However, in practice, CIT is currently only enforced in respect of corporate entities engaged in the production of oil and gas or extraction of other natural resources in the United Arab Emirates, see PwC, "Worldwide Tax Summaries - Corporate - Taxes on corporate income - United Arab Emirates," https://taxsummaries.pwc.com/united-arab-emirates/corporate/taxes-on-corporate-income. As this dataset captures general corporate tax regimes, the United Arab Emirates' corporate tax rate is set to 0 for all years.
-
-Under the Emirate-based tax decrees, CIT may be imposed on all companies (including branches and permanent establishments [PEs]) at rates of up to 55%.
+* **ARE	- United Arab Emirates:** The United Arab Emirates is a federation of seven Emirates: Abu Dhabi, Dubai, Sharjah, Ajman, Umm Al-Qaiwain, Ras Al-Khaimah, and Fujairah. Currently, the United Arab Emirates does not have a federal corporate income tax regime; however, most of the Emirates introduced income tax decrees in the late 1960s, and taxation is therefore determined on an Emirate-by-Emirate basis. Under the Emirate-based tax decrees, CIT may be imposed on all companies (including branches and permanent establishments) at rates of up to 55%. However, in practice, CIT is currently only enforced in respect of corporate entities engaged in the production of oil and gas or extraction of other natural resources in the United Arab Emirates, see PwC, "Worldwide Tax Summaries - Corporate - Taxes on corporate income - United Arab Emirates," https://taxsummaries.pwc.com/united-arab-emirates/corporate/taxes-on-corporate-income. As this dataset captures general corporate tax regimes, the United Arab Emirates' corporate tax rate is set to 0 for all years.
 
 * **ARM - Armenia:** Corporate rate reduced from 20% in 2019 to 18% in 2020, see Deloitte, "International Tax - Armenia Highlights 2020," January 2020, https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Tax/dttl-tax-armeniahighlights-2020.pdf.
 
@@ -34,7 +32,7 @@ Under the Emirate-based tax decrees, CIT may be imposed on all companies (includ
 
 * **ATF - French Southern Territories:** No one lives permanently in these territories of France, hence no tax system.
 
-* **BEL - Belgium:** Corporate income tax rate lowered from 29.58 percent in 2019 to 25 percent in 2020, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=171?download
+* **BEL - Belgium:** Corporate income tax rate lowered from 29.58 percent in 2019 to 25 percent in 2020, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=171?download.
 
 * **BES	- Bonaire, Sint Eustatius and Saba:** 0 percent corporate income tax for the years 2012-2016 and 25 percent since 2017, see KPMG, "Corporate tax rates table," https://home.kpmg/xx/en/home/services/tax/tax-tools-and-resources/tax-rates-online/corporate-tax-rates-table.html.
 
@@ -64,7 +62,7 @@ Under the Emirate-based tax decrees, CIT may be imposed on all companies (includ
 
 * **ERI - Eritrea:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Eritrea," https://www.bloomberglaw.com/product/tax/document/26317091880.
 
-* **ESH - Western Sahara:**  Is a disputed territory partially controlled by the self-proclaimed Sahrawi Arab Democratic Republic and partially occupied by neighboring Morocco, with businesses apparently not paying taxes, see Wikipedia, "Western Sahara," https://en.wikipedia.org/wiki/Western_Sahara#cite_note-leak1-86. But since no official information can be found on this, the corporate income tax rate continues to be 'N/A.'
+* **ESH - Western Sahara:**  Is a disputed territory partially controlled by the self-proclaimed Sahrawi Arab Democratic Republic and partially occupied by neighboring Morocco, with businesses apparently not paying taxes, see Wikipedia, "Western Sahara," https://en.wikipedia.org/wiki/Western_Sahara#cite_note-leak1-86. Since no official information can be found on this, the corporate income tax rate continues to be 'N/A.'
 
 * **FLK - Falkland Islands (Malvinas):** Corporate income tax rate of 26 percent, see Treasury, Tax & Pensions, "Tax Quick Links: 2020 New Rates," Falkland Islands Government, https://www.fig.gov.fk/treasury/images/PDFs/New_Rates_2020_for_public.pdf.
 
@@ -72,7 +70,7 @@ Under the Emirate-based tax decrees, CIT may be imposed on all companies (includ
 
 * **FRO - Faroe Islands:** Corporate income tax rate of 18 percent, see Faroeislands.fo, "Invest in the Faroe Islands," https://www.faroeislands.fo/economy-business/invest/.
 
-* **FSM - Micronesia (Federated States of):** A progressive corporate income tax with top rate of 30% was introduced as of 2020 (there was a flat 21% rate between 2011 and 2019), see Bloomberg Tax, "Country Guides - Micronesia," https://www.bloomberglaw.com/product/tax/document/25902500392. In addition, there is a gross receipts tax, see Division of Customs and Tax Administration, "Federated States of Micronesia Tax Information," Department of Finance and Administration, http://www.dofa.gov.fm/wp-content/uploads/2019/06/CTA-BOOKLET.pdf.
+* **FSM - Micronesia (Federated States of):** A progressive corporate income tax with a top rate of 30% was introduced as of 2020 (there was a flat 21% rate between 2011 and 2019), see Bloomberg Tax, "Country Guides - Micronesia," https://www.bloomberglaw.com/product/tax/document/25902500392. In addition, there is a gross receipts tax, see Division of Customs and Tax Administration, "Federated States of Micronesia Tax Information," Department of Finance and Administration, http://www.dofa.gov.fm/wp-content/uploads/2019/06/CTA-BOOKLET.pdf.
 
 * **GIN - Guinea:** Corporate income tax rate of 35 percent, see Bloomberg Tax, "Country Guides - Guinea," https://www.bloomberglaw.com/product/tax/document/26537016872.
 
@@ -94,7 +92,7 @@ Under the Emirate-based tax decrees, CIT may be imposed on all companies (includ
 
 * **HTI - Haiti:** Corporate income tax rate of 30 percent, see Bloomberg Tax, "Country Guides - Haiti," https://www.bloomberglaw.com/product/tax/document/25590597672.
 
-* **IMN - Isle of Man:** Correction: Corporate income tax rate of 15 percent between 2003 and 2006, see OECD, "Corporate Tax Statistics: Statutory Corporate Tax Rate Explanatory Annex for Non-OECD Jurisdictions," http://www.oecd.org/tax/tax-policy/explanatory-annex-non-oecd-statutory-cit-rates.pdf.
+* **IMN - Isle of Man:** Correction to last year's dataset: Corporate income tax rate of 15 percent between 2003 and 2006, see OECD, "Corporate Tax Statistics: Statutory Corporate Tax Rate Explanatory Annex for Non-OECD Jurisdictions," http://www.oecd.org/tax/tax-policy/explanatory-annex-non-oecd-statutory-cit-rates.pdf.
 
 * **IOT - British Indian Ocean Territory:** As an overseas territory of the UK with no permanent population (the only inhabitants of the territory are US and British military personnel and associated contractors), there does not seem to be a tax system, hence shown as 'N/A.'
 
@@ -194,7 +192,7 @@ Under the Emirate-based tax decrees, CIT may be imposed on all companies (includ
 
 * **VGB - British Virgin Islands:** Corporate tax rate of 0 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=231?download and Bloomberg Tax, "Country Guides - British Virgin Islands," https://www.bloomberglaw.com/product/tax/document/25590602280.
 
-* **VIR - 	United States Virgin Islands:** Corporate tax rate of 21 percent, see EY, "Worldwide Corporate Tax Guide 2019," https://www.ey.com/Publication/vwLUAssets/ey-worldwide-corporate-tax-guide-2019/$FILE/ey-worldwide-corporate-tax-guide-2019.pdf.
+* **VIR - 	United States Virgin Islands:** Corporate tax rate of 23.1 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1882?download.
 
 * **VUT - Vanuatu:** Corporate tax rate of 0 percent at least since 2010, see KPMG, "Corporate tax rates table," https://home.kpmg/xx/en/home/services/tax/tax-tools-and-resources/tax-rates-online/corporate-tax-rates-table.html.
 
@@ -202,13 +200,13 @@ Under the Emirate-based tax decrees, CIT may be imposed on all companies (includ
 
 * **XKX - Kosovo, Republic of:** Corporate tax rate of 10 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=919?download and Bloomberg Tax, "Country Guides - Kosovo," https://www.bloomberglaw.com/product/tax/document/25591303208.
 
-* **ZWE - Zimbabwe:** Corporate tax rate of 24% plus a 3% AIDS levy (=24.72%) as of 2020 (25% + 3% AIDS levy prior), see PwC, "Worldwide Tax Summaries - Corporate - Taxes on corporate income - Zimbabwe," https://taxsummaries.pwc.com/zimbabwe/corporate/taxes-on-corporate-income.
+* **ZWE - Zimbabwe:** Corporate tax rate of 24% plus a 3% AIDS levy (=24.72%) as of 2020 (25% + 3% AIDS levy prior to 2020), see PwC, "Worldwide Tax Summaries - Corporate - Taxes on corporate income - Zimbabwe," https://taxsummaries.pwc.com/zimbabwe/corporate/taxes-on-corporate-income.
 
 
 ____________________________________________________
 ## **GROSS DOMESTIC PRODUCT (GDP)**
 
-* U.S. Department of Agriculture, “International Macroeconomics Data Set,” December 2018, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
+* U.S. Department of Agriculture, “International Macroeconomics Data Set,” Jan. 3, 2020, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
 
 
 ____________________________________________________
