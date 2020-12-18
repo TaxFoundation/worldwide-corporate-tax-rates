@@ -38,7 +38,7 @@ using(stringr)
 using(dplyr)
 using(naniar)
 using(IMFData)
-
+using(magicfor)
 
 #ISO-Codes####
 
@@ -1497,3 +1497,28 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       colnames(all_rates_2020)[colnames(all_rates_2020)=="rate"] <- "Corporate Tax Rate"
       
       write.csv(all_rates_2020, "final-outputs/all_rates_2020.csv", row.names = FALSE)
+      
+      #Non-US OECD Avg
+      oecd_avg<-subset(final_data,final_data$oecd==1)
+      
+      non_us_oecd<-subset(oecd_avg,oecd_avg$iso_3!="USA")
+      non_us_oecd$rate<-as.numeric(non_us_oecd$rate)
+      #non_us_oecd$weighted_rate<-weighted.mean(non_us_oecd$rate,non_us_oecd$gdp,na.rm = T)
+      
+      usa<-subset(oecd_avg,oecd_avg$iso_3=="USA")
+      
+      #Means####
+      magic_for(silent = TRUE)
+      years<-print(unique(non_us_oecd$year))
+      
+      #Weighted average pct of total revenues
+      for(year in years){
+        non_us_oecd_weighted_avg<-weighted.mean(non_us_oecd$rate[non_us_oecd$year==year],non_us_oecd$gdp[non_us_oecd$year==year],na.rm = T)
+        non_us_oecd_avg<-mean(non_us_oecd$rate[non_us_oecd$year==year])
+        
+        put(non_us_oecd_weighted_avg,non_us_oecd_avg)
+      }
+      non_us_oecd_avgs<-magic_result_as_dataframe()
+      
+      us_vs_oecd<-merge(usa,non_us_oecd_avgs,by="year")
+      
