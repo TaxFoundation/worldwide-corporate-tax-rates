@@ -1514,11 +1514,13 @@ write.csv(rate_changes, "final-outputs/rate_changes.csv")
       #Weighted average pct of total revenues
       for(year in years){
         non_us_oecd_weighted_avg<-weighted.mean(non_us_oecd$rate[non_us_oecd$year==year],non_us_oecd$gdp[non_us_oecd$year==year],na.rm = T)
-        non_us_oecd_avg<-mean(non_us_oecd$rate[non_us_oecd$year==year])
+        non_us_oecd_avg<-mean(non_us_oecd$rate[non_us_oecd$year==year],na.rm=T)
         
         put(non_us_oecd_weighted_avg,non_us_oecd_avg)
       }
       non_us_oecd_avgs<-magic_result_as_dataframe()
       
       us_vs_oecd<-merge(usa,non_us_oecd_avgs,by="year")
+      
+      write.csv(us_vs_oecd,"us_vs_oecd.csv")
       
