@@ -38,7 +38,7 @@
 
 * **BLM - Saint Barthelemy:** No evidence of a corporate income tax (only lump-sum tax of €350 plus €100 per employee), hence 0 percent rate, see Community of St Barthelemy, "Formulaires de la Collectivité: Fiscalité: Déclaration Contribution Forfaitaire Annuelle des Entreprises - CFAE," http://www.comstbarth.fr/formulaires_collectivite.aspx#.
 
-* **BLZ - Belize:** Switched from a corporate income tax to a gross receipts tax in 1999, see Income Tax Department, "The Business Tax," http://incometaxbelize.gov.bz/wp-content/uploads/2016/07/business_tax_guide2009.pdf. Since the rates of a corporate income tax and a gross receipts tax are not comparable, it is shown as 'N/A' starting in 1999.
+* **BLZ - Belize:** Switched from a corporate income tax to a gross receipts tax in 1999, see Income Tax Department, "The Business Tax," http://incometaxbelize.gov.bz/wp-content/uploads/2016/07/business_tax_guide2009.pdf. However, also has a corporate income tax of 25 percent, see Bloomberg Tax, “Country Guides - Belize - Corporate Tax Rates,” https://www.bloomberglaw.com/product/tax/document/25590623272.
 
 * **BTN - Bhutan:** Corporate income tax rate of 30 percent, see Ministry of Finance (Royal Government of Bhutan), "FAQ: Business Income Tax (BIT)/Corporate Income Tax (CIT)," https://www.mof.gov.bt/faq/.
 

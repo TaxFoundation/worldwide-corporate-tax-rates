@@ -195,7 +195,7 @@ country_iso_cont_groups$brics <- ifelse(country_iso_cont$iso_3 == "BRA"
                                   ,1,0)
 
 
-#OECD Data####
+#OECD Data: OECD Countries####
 
 #Read in dataset
 dataset_list<-get_datasets()
@@ -293,6 +293,43 @@ previous_years <- read_csv("source-data/data_rates_1980_2019.csv")
 #Drop column that is not needed
 previous_years <- subset(previous_years, select = -c(X1))
 
+#Read in OECD dataset for non-OECD Countries
+
+#Read in dataset
+dataset_list<-get_datasets()
+search_dataset("Corporate", data= dataset_list)
+dataset_non_OECD <- ("CTS_CIT")
+dstruc <- get_data_structure(dataset_non_OECD)
+str(dstruc, max.level = 1)
+dstruc$VAR_DESC
+dstruc$CORP_TAX
+
+non_oecd_data <- get_dataset("CTS_CIT", start_time = 2000, end_time = 2019)
+
+#Keep and rename selected columns
+
+non_oecd_data <- subset(non_oecd_data, non_oecd_data$CORP_TAX=="COMB_CIT_RATE")
+non_oecd_data <- subset(non_oecd_data, select = -c(CORP_TAX,TIME_FORMAT))
+
+colnames(non_oecd_data)[colnames(non_oecd_data)=="obsTime"] <- "year"
+colnames(non_oecd_data)[colnames(non_oecd_data)=="obsValue"] <- "rate"
+colnames(non_oecd_data)[colnames(non_oecd_data)=="COU"] <- "iso_3"
+
+
+#Add rates for historic years that OECD database covers for non-OECD countries and that are missing in the historic TF dataset
+previous_years_long <- (melt(previous_years, id=c("iso_2","iso_3","continent","country")))
+colnames(previous_years_long)[colnames(previous_years_long)=="variable"] <- "year"
+previous_years_long$value <- as.numeric(previous_years_long$value)
+
+previous_years_long <- merge(previous_years_long, non_oecd_data, by=c("iso_3", "year"), all=T)
+
+previous_years_long$value <- if_else(is.na(previous_years_long$value), previous_years_long$rate, previous_years_long$value)
+previous_years_long <- subset(previous_years_long, select = -c(rate))
+colnames(previous_years_long)[colnames(previous_years_long)=="value"] <- "rate"
+
+previous_years <- spread(previous_years_long, year, rate)
+
+
 #Combine 2020 data ("oecd_kpmg_2020") with data from previous years ("previous_years")
 
 oecd_kpmg_2020 <- subset(oecd_kpmg_2020, select = -c(country, continent))
@@ -331,6 +368,9 @@ all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "BES",] <- 25
 
 #BLM - Saint Barthelemy
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "BLM",] <- 0
+
+#BLZ - Belize
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "BLZ",] <- 25
 
 #BTN - Bhutan
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "BTN",] <- 30
