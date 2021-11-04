@@ -3,10 +3,10 @@
 #Add Missing Corporate Rates Manually###
 
 #ALA - Aland Islands
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "ALA",] <- 20
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "ALA",] <- 20
 
 #ARE - United Arab Emirates (correction: rate set to zero for all years as CIT only levied on certain industries and this dataset captures general corporate tax systems)
-all_years_preliminary[c("1980", 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020)][all_years_preliminary$iso_3 == "ARE",] <- 0
+all_years_preliminary[c("1980", 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021)][all_years_preliminary$iso_3 == "ARE",] <- 0
 
 #ASM - American Samoa
 all_years_preliminary[c("2014")][all_years_preliminary$iso_3 == "ASM",] <- 44
@@ -16,46 +16,55 @@ all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "ASM",] <- 34
 all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "ASM",] <- 34
 all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "ASM",] <- 34
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "ASM",] <- 34
-
-#BES - Bonaire, Sint Eustatius and Saba
-all_years_preliminary[c("2012")][all_years_preliminary$iso_3 == "BES",] <- 0
-all_years_preliminary[c("2013")][all_years_preliminary$iso_3 == "BES",] <- 0
-all_years_preliminary[c("2014")][all_years_preliminary$iso_3 == "BES",] <- 0
-all_years_preliminary[c("2015")][all_years_preliminary$iso_3 == "BES",] <- 0
-all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "BES",] <- 0
-all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "BES",] <- 25
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "ASM",] <- 34
 
 #BLM - Saint Barthelemy
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "BLM",] <- 0
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "BLM",] <- 0
 
 #BLZ - Belize
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "BLZ",] <- 25
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "BLZ",] <- 25
 
 #BTN - Bhutan
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "BTN",] <- 30
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "BTN",] <- 30
 
 #CAF - Central African Republic
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "CAF",] <- 30
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "CAF",] <- 30
 
 #COK - Cook Islands
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "COK",] <- 20
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "COK",] <- 20
 
 #COM - Comoros
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "COM",] <- 50
+all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "COM",] <- 35
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "COM",] <- 35
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "COM",] <- 35
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "COM",] <- 35
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "COM",] <- 35
 
 #CPV - Cabo Verde
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "CPV",] <- 22
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "CPV",] <- 22
+
+#CUB - Cuba
+all_years_preliminary[c("2013")][all_years_preliminary$iso_3 == "CUB",] <- 35
+all_years_preliminary[c("2014")][all_years_preliminary$iso_3 == "CUB",] <- 35
+all_years_preliminary[c("2015")][all_years_preliminary$iso_3 == "CUB",] <- 35
+all_years_preliminary[c("2016")][all_years_preliminary$iso_3 == "CUB",] <- 35
+all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "CUB",] <- 35
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "CUB",] <- 35
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "CUB",] <- 35
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "CUB",] <- 35
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "CUB",] <- 35
 
 #ERI - Eritrea
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "ERI",] <-  30
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "ERI",] <-  30
 
 #FLK - Falkland Islands (Malvinas)
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "FLK",] <- 26
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "FLK",] <- 26
 
 #FRO - Faroe Islands
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "FRO",] <- 18
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "FRO",] <- 18
 
 #FSM - Micronesia (Federated States of)
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "FSM",] <- 30
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "FSM",] <- 30
 all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "FSM",] <- 21
 all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "FSM",] <- 21
@@ -68,10 +77,10 @@ all_years_preliminary[c("2012")][all_years_preliminary$iso_3 == "FSM",] <- 21
 all_years_preliminary[c("2011")][all_years_preliminary$iso_3 == "FSM",] <- 21
 
 #GIN - Guinea
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "GIN",] <- 35
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "GIN",] <- 35
 
 #GNB - Guinea-Bissau
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "GNB",] <- 25
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "GNB",] <- 25
 
 #GNQ - Equatorial Guinea
 all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "GNQ",] <- 35

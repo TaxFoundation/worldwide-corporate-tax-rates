@@ -25,7 +25,7 @@ colnames(oecd_data_2021)[colnames(oecd_data_2021)=="COU"] <- "iso_3"
 #KPMG Data####
 
 #Read in dataset
-kpmg_data_2021 <- read_excel("source-data/kpmg_dataset_2010_2021.xlsx")
+kpmg_data_2021 <- read_excel("source_data/kpmg_dataset_2010_2021.xlsx")
 
 #Keep and rename selected columns
 kpmg_data_2021 <- kpmg_data_2021[,-c(2:11)]
@@ -93,7 +93,7 @@ oecd_kpmg_2021 <- oecd_kpmg_2021[, c("2021", "iso_3", "country", "continent")]
 #Dataset for previous years####
 
 #Read in dataset Tax Foundation has compiled over the years for 1980-2020
-previous_years <- read_csv("source-data/data_rates_1980_2020.csv")
+previous_years <- read_csv("source_data/data_rates_1980_2020.csv")
 
 #Drop column that is not needed
 previous_years <- subset(previous_years, select = -c(X1))
@@ -143,5 +143,4 @@ all_years_preliminary <- merge(previous_years, oecd_kpmg_2021, by="iso_3", all=T
 
 all_years_preliminary <- all_years_preliminary[, c("iso_2", "iso_3", "continent", "country", 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021)]
 
-write.csv(all_years_preliminary,"intermediate-outputs/rates_preliminary.csv")
-
+write.csv(all_years_preliminary,"intermediate_outputs/rates_preliminary.csv")
