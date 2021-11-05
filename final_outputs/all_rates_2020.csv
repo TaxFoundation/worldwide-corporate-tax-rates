@@ -20,6 +20,7 @@
 "BRB","Barbados","NO",5.5
 "BLR","Belarus","EU",18
 "BEL","Belgium","EU",25
+"BLZ","Belize","NO",25
 "BEN","Benin","AF",30
 "BMU","Bermuda","NO",0
 "BTN","Bhutan","AS",30
@@ -45,12 +46,13 @@
 "HKG","China, Hong Kong Special Administrative Region","AS",16.5
 "MAC","China, Macao Special Administrative Region","AS",12
 "COL","Colombia","SA",32
-"COM","Comoros","AF",50
+"COM","Comoros","AF",35
 "COG","Congo","AF",30
 "COK","Cook Islands","OC",20
 "CRI","Costa Rica","NO",30
 "CIV","Cote d'Ivoire","AF",25
 "HRV","Croatia","EU",18
+"CUB","Cuba","NO",35
 "CUW","Curacao","NO",22
 "CYP","Cyprus","EU",12.5
 "CZE","Czechia","EU",19

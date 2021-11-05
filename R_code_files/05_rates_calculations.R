@@ -16,7 +16,7 @@ rates_gdp <- merge(rates_gdp, country_iso_cont_groups, by =c("iso_2","iso_3", "c
 final_data <- rates_gdp[order(rates_gdp$iso_3, rates_gdp$year),]
 
 #Write as final data file
-write.csv(final_data,"final-data/final_data_long.csv", row.names = FALSE)
+write.csv(final_data,"final_data/final_data_long.csv", row.names = FALSE)
 
 
 #Summary statistics####
@@ -27,12 +27,12 @@ complete_data$rate <- as.numeric(complete_data$rate)
 
 #Creating the 2020 dataset that includes only countries for which we have gdp data
 data2020 <- subset(complete_data, year==2020, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
-write.csv(data2020, "final-data/final_data_2020.csv")
+write.csv(data2020, "final_data/final_data_2020.csv")
 
 #Creating the 2020 dataset that includes countries with missing gdp data as well
 data2020_gdp_mis <- subset(final_data, year==2020, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
 data2020_gdp_mis <- subset(data2020_gdp_mis, !is.na(data2020_gdp_mis$rate))
-write.csv(data2020_gdp_mis, "final-data/final_data_2020_gdp_incomplete.csv")
+write.csv(data2020_gdp_mis, "final_data/final_data_2020_gdp_incomplete.csv")
 
 #2020 simple mean (including only countries with gdp data)
 data2020$rate <- as.numeric(data2020$rate)
@@ -85,7 +85,7 @@ colnames(rate_changes)[colnames(rate_changes)=="change"] <- "Change from 2019 to
 #Order and write table
 rate_changes <- rate_changes[order(rate_changes$Continent, rate_changes$Country),]
 
-write.csv(rate_changes, "final-outputs/rate_changes.csv")
+write.csv(rate_changes, "final_outputs/rate_changes.csv")
 
 
 #Top, Bottom, and Zero Rates
@@ -149,9 +149,9 @@ colnames(zerorate)[colnames(zerorate)=="rate"] <- "Rate"
 zerorate <- zerorate[order(zerorate$Country),]
 
 #exporting top, bottom, and zero rate
-write.csv(toprate, "final-outputs/top_rates.csv")
-write.csv(bottomrate, "final-outputs/bottom_rates.csv")
-write.csv(zerorate, "final-outputs/zero_rates.csv")
+write.csv(toprate, "final_outputs/top_rates.csv")
+write.csv(bottomrate, "final_outputs/bottom_rates.csv")
+write.csv(zerorate, "final_outputs/zero_rates.csv")
 
 
 #Regional distribution###
@@ -697,7 +697,7 @@ allregional <- data.frame(merge(regional20, regional10, by = c("region"), all = 
 allregional <- data.frame(merge(allregional, regional00, by = c("region"), all= TRUE))
 allregional <- data.frame(merge(allregional, regional90, by = c("region"), all = TRUE))
 allregional <- data.frame(merge(allregional, regional80, by = c("region"), all = TRUE))
-write.csv(allregional, "final-outputs/regional_all_data.csv")
+write.csv(allregional, "final_outputs/regional_all_data.csv")
 
 
 #Data for world map showing increases/decreases
@@ -706,7 +706,7 @@ write.csv(allregional, "final-outputs/regional_all_data.csv")
 #      rate_changes <- rate_changes[complete.cases(rate_changes),]
 #      rate_changes$rate_change <- (rate_changes$`2019` - rate_changes$`2000`)
 #      rate_changes$change <- if_else(rate_changes$`2019` == rate_changes$`2000`,"No Change",if_else(rate_changes$`2019` > rate_changes$`2000`, "Increase", "Decrease"))
-#      write.csv(rate_changes, "final-outputs/rate_changes.csv")
+#      write.csv(rate_changes, "final_outputs/rate_changes.csv")
 
 
 #Format and write table showing rates by region
@@ -714,13 +714,13 @@ colnames(regional20)[colnames(regional20)=="region"] <- "Region"
 colnames(regional20)[colnames(regional20)=="avgrate20"] <- "Average Rate"
 colnames(regional20)[colnames(regional20)=="wavgrate20"] <- "Weighted Average Rate"
 colnames(regional20)[colnames(regional20)=="count20"] <- "Number of Countries"
-write.csv(regional20, "final-outputs/rates_regional.csv")
+write.csv(regional20, "final_outputs/rates_regional.csv")
 
 
 #Chart showing distribution of rates in 2020 (including countries with missing gdp data)
 dist <- hist(data2020_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2020 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
 distdata <- data.frame(dist$counts,dist$breaks[1:12])
-write.csv(distdata, "final-outputs/distribution_2020_count.csv")
+write.csv(distdata, "final_outputs/distribution_2020_count.csv")
 
 
 #Time series graph (only includes countries for which we have GDP data)
@@ -730,7 +730,7 @@ complete_data$gdp <- as.numeric(complete_data$gdp)
 timeseries <- ddply(complete_data, .(year),summarize, weighted.average = weighted.mean(rate,gdp, na.rm = TRUE), average = mean(rate, na.rm = TRUE),n = length(rate[is.na(rate) == FALSE]))
 colnames(timeseries)[colnames(timeseries)=="n"] <- "country_count"
 
-write.csv(timeseries, "final-outputs/rate_time_series.csv", row.names = FALSE)
+write.csv(timeseries, "final_outputs/rate_time_series.csv", row.names = FALSE)
 
 
 #Chart showing how distribution has changed each decade (including countries with missing gdp data)
@@ -811,7 +811,7 @@ colnames(alldist )[colnames(alldist)=="dist00.counts"] <- "2000"
 colnames(alldist )[colnames(alldist)=="dist90.counts"] <- "1990"
 colnames(alldist )[colnames(alldist)=="dist80.counts"] <- "1980"
 
-write.csv(alldist, "final-outputs/distribution_all_decades.csv")
+write.csv(alldist, "final_outputs/distribution_all_decades.csv")
 
 
 #Appendix: 
@@ -821,11 +821,11 @@ all_years_final_count <- all_years_final
 all_years_final_count[all_years_final_count >= 0] <- 1
 all_years_final_count[is.na(all_years_final_count)] <- 0
 
-year_count <- data.frame(apply(all_years_final_count[5:45], MARGIN=2, FUN=sum))
+year_count <- data.frame(apply(all_years_final_count[5:46], MARGIN=2, FUN=sum))
 
 colnames(year_count)[colnames(year_count)=="apply.all_years_final_count.5.45...MARGIN...2..FUN...sum."] <- "Count"
 
-write.csv(year_count, "final-outputs/year_count.csv")
+write.csv(year_count, "final_outputs/year_count.csv")
 
 #Table with all 2020 tax rates
 all_rates_2020 <- data2020_gdp_mis
@@ -838,4 +838,4 @@ colnames(all_rates_2020)[colnames(all_rates_2020)=="country"] <- "Country"
 colnames(all_rates_2020)[colnames(all_rates_2020)=="continent"] <- "Continent"
 colnames(all_rates_2020)[colnames(all_rates_2020)=="rate"] <- "Corporate Tax Rate"
 
-write.csv(all_rates_2020, "final-outputs/all_rates_2020.csv", row.names = FALSE)
+write.csv(all_rates_2020, "final_outputs/all_rates_2020.csv", row.names = FALSE)

@@ -3,13 +3,13 @@
 #OECD Data: OECD Countries####
 
 #Read in dataset
-dataset_list<-get_datasets()
-search_dataset("Corporate", data= dataset_list)
-dataset <- ("TABLE_II1")
-dstruc <- get_data_structure(dataset)
-str(dstruc, max.level = 1)
-dstruc$VAR_DESC
-dstruc$CORP_TAX
+#dataset_list<-get_datasets()
+#search_dataset("Corporate", data= dataset_list)
+#dataset <- ("TABLE_II1")
+#dstruc <- get_data_structure(dataset)
+#str(dstruc, max.level = 1)
+#dstruc$VAR_DESC
+#dstruc$CORP_TAX
 
 oecd_data_2021 <- get_dataset("TABLE_II1", start_time = 2021, end_time = 2021)
 
@@ -101,13 +101,13 @@ previous_years <- subset(previous_years, select = -c(X1))
 #Read in OECD dataset for non-OECD Countries
 
 #Read in dataset
-dataset_list<-get_datasets()
-search_dataset("Corporate", data= dataset_list)
-dataset_non_OECD <- ("CTS_CIT")
-dstruc <- get_data_structure(dataset_non_OECD)
-str(dstruc, max.level = 1)
-dstruc$VAR_DESC
-dstruc$CORP_TAX
+#dataset_list<-get_datasets()
+#search_dataset("Corporate", data= dataset_list)
+#dataset_non_OECD <- ("CTS_CIT")
+#dstruc <- get_data_structure(dataset_non_OECD)
+#str(dstruc, max.level = 1)
+#dstruc$VAR_DESC
+#dstruc$CORP_TAX
 
 non_oecd_data <- get_dataset("CTS_CIT", start_time = 2000, end_time = 2020)
 
