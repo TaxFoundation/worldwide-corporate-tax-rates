@@ -25,41 +25,41 @@ write.csv(final_data,"final_data/final_data_long.csv", row.names = FALSE)
 complete_data <- final_data[complete.cases(final_data$rate, final_data$gdp),]
 complete_data$rate <- as.numeric(complete_data$rate)
 
-#Creating the 2020 dataset that includes only countries for which we have gdp data
-data2020 <- subset(complete_data, year==2020, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
-write.csv(data2020, "final_data/final_data_2020.csv")
+#Creating the 2021 dataset that includes only countries for which we have gdp data
+data2021 <- subset(complete_data, year==2021, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
+write.csv(data2021, "final_data/final_data_2021.csv")
 
-#Creating the 2020 dataset that includes countries with missing gdp data as well
-data2020_gdp_mis <- subset(final_data, year==2020, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
-data2020_gdp_mis <- subset(data2020_gdp_mis, !is.na(data2020_gdp_mis$rate))
-write.csv(data2020_gdp_mis, "final_data/final_data_2020_gdp_incomplete.csv")
+#Creating the 2021 dataset that includes countries with missing gdp data as well
+data2021_gdp_mis <- subset(final_data, year==2021, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
+data2021_gdp_mis <- subset(data2021_gdp_mis, !is.na(data2021_gdp_mis$rate))
+write.csv(data2021_gdp_mis, "final_data/final_data_2021_gdp_incomplete.csv")
 
-#2020 simple mean (including only countries with gdp data)
-data2020$rate <- as.numeric(data2020$rate)
-simple_mean_20 <- mean(data2020$rate, na.rm = TRUE)
+#2021 simple mean (including only countries with gdp data)
+data2021$rate <- as.numeric(data2021$rate)
+simple_mean_21 <- mean(data2021$rate, na.rm = TRUE)
 
-#2020 simple mean (including countries with missing gdp data)
-data2020_gdp_mis$rate <- as.numeric(data2020_gdp_mis$rate)
-simple_mean_20_gdp_mis <- mean(data2020_gdp_mis$rate, na.rm = TRUE)
+#2021 simple mean (including countries with missing gdp data)
+data2021_gdp_mis$rate <- as.numeric(data2021_gdp_mis$rate)
+simple_mean_21_gdp_mis <- mean(data2021_gdp_mis$rate, na.rm = TRUE)
 
-#2020 weighted mean (including only countries with gdp data)
-weighted_mean_20 <- weighted.mean(data2020$rate, data2020$gdp, na.rm = TRUE)
+#2021 weighted mean (including only countries with gdp data)
+weighted_mean_21 <- weighted.mean(data2021$rate, data2021$gdp, na.rm = TRUE)
 
-#2020 number of rates (including only countries with gdp data)
-numrates_20 <- NROW(data2020$rate)
-numgdp_20 <- NROW(data2020$gdp)
+#2021 number of rates (including only countries with gdp data)
+numrates_21 <- NROW(data2021$rate)
+numgdp_21 <- NROW(data2021$gdp)
 
-#2020 number of rates (including countries with missing gdp data)
-numrates_20_gdp_mis <- NROW(data2020_gdp_mis$rate)
-numgdp_20_gdp_mis <- NROW(data2020_gdp_mis$gdp)
+#2021 number of rates (including countries with missing gdp data)
+numrates_21_gdp_mis <- NROW(data2021_gdp_mis$rate)
+numgdp_21_gdp_mis <- NROW(data2021_gdp_mis$gdp)
 
 
 #Table showing rate changes between 2019 and 2020
 rate_changes <- all_years_final
-rate_changes <- subset(rate_changes, select = c("iso_3", "country", "continent", 2019, 2020))
+rate_changes <- subset(rate_changes, select = c("iso_3", "country", "continent", 2020, 2021))
 rate_changes <- rate_changes[complete.cases(rate_changes),]
 
-rate_changes$change <- (rate_changes$'2020' - rate_changes$'2019')
+rate_changes$change <- (rate_changes$'2021' - rate_changes$'2020')
 
 #Drop countries with no changes
 rate_changes <- subset(rate_changes, change!=0)
@@ -78,9 +78,9 @@ rate_changes$continent <- if_else(rate_changes$continent == "SA", "South America
 colnames(rate_changes)[colnames(rate_changes)=="iso_3"] <- "ISO_3"
 colnames(rate_changes)[colnames(rate_changes)=="country"] <- "Country"
 colnames(rate_changes)[colnames(rate_changes)=="continent"] <- "Continent"
-colnames(rate_changes)[colnames(rate_changes)=="2019"] <- "2019 Tax Rate"
 colnames(rate_changes)[colnames(rate_changes)=="2020"] <- "2020 Tax Rate"
-colnames(rate_changes)[colnames(rate_changes)=="change"] <- "Change from 2019 to 2020"
+colnames(rate_changes)[colnames(rate_changes)=="2021"] <- "2021 Tax Rate"
+colnames(rate_changes)[colnames(rate_changes)=="change"] <- "Change from 2020 to 2021"
 
 #Order and write table
 rate_changes <- rate_changes[order(rate_changes$Continent, rate_changes$Country),]
@@ -91,7 +91,7 @@ write.csv(rate_changes, "final_outputs/rate_changes.csv")
 #Top, Bottom, and Zero Rates
 
 #Top
-toprate <- arrange(data2020_gdp_mis, desc(rate))
+toprate <- arrange(data2021_gdp_mis, desc(rate))
 toprate <- toprate[1:20,]
 
 toprate$continent <- if_else(toprate$continent == "EU", "Europe", toprate$continent)
@@ -110,7 +110,7 @@ colnames(toprate)[colnames(toprate)=="rate"] <- "Rate"
 toprate <- toprate[order(-toprate$Rate, toprate$Country),]
 
 #bottom
-bottomrate <- arrange(data2020_gdp_mis, rate)
+bottomrate <- arrange(data2021_gdp_mis, rate)
 bottomrate <- subset(bottomrate, rate > 0)
 bottomrate <- bottomrate[1:20,]
 
@@ -130,7 +130,7 @@ colnames(bottomrate)[colnames(bottomrate)=="rate"] <- "Rate"
 bottomrate <- bottomrate[order(bottomrate$Rate, bottomrate$Country),]
 
 #zero
-zerorate <- arrange(data2020_gdp_mis, rate)
+zerorate <- arrange(data2021_gdp_mis, rate)
 zerorate <- subset(zerorate, rate==0)
 
 zerorate$continent <- if_else(zerorate$continent == "EU", "Europe", zerorate$continent)

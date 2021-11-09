@@ -1,11 +1,19 @@
-"","ISO_3","Country","Continent","2019 Tax Rate","2020 Tax Rate","Change from 2019 to 2020"
-"219","TGO","Togo","Africa",28,27,-1
-"251","ZWE","Zimbabwe","Africa",25.75,24.72,-1.03
-"11","ARM","Armenia","Asia",20,18,-2
-"20","BEL","Belgium","Europe",29.58,25,-4.58
-"77","FRA","France","Europe",34.43,32.02,-2.41
-"140","MCO","Monaco","Europe",31,28,-3
-"93","GRL","Greenland","North America",31.8,26.5,-5.3
-"187","PYF","French Polynesia","Oceania",26,25,-1
-"79","FSM","Micronesia (Federated States of)","Oceania",21,30,9
-"51","COL","Colombia","South America",33,32,-1
+"","ISO_3","Country","Continent","2020 Tax Rate","2021 Tax Rate","Change from 2020 to 2021"
+"3","AGO","Angola","Africa",30,25,-5
+"49","COG","Congo","Africa",30,28,-2
+"48","COD","Democratic Republic of the Congo","Africa",35,30,-5
+"88","GMB","Gambia","Africa",31,27,-4
+"227","TUN","Tunisia","Africa",25,15,-10
+"24","BGD","Bangladesh","Asia",25,32.5,7.5
+"104","IDN","Indonesia","Asia",25,22,-3
+"126","LAO","Lao People's Democratic Republic","Asia",24,20,-4
+"132","LKA","Sri Lanka","Asia",28,24,-4
+"228","TUR","Turkey","Asia",22,20,-2
+"77","FRA","France","Europe",32.02,28.4075,-3.6125
+"85","GIB","Gibraltar","Europe",10,12.5,2.5
+"140","MCO","Monaco","Europe",28,26.5,-1.5
+"212","SWE","Sweden","Europe",21.4,20.6,-0.799999999999997
+"43","CHE","Switzerland","Europe",21.148581,19.698516,-1.450065
+"10","ARG","Argentina","South America",30,35,5
+"44","CHL","Chile","South America",25,10,-15
+"51","COL","Colombia","South America",32,31,-1
