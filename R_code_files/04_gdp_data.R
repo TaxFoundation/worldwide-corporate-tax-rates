@@ -21,12 +21,29 @@ gdp_projected_2015$Country[gdp_projected_2015$Country == "Côte d'Ivoire"] <- "Co
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Guinea Bissau"] <- "Guinea-Bissau"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Central Afr Rep"] <- "Central African Republic"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Dem Rep Congo"] <- "Democratic Republic of the Congo"
+gdp_historical_2015$Country[gdp_historical_2015$Country == "Democratic Republic of Congo"] <- "Democratic Republic of the Congo"
+gdp_projected_2015$Country[gdp_projected_2015$Country == "Democratic Republic of Congo"] <- "Democratic Republic of the Congo"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Rep Congo"] <- "Republic of the Congo"
+gdp_historical_2015$Country[gdp_historical_2015$Country == "Republic of Congo"] <- "Republic of the Congo"
+gdp_projected_2015$Country[gdp_projected_2015$Country == "Republic of Congo"] <- "Republic of the Congo"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Sao Tome Principe"] <- "Sao Tome and Principe"
-gdp_historical_2015$Country[gdp_historical_2015$Country == "São Tomé and Príncipe"] <- "Sao Tome and Principe"
-gdp_projected_2015$Country[gdp_projected_2015$Country == "São Tomé and Príncipe"] <- "Sao Tome and Principe"
+gdp_historical_2015$Country[gdp_historical_2015$Country == "São Tomé and Principe"] <- "Sao Tome and Principe"
+gdp_projected_2015$Country[gdp_projected_2015$Country == "São Tomé and Principe"] <- "Sao Tome and Principe"
+gdp_historical_2015$Country[gdp_historical_2015$Country == "St. Kitts Nevis"] <- "St. Kitts and Nevis"
+gdp_projected_2015$Country[gdp_projected_2015$Country == "St. Kitts Nevis"] <- "St. Kitts and Nevis"
+gdp_historical_2015$Country[gdp_historical_2015$Country == "St. Vincent Grenadines"] <- "St. Vincent and Grenadines"
+gdp_projected_2015$Country[gdp_projected_2015$Country == "St. Vincent Grenadines"] <- "St. Vincent and Grenadines"
 gdp_historical_2015$Country[gdp_historical_2015$Country == "Swaziland/Eswatini"] <- "Swaziland"
 gdp_projected_2015$Country[gdp_projected_2015$Country == "Swaziland/Eswatini"] <- "Swaziland"
+
+
+#Add Qatar and Zimbabwe to gdp_historical_2010
+Qatar<-c("Qatar",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA)
+Zimbabwe<-c("Zimbabwe",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA)
+
+gdp_historical_2010<-(rbind(gdp_historical_2010,Qatar))
+gdp_historical_2010<-(rbind(gdp_historical_2010,Zimbabwe))
+
 
 #write.csv(gdp_historical_2010,"gdp_historical_2010.csv",row.names = F)
 #write.csv(gdp_historical_2015,"gdp_historical_2015.csv",row.names = F)
