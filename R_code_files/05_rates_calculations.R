@@ -693,7 +693,7 @@ regional80 <- data.frame(region,avgrate80,wavgrate80,count80)
 
 
 #Regional decade data
-allregional <- data.frame(merge(regional20, regional10, by = c("region"), all = TRUE))
+allregional <- data.frame(merge(regional21, regional10, by = c("region"), all = TRUE))
 allregional <- data.frame(merge(allregional, regional00, by = c("region"), all= TRUE))
 allregional <- data.frame(merge(allregional, regional90, by = c("region"), all = TRUE))
 allregional <- data.frame(merge(allregional, regional80, by = c("region"), all = TRUE))
@@ -710,17 +710,17 @@ write.csv(allregional, "final_outputs/regional_all_data.csv")
 
 
 #Format and write table showing rates by region
-colnames(regional20)[colnames(regional20)=="region"] <- "Region"
-colnames(regional20)[colnames(regional20)=="avgrate20"] <- "Average Rate"
-colnames(regional20)[colnames(regional20)=="wavgrate20"] <- "Weighted Average Rate"
-colnames(regional20)[colnames(regional20)=="count20"] <- "Number of Countries"
-write.csv(regional20, "final_outputs/rates_regional.csv")
+colnames(regional21)[colnames(regional21)=="region"] <- "Region"
+colnames(regional21)[colnames(regional21)=="avgrate21"] <- "Average Rate"
+colnames(regional21)[colnames(regional21)=="wavgrate21"] <- "Weighted Average Rate"
+colnames(regional21)[colnames(regional21)=="count21"] <- "Number of Countries"
+write.csv(regional21, "final_outputs/rates_regional.csv")
 
 
 #Chart showing distribution of rates in 2020 (including countries with missing gdp data)
-dist <- hist(data2021_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60), main="2020 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
-distdata <- data.frame(dist$counts,dist$breaks[1:12])
-write.csv(distdata, "final_outputs/distribution_2020_count.csv")
+dist <- hist(data2021_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50), main="2021 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+distdata <- data.frame(dist$counts,dist$breaks[1:10])
+write.csv(distdata, "final_outputs/distribution_2021_count.csv")
 
 
 #Time series graph (only includes countries for which we have GDP data)
@@ -736,11 +736,11 @@ write.csv(timeseries, "final_outputs/rate_time_series.csv", row.names = FALSE)
 #Chart showing how distribution has changed each decade (including countries with missing gdp data)
 
 #2021 distribution (in percent rather than country counts)
-dist_percent <- hist(data2021_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="2020 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+dist_percent <- hist(data2021_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="2021 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
 distdata_percent <- data.frame(dist_percent$counts, dist_percent$breaks[1:15])
 colnames(distdata_percent)[colnames(distdata_percent)=="dist_percent.breaks.1.15."] <- "break"
 
-distdata_percent$dist_percent.counts <- distdata_percent$dist_percent.counts / numrates_20_gdp_mis
+distdata_percent$dist_percent.counts <- distdata_percent$dist_percent.counts / numrates_21_gdp_mis
 
 #2010 distribution
 data2010_gdp_mis <- subset(final_data, year==2010, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
@@ -805,7 +805,7 @@ colnames(alldist )[colnames(alldist)=="break."] <- "break"
 alldist <- data.frame(merge(alldist, dist80data, by = c("break"), all= TRUE))
 
 colnames(alldist )[colnames(alldist)=="break."] <- "Rate Category"
-colnames(alldist )[colnames(alldist)=="dist_percent.counts"] <- "2020"
+colnames(alldist )[colnames(alldist)=="dist_percent.counts"] <- "2021"
 colnames(alldist )[colnames(alldist)=="dist10.counts"] <- "2010"
 colnames(alldist )[colnames(alldist)=="dist00.counts"] <- "2000"
 colnames(alldist )[colnames(alldist)=="dist90.counts"] <- "1990"
@@ -823,14 +823,14 @@ all_years_final_count[is.na(all_years_final_count)] <- 0
 
 year_count <- data.frame(apply(all_years_final_count[5:46], MARGIN=2, FUN=sum))
 
-colnames(year_count)[colnames(year_count)=="apply.all_years_final_count.5.45...MARGIN...2..FUN...sum."] <- "Count"
+colnames(year_count)[colnames(year_count)=="apply.all_years_final_count.5.46...MARGIN...2..FUN...sum."] <- "Count"
 
 write.csv(year_count, "final_outputs/year_count.csv")
 
-#Table with all 2020 tax rates
+#Table with all 2021 tax rates
 all_rates_2021 <- data2021_gdp_mis
 
-all_rates_2021 <- subset(all_rates_2021, year==2020, select = c(iso_3, country, continent, rate))
+all_rates_2021 <- subset(all_rates_2021, year==2021, select = c(iso_3, country, continent, rate))
 all_rates_2021 <- all_rates_2021[order(all_rates_2021$country),]
 
 colnames(all_rates_2021)[colnames(all_rates_2021)=="iso_3"] <- "ISO3"

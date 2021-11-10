@@ -5,10 +5,10 @@
 "DZA","Algeria","AF",26
 "ASM","American Samoa","OC",34
 "AND","Andorra","EU",10
-"AGO","Angola","AF",30
+"AGO","Angola","AF",25
 "AIA","Anguilla","NO",0
 "ATG","Antigua and Barbuda","NO",25
-"ARG","Argentina","SA",30
+"ARG","Argentina","SA",35
 "ARM","Armenia","AS",18
 "ABW","Aruba","NO",25
 "AUS","Australia","OC",30
@@ -16,7 +16,7 @@
 "AZE","Azerbaijan","AS",20
 "BHS","Bahamas","NO",0
 "BHR","Bahrain","AS",0
-"BGD","Bangladesh","AS",25
+"BGD","Bangladesh","AS",32.5
 "BRB","Barbados","NO",5.5
 "BLR","Belarus","EU",18
 "BEL","Belgium","EU",25
@@ -37,17 +37,17 @@
 "CPV","Cabo Verde","AF",22
 "KHM","Cambodia","AS",20
 "CMR","Cameroon","AF",33
-"CAN","Canada","NO",26.47
+"CAN","Canada","NO",26.15
 "CYM","Cayman Islands","NO",0
 "CAF","Central African Republic","AF",30
 "TCD","Chad","AF",35
-"CHL","Chile","SA",25
+"CHL","Chile","SA",10
 "CHN","China","AS",25
 "HKG","China, Hong Kong Special Administrative Region","AS",16.5
 "MAC","China, Macao Special Administrative Region","AS",12
-"COL","Colombia","SA",32
+"COL","Colombia","SA",31
 "COM","Comoros","AF",35
-"COG","Congo","AF",30
+"COG","Congo","AF",28
 "COK","Cook Islands","OC",20
 "CRI","Costa Rica","NO",30
 "CIV","Cote d'Ivoire","AF",25
@@ -56,7 +56,7 @@
 "CUW","Curacao","NO",22
 "CYP","Cyprus","EU",12.5
 "CZE","Czechia","EU",19
-"COD","Democratic Republic of the Congo","AF",35
+"COD","Democratic Republic of the Congo","AF",30
 "DNK","Denmark","EU",22
 "DJI","Djibouti","AF",25
 "DMA","Dominica","NO",25
@@ -72,14 +72,14 @@
 "FRO","Faroe Islands","EU",18
 "FJI","Fiji","OC",20
 "FIN","Finland","EU",20
-"FRA","France","EU",32.02
+"FRA","France","EU",28.4075
 "PYF","French Polynesia","OC",25
 "GAB","Gabon","AF",30
-"GMB","Gambia","AF",31
+"GMB","Gambia","AF",27
 "GEO","Georgia","AS",15
-"DEU","Germany","EU",29.897059
+"DEU","Germany","EU",29.937781
 "GHA","Ghana","AF",25
-"GIB","Gibraltar","EU",10
+"GIB","Gibraltar","EU",12.5
 "GRC","Greece","EU",24
 "GRL","Greenland","NO",26.5
 "GRD","Grenada","NO",28
@@ -94,7 +94,7 @@
 "HUN","Hungary","EU",9
 "ISL","Iceland","EU",20
 "IND","India","AS",30
-"IDN","Indonesia","AS",25
+"IDN","Indonesia","AS",22
 "IRN","Iran (Islamic Republic of)","AS",25
 "IRQ","Iraq","AS",15
 "IRL","Ireland","EU",12.5
@@ -111,7 +111,7 @@
 "XKX","Kosovo, Republic of","EU",10
 "KWT","Kuwait","AS",15
 "KGZ","Kyrgyzstan","AS",10
-"LAO","Lao People's Democratic Republic","AS",24
+"LAO","Lao People's Democratic Republic","AS",20
 "LVA","Latvia","EU",20
 "LBN","Lebanon","AS",17
 "LSO","Lesotho","AF",25
@@ -130,7 +130,7 @@
 "MUS","Mauritius","AF",15
 "MEX","Mexico","NO",30
 "FSM","Micronesia (Federated States of)","OC",30
-"MCO","Monaco","EU",28
+"MCO","Monaco","EU",26.5
 "MNG","Mongolia","AS",25
 "MNE","Montenegro","EU",9
 "MSR","Montserrat","NO",30
@@ -187,13 +187,13 @@
 "ZAF","South Africa","AF",28
 "SSD","South Sudan","AF",25
 "ESP","Spain","EU",25
-"LKA","Sri Lanka","AS",28
+"LKA","Sri Lanka","AS",24
 "PSE","State of Palestine","AS",15
 "SDN","Sudan","AF",35
 "SUR","Suriname","SA",36
 "SWZ","Swaziland","AF",27.5
-"SWE","Sweden","EU",21.4
-"CHE","Switzerland","EU",21.148581
+"SWE","Sweden","EU",20.6
+"CHE","Switzerland","EU",19.698516
 "SYR","Syrian Arab Republic","AS",28
 "TWN","Taiwan","AS",20
 "TJK","Tajikistan","AS",23
@@ -204,8 +204,8 @@
 "TKL","Tokelau","OC",0
 "TON","Tonga","OC",25
 "TTO","Trinidad and Tobago","NO",30
-"TUN","Tunisia","AF",25
-"TUR","Turkey","AS",22
+"TUN","Tunisia","AF",15
+"TUR","Turkey","AS",20
 "TKM","Turkmenistan","AS",8
 "TCA","Turks and Caicos Islands","NO",0
 "UGA","Uganda","AF",30
@@ -213,7 +213,7 @@
 "ARE","United Arab Emirates","AS",0
 "GBR","United Kingdom of Great Britain and Northern Ireland","EU",19
 "TZA","United Republic of Tanzania","AF",30
-"USA","United States of America","NO",25.766571
+"USA","United States of America","NO",25.754568
 "VIR","United States Virgin Islands","NO",23.1
 "URY","Uruguay","SA",25
 "UZB","Uzbekistan","AS",7.5
