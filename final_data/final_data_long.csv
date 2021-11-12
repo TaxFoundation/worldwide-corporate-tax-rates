@@ -1552,7 +1552,7 @@
 "BT","BTN","AS","Bhutan","2018",30,"2.335853099823",0,0,0,0,0
 "BT","BTN","AS","Bhutan","2019",30,"2.45965170860291",0,0,0,0,0
 "BT","BTN","AS","Bhutan","2020",30,"2.49900603294373",0,0,0,0,0
-"BT","BTN","AS","Bhutan","2021",30,"2.62645530700684",0,0,0,0,0
+"BT","BTN","AS","Bhutan","2021",25,"2.62645530700684",0,0,0,0,0
 "BV","BVT","AN","Bouvet Island","1980",NA,NA,0,0,0,0,0
 "BV","BVT","AN","Bouvet Island","1981",NA,NA,0,0,0,0,0
 "BV","BVT","AN","Bouvet Island","1982",NA,NA,0,0,0,0,0
@@ -2178,11 +2178,11 @@
 "KM","COM","AF","Comoros","2014",NA,NA,0,0,0,0,0
 "KM","COM","AF","Comoros","2015",35,NA,0,0,0,0,0
 "KM","COM","AF","Comoros","2016",NA,NA,0,0,0,0,0
-"KM","COM","AF","Comoros","2017",35,NA,0,0,0,0,0
-"KM","COM","AF","Comoros","2018",35,NA,0,0,0,0,0
-"KM","COM","AF","Comoros","2019",35,NA,0,0,0,0,0
-"KM","COM","AF","Comoros","2020",35,NA,0,0,0,0,0
-"KM","COM","AF","Comoros","2021",35,NA,0,0,0,0,0
+"KM","COM","AF","Comoros","2017",50,NA,0,0,0,0,0
+"KM","COM","AF","Comoros","2018",50,NA,0,0,0,0,0
+"KM","COM","AF","Comoros","2019",50,NA,0,0,0,0,0
+"KM","COM","AF","Comoros","2020",50,NA,0,0,0,0,0
+"KM","COM","AF","Comoros","2021",50,NA,0,0,0,0,0
 "CV","CPV","AF","Cabo Verde","1980",NA,"0.193109750747681",0,0,0,0,0
 "CV","CPV","AF","Cabo Verde","1981",NA,"0.209430545568466",0,0,0,0,0
 "CV","CPV","AF","Cabo Verde","1982",NA,"0.215347021818161",0,0,0,0,0
@@ -5122,7 +5122,7 @@
 "KI","KIR","OC","Kiribati","2018",35,NA,0,0,0,0,0
 "KI","KIR","OC","Kiribati","2019",35,NA,0,0,0,0,0
 "KI","KIR","OC","Kiribati","2020",35,NA,0,0,0,0,0
-"KI","KIR","OC","Kiribati","2021",35,NA,0,0,0,0,0
+"KI","KIR","OC","Kiribati","2021",30,NA,0,0,0,0,0
 "KN","KNA","NO","Saint Kitts and Nevis","1980",NA,"0.227680951356888",0,0,0,0,0
 "KN","KNA","NO","Saint Kitts and Nevis","1981",NA,"0.231201976537704",0,0,0,0,0
 "KN","KNA","NO","Saint Kitts and Nevis","1982",NA,"0.23247167468071",0,0,0,0,0
@@ -7850,9 +7850,9 @@ NA,"NAM","AF","Namibia","2021",32,"10.4844245910645",0,0,0,0,0
 "PF","PYF","OC","French Polynesia","2016",NA,NA,0,0,0,0,0
 "PF","PYF","OC","French Polynesia","2017",28,NA,0,0,0,0,0
 "PF","PYF","OC","French Polynesia","2018",27,NA,0,0,0,0,0
-"PF","PYF","OC","French Polynesia","2019",26,NA,0,0,0,0,0
-"PF","PYF","OC","French Polynesia","2020",25,NA,0,0,0,0,0
-"PF","PYF","OC","French Polynesia","2021",25,NA,0,0,0,0,0
+"PF","PYF","OC","French Polynesia","2019",27,NA,0,0,0,0,0
+"PF","PYF","OC","French Polynesia","2020",27,NA,0,0,0,0,0
+"PF","PYF","OC","French Polynesia","2021",27,NA,0,0,0,0,0
 "QA","QAT","AS","Qatar","1980",NA,NA,0,0,0,0,0
 "QA","QAT","AS","Qatar","1981",NA,NA,0,0,0,0,0
 "QA","QAT","AS","Qatar","1982",50,NA,0,0,0,0,0

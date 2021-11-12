@@ -23,7 +23,7 @@
 "BLZ","Belize","NO",25
 "BEN","Benin","AF",30
 "BMU","Bermuda","NO",0
-"BTN","Bhutan","AS",30
+"BTN","Bhutan","AS",25
 "BOL","Bolivia (Plurinational State of)","SA",25
 "BES","Bonaire, Sint Eustatius and Saba","NO",25
 "BIH","Bosnia and Herzegovina","EU",10
@@ -46,7 +46,7 @@
 "HKG","China, Hong Kong Special Administrative Region","AS",16.5
 "MAC","China, Macao Special Administrative Region","AS",12
 "COL","Colombia","SA",31
-"COM","Comoros","AF",35
+"COM","Comoros","AF",50
 "COG","Congo","AF",28
 "COK","Cook Islands","OC",20
 "CRI","Costa Rica","NO",30
@@ -73,7 +73,7 @@
 "FJI","Fiji","OC",20
 "FIN","Finland","EU",20
 "FRA","France","EU",28.4075
-"PYF","French Polynesia","OC",25
+"PYF","French Polynesia","OC",27
 "GAB","Gabon","AF",30
 "GMB","Gambia","AF",27
 "GEO","Georgia","AS",15
@@ -107,7 +107,7 @@
 "JOR","Jordan","AS",20
 "KAZ","Kazakhstan","AS",20
 "KEN","Kenya","AF",30
-"KIR","Kiribati","OC",35
+"KIR","Kiribati","OC",30
 "XKX","Kosovo, Republic of","EU",10
 "KWT","Kuwait","AS",15
 "KGZ","Kyrgyzstan","AS",10
