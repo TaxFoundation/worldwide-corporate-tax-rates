@@ -28,7 +28,7 @@ all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "BLM",] <- 0
 all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "BLZ",] <- 25
 
 #BTN - Bhutan
-all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "BTN",] <- 30
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "BTN",] <- 25
 
 #CAF - Central African Republic
 all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "CAF",] <- 30
@@ -37,11 +37,11 @@ all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "CAF",] <- 30
 all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "COK",] <- 20
 
 #COM - Comoros
-all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "COM",] <- 35
-all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "COM",] <- 35
-all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "COM",] <- 35
-all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "COM",] <- 35
-all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "COM",] <- 35
+all_years_preliminary[c("2017")][all_years_preliminary$iso_3 == "COM",] <- 50
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "COM",] <- 50
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "COM",] <- 50
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "COM",] <- 50
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "COM",] <- 50
 
 #CPV - Cabo Verde
 all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "CPV",] <- 22
@@ -110,7 +110,7 @@ all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "IRN",] <- 25
 all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "IRQ",] <- 15
 
 #KIR - Kiribati
-all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "KIR",] <- 35
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "KIR",] <- 30
 
 #LAO - Lao People's Democratic Republic
 all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "LAO",] <- 20
@@ -161,7 +161,10 @@ all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "PAK",] <- 29
 all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "PRI",] <- 37.5
 
 #PYF - French Polynesia
-all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "PYF",] <- 25
+all_years_preliminary[c("2018")][all_years_preliminary$iso_3 == "PYF",] <- 27
+all_years_preliminary[c("2019")][all_years_preliminary$iso_3 == "PYF",] <- 27
+all_years_preliminary[c("2020")][all_years_preliminary$iso_3 == "PYF",] <- 27
+all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "PYF",] <- 27
 
 #SHN - Saint Helena
 all_years_preliminary[c("2021")][all_years_preliminary$iso_3 == "SHN",] <- 25
