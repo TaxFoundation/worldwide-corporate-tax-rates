@@ -11,7 +11,7 @@
 
 * OECD, "OECD Tax Database, Table II.1 Statutory corporate income tax rate," updated April 2021, https://stats.oecd.org/index.aspx?DataSetCode=Table_II1.
 
-* Bloomberg Tax, "Country Guides - Corporate Tax Rates," 
+* Bloomberg Tax, "Country Guides - Corporate Tax Rates," accessed October and November 2021, https://www.bloomberglaw.com/product/tax/toc_view_menu/3380.  
 
 ### For corporate income tax rates from 1980 to 2019:
 
@@ -19,11 +19,7 @@
 
 
 ## Sources/details on countries that are not part of the KPMG or OECD datasets or countries that changed their corporate tax rate in 2020 (rates apply to the year 2020 unless otherwise noted)
-Aland Islands
-Saint Barthelemy
-Saint Helena
-Tokelau
-Wallis and Futuna Islands
+
 * **ALA - Aland Islands:** Corporate income tax rate of 20 percent, see Alands landskapsregering, "Beskattning av företag och samfund," updated on Feb. 7, 2018, https://www.regeringen.ax/ekonomi/skattesystemet/beskattning-foretag-samfund.
 
 * **ANT - Netherlands Antilles:** In 2010, the Netherlands Antilles were split: Curaçao and St Maarten each became separate countries within the Kingdom of the Netherlands and the Islands of Bonaire, Saba and St Eustatia became special municipalities of the Netherlands. As a result, there is no corporate tax rate starting in 2010.
@@ -36,7 +32,7 @@ Wallis and Futuna Islands
 
 * **ATF - French Southern Territories:** No one lives permanently in these territories of France, hence no tax system.
 
-* **BLM - Saint Barthelemy:** No evidence of a corporate income tax (only lump-sum tax of €350 plus €100 per employee), hence 0 percent rate, see Community of St Barthelemy, "Formulaires de la Collectivité: Fiscalité: Déclaration Contribution Forfaitaire Annuelle des Entreprises - CFAE," http://www.comstbarth.fr/formulaires_collectivite.aspx#.
+* **BLM - Saint Barthelemy:** No evidence of a corporate income tax (only lump-sum tax of €350 plus €100 per employee), hence 0 percent rate, see Community of St Barthelemy, "Formulaires de la Collectivité: Fiscalité: Déclaration Contribution Forfaitaire Annuelle des Entreprises - CFAE," https://www.comstbarth.fr/in/rest/annotationSVC/Attachment/attach_cmsUpload_1f046465-8a68-43f8-858a-ad262d540cc9.
 
 * **BLZ - Belize:** Switched from a corporate income tax to a gross receipts tax in 1999, see Income Tax Department, "The Business Tax," http://incometaxbelize.gov.bz/wp-content/uploads/2016/07/business_tax_guide2009.pdf. However, also has a corporate income tax of 25 percent, see Bloomberg Tax, “Country Guides - Belize - Corporate Tax Rates,” https://www.bloomberglaw.com/product/tax/document/25590623272.
 
@@ -90,33 +86,15 @@ Wallis and Futuna Islands
 
 * **SJM - Svalbard and Jan Mayen Islands:** Although both are dependencies of Norway, the islands seem to have tax systems (partly) independent from Norway but no data found on their tax rates, hence shown as 'N/A,' see The Norwegian Tax Administration, "Jan Mayen and the Norwegian dependencies in the Antarctic," https://www.skatteetaten.no/en/business-and-organisation/employer/the-a-melding/the-a-melding-guide/special-groups/jan-mayen-and-the-norwegian-dependencies-in-the-antarctic/.
 
-* **SMR - San Marino:** Corporate income tax rate of 17 percent, see Economic Development Agency, "Tax system," https://www.agency.sm/en/invest-in-san-marino/tax-system and Bloomberg Tax, "Country Guides - San Marino," https://www.bloomberglaw.com/product/tax/document/25902505000#A0R5R1Q8D0.
-
 * **SOM - Somalia:** According to the World Bank Doing Business report, there is no data available/there is no corporate tax, see "Doing Business 2020: Economy Profile Somalia," page 40, https://www.doingbusiness.org/content/dam/doingBusiness/country/s/somalia/SOM.pdf and Somalian Ministry of Finance, "Revenue explorer," https://mof.gov.so/fiscal/REVexplorer.html (does not show any corporate income tax revenue).
 
 * **SPM - Saint Pierre and Miquelon:** Saint Pierre and Miquelon is a French overseas collectivity and is partially part of the French tax system. Corporate income tax seems to be the same as in France, see Saint Pierre and Miquelon Tax Service Directorate, "Dues and taxes," https://www.services-fiscaux975.fr/fr/38.html. Due to the French dependency, the tax rate is shown as N/A.
-
-* **SSD - South Sudan:** Corporate tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1603?download and Bloomberg Tax, "Country Guides - South Sudan," https://www.bloomberglaw.com/product/tax/document/25903709736.
-
-* **STP - Sao Tome and Principe:** Corporate tax rate of 25 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1492?download and Bloomberg Tax, "Country Guides - Sao Tome And Principe, https://www.bloomberglaw.com/product/tax/document/25590843432.
 
 * **SYC - Seychelles:** Corporate tax rate of 33 percent, see Seychelles Revenue Commissions, "Business Tax Rates," https://www.src.gov.sc/pages/businesstax/BusinessTaxRates.aspx. Corporate tax rate of 40 percent for the years 2000-2006, see OECD, "Corporate Tax Statistics: Statutory Corporate Tax Rate Explanatory Annex for Non-OECD Jurisdictions," http://www.oecd.org/tax/tax-policy/explanatory-annex-non-oecd-statutory-cit-rates.pdf.
 
 * **TCD - Chad:** Corporate income tax rate of 35 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=312?download and Bloomberg Tax, "Country Guides - Chad," https://www.bloomberglaw.com/product/tax/document/25590853672.
 
-* **TGO - Togo:** Corporate income tax rate of 27 percent, see Office Togolais des Recettes (Togolaise Tax Office) "Le Guide Fiscal OTR 2020," https://www.otr.tg/index.php/en/documentation/sur-les-impots/code-general-des-impots/199-le-guide-fiscal-otr-2020/file.html and Bloomberg Tax, "Country Guides - Togo," https://www.bloomberglaw.com/product/tax/document/25590797352. Rate was reduced from 28 percent in 2019 to 27 percent in 2020, see République Togolaise, “L’essentiel des réformes entreprises au niveau de l’indicateur Paiement des Impôts et Taxes,” Portail Officiel de la République Togolaise, Mar. 16, 2020, https://www.republiquetogolaise.com/gouvernance-economique/1603-4149-l-essentiel-des-reformes-entreprises-au-niveau-de-l-indicateur-paiement-des-impots-et-taxes.
-
-* **TJK - Tajikistan:** Corporate income tax rate of 23 percent, see PwC, "Tajikistan: Corporate - Taxes on corporate income," http://taxsummaries.pwc.com/ID/Tajikistan-Corporate-Taxes-on-corporate-income and Bloomberg Tax, "Country Guides - Tajikistan," https://www.bloomberglaw.com/product/tax/document/25591004200.
-
-* **TKL - Tokelau:** There is no corporate income tax in Tokelau, hence shown as 0 percent, see OECD, "Corporate Tax Statistics - Second Edition," page  - footnote 3, 2020, https://www.oecd.org/tax/tax-policy/corporate-tax-statistics-second-edition.pdf#page=8. Same applies to 2019, see OECD, "Corporate Tax Statistics - First Edition," page 5 - footnote 3, 2019, https://www.oecd.org/tax/tax-policy/corporate-tax-statistics-database-first-edition.pdf#page=7.
-
-* **TKM - Turkmenistan:** Corporate tax rate of 8 percent; the 20 percent rate shown in the KPMG dataset only applies to _other_ residents, including contractors/subcontractors under the Petroleum law, see Bloomberg Tax, "Country Guides - Turkmenistan," https://www.bloomberglaw.com/product/tax/document/25737399336.
-
-* **TLS - Timor-Leste:** Corporate income tax rate of 10 percent, see PwC, "Timor-Leste: Corporate - Taxes on corporate income," http://taxsummaries.pwc.com/ID/Timor-Leste-Corporate-Taxes-on-corporate-income and Bloomberg Tax, "Country Guides - Timor-Leste," https://www.bloomberglaw.com/product/tax/document/25590970408.
-
-* **TON - Tonga:** Corporate income tax rate of 25 percent, see Bloomberg Tax, "Country Guides - Tonga," https://www.bloomberglaw.com/product/tax/document/25591092264.
-
-* **Trinidad & Tobago:** Corporate income tax rate of 30 percent since 2017, see Trinidad & Tobago Ministry of Finance, "Budget Statement 2017," https://www.finance.gov.tt/wp-content/uploads/2016/09/Budget-Statement-2017-for-web.pdf#page=45 and Bloomberg Tax, "Country Guides - Trinidad and Tobago," https://www.bloomberglaw.com/product/tax/document/25590439976.
+* **TKL - Tokelau:** There is no corporate income tax in Tokelau, hence shown as 0 percent, see OECD, "Corporate Tax Statistics - Third Edition," page  - footnote 3, 2021, https://www.oecd.org/tax/tax-policy/corporate-tax-statistics-third-edition.pdf#page=8. Same applies to 2019 and 2020, see OECD, "Corporate Tax Statistics - Second Edition," page  - footnote 3, 2020, https://www.oecd.org/tax/tax-policy/corporate-tax-statistics-second-edition.pdf#page=8, and OECD, "Corporate Tax Statistics - First Edition," page 5 - footnote 3, 2019, https://www.oecd.org/tax/tax-policy/corporate-tax-statistics-database-first-edition.pdf#page=7.
 
 * **TUV - Tuvalu:** Tuvalu Government - Ministry of Finance and Economic Development shows 30 percent corporate income tax rate in their Income Tax Act from 2009, see Tuvalu Government - Ministry of Finance and Economic Development, "Income Tax Act," https://mfed.tv/inland-revenue-department/. However, no more recent data can be found, thus Tuvalu continues to be shown as N/A for all years.
 
@@ -124,24 +102,15 @@ Wallis and Futuna Islands
 
 * **VAT - Holy See:** No data found, there does not seem to be a corporate income tax, hence shown as 'N/A.'
 
-* **VGB - British Virgin Islands:** Corporate tax rate of 0 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=231?download and Bloomberg Tax, "Country Guides - British Virgin Islands," https://www.bloomberglaw.com/product/tax/document/25590602280.
-
-* **VIR - 	United States Virgin Islands:** Corporate tax rate of 23.1 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=1882?download.
-
-* **VUT - Vanuatu:** Corporate tax rate of 0 percent at least since 2010, see KPMG, "Corporate tax rates table," https://home.kpmg/xx/en/home/services/tax/tax-tools-and-resources/tax-rates-online/corporate-tax-rates-table.html.
-
 * **WLF - Wallis and Futuna Islands:** Corporate tax rate of 0 percent, see Wallis & Futuna, "Investing in Wallis & Futuna," https://www.wallis-et-futuna.wf/en/investing.
 
-* **XKX - Kosovo, Republic of:** Corporate tax rate of 10 percent, see EY, "Worldwide Corporate Tax Guide 2020," https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/tax/tax-pdfs/ey-2020-wctg-web-final-20-july-2020.pdf#page=919?download and Bloomberg Tax, "Country Guides - Kosovo," https://www.bloomberglaw.com/product/tax/document/25591303208.
-
-* **ZWE - Zimbabwe:** Corporate tax rate of 24% plus a 3% AIDS levy (=24.72%) as of 2020 (25% + 3% AIDS levy prior to 2020), see PwC, "Worldwide Tax Summaries - Corporate - Taxes on corporate income - Zimbabwe," https://taxsummaries.pwc.com/zimbabwe/corporate/taxes-on-corporate-income.
-
+* **ZWE - Zimbabwe:** Corporate tax rate of 24% plus a 3% AIDS levy (=24.72%) as of 2021 (25% + 3% AIDS levy prior to 2020), see Bloomberg Tax, "Country Guides - Zimbabwe," https://www.bloomberglaw.com/product/tax/document/25590782504.
 
 ____________________________________________________
 ## **GROSS DOMESTIC PRODUCT (GDP)**
 
-* U.S. Department of Agriculture, “International Macroeconomics Data Set,” Jan. 3, 2020, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
-
+* For years prior to 1999, U.S. Department of Agriculture, “International Macroeconomics Data Set,” Jan. 8, 2020, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
+* For years following 1999, U.S. Department of Agriculture, “International Macroeconomics Data Set - Gross Domestic Product (2015 base) Projected,” Jan. 8, 2021, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/, and U.S. Department of Agriculture, “International Macroeconomics Data Set - Gross Domestic Product (2015 base) Historical,” Jan. 8, 2021, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
 
 ____________________________________________________
 ## **COUNTRY CODES**
