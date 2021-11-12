@@ -109,8 +109,8 @@
 ____________________________________________________
 ## **GROSS DOMESTIC PRODUCT (GDP)**
 
-* For years prior to 1999, U.S. Department of Agriculture, “International Macroeconomics Data Set,” Jan. 8, 2020, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
-* For years following 1999, U.S. Department of Agriculture, “International Macroeconomics Data Set - Gross Domestic Product (2015 base) Projected,” Jan. 8, 2021, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/, and U.S. Department of Agriculture, “International Macroeconomics Data Set - Gross Domestic Product (2015 base) Historical,” Jan. 8, 2021, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
+* For years prior to 1999, U.S. Department of Agriculture, “International Macroeconomics Data Set - Historical Real Gross Domestic Product (GDP) and Growth Rates of GDP for Baseline Countries/Regions (in billions of 2010 dollars) 1980-2018,” Jan. 3, 2020, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
+* For years following 1999, U.S. Department of Agriculture, “International Macroeconomics Data Set - Projected Real Gross Domestic Product (GDP) and Growth Rates of GDP for Baseline Countries/Regions (in billions of 2015 dollars) 2012-2032,” Jan. 7, 2021, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/, and U.S. Department of Agriculture, “International Macroeconomics Data Set - Historical Real Gross Domestic Product (GDP) and Growth Rates of GDP for Baseline Countries/Regions (in billions of 2015 dollars) 1999-2019,” Jan. 7, 2021, https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/.
 
 ____________________________________________________
 ## **COUNTRY CODES**
