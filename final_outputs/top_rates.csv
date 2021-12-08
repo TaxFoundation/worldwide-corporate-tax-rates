@@ -2,11 +2,11 @@
 "1","Comoros","Africa",50
 "2","Puerto Rico","North America",37.5
 "3","Suriname","South America",36
+"4","Argentina","South America",35
 "12","Chad","Africa",35
-"4","Democratic Republic of the Congo","Africa",35
-"6","Equatorial Guinea","Africa",35
-"5","Guinea","Africa",35
-"7","Kiribati","Oceania",35
+"5","Cuba","North America",35
+"7","Equatorial Guinea","Africa",35
+"6","Guinea","Africa",35
 "9","Malta","Europe",35
 "8","Saint Martin (French Part)","North America",35
 "11","Sint Maarten (Dutch part)","North America",35
@@ -18,4 +18,4 @@
 "17","Cameroon","Africa",33
 "18","Saint Kitts and Nevis","North America",33
 "19","Seychelles","Africa",33
-"20","France","Europe",32.02
+"20","Bangladesh","Asia",32.5
