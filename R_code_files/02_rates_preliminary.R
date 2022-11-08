@@ -11,17 +11,17 @@
 #dstruc$VAR_DESC
 #dstruc$CORP_TAX
 
-oecd_data_2021 <- get_dataset("TABLE_II1", start_time = 2021, end_time = 2021)
+oecd_data_2022 <- get_dataset("TABLE_II1", start_time = 2022, end_time = 2022)
 
 #Keep and rename selected columns
 
-oecd_data_2021 <- subset(oecd_data_2021, oecd_data_2021$CORP_TAX=="COMB_CIT_RATE")
-oecd_data_2021 <- subset(oecd_data_2021, select = -c(CORP_TAX,TIME_FORMAT,obsTime))
+oecd_data_2022 <- subset(oecd_data_2022, oecd_data_2022$CORP_TAX=="COMB_CIT_RATE")
+oecd_data_2022 <- subset(oecd_data_2022, select = -c(CORP_TAX,TIME_FORMAT,Time))
 
-colnames(oecd_data_2021)[colnames(oecd_data_2021)=="obsValue"] <- "2021"
-colnames(oecd_data_2021)[colnames(oecd_data_2021)=="COU"] <- "iso_3"
+colnames(oecd_data_2022)[colnames(oecd_data_2022)=="obsValue"] <- "2022"
+colnames(oecd_data_2022)[colnames(oecd_data_2022)=="COU"] <- "iso_3"
 
-
+#KPMG Rows are no longer applicable now that KPMG dataset is no longer being updated
 #KPMG Data####
 
 #Read in dataset
@@ -78,10 +78,10 @@ kpmg_data_iso <- merge(kpmg_data_2021, country_iso_cont, by="country", all=T)
 #Remove continent averages
 kpmg_data_iso <- kpmg_data_iso[!grepl("average", kpmg_data_iso$country),]
 
-
+ 
 #Merge OECD and KPMG Data####
 
-oecd_kpmg_2021 <- merge(oecd_data_2021, kpmg_data_iso, by="iso_3", all=T)
+oecd_kpmg_2021 <- merge(oecd_data_2022, kpmg_data_iso, by="iso_3", all=T)
 oecd_kpmg_2021$`2021.x` <- if_else(is.na(oecd_kpmg_2021$`2021.x`), oecd_kpmg_2021$`2021.y`, oecd_kpmg_2021$`2021.x`)
 oecd_kpmg_2021 <- subset(oecd_kpmg_2021, select = -c(`2021.y`,iso_2))
 
@@ -92,11 +92,11 @@ oecd_kpmg_2021 <- oecd_kpmg_2021[, c("2021", "iso_3", "country", "continent")]
 
 #Dataset for previous years####
 
-#Read in dataset Tax Foundation has compiled over the years for 1980-2020
-previous_years <- read_csv("source_data/data_rates_1980_2020.csv")
+#Read in dataset Tax Foundation has compiled over the years for 1980-2021
+previous_years <- read_csv("source_data/data_rates_1980_2021.csv")
 
 #Drop column that is not needed
-previous_years <- subset(previous_years, select = -c(X1))
+previous_years <- subset(previous_years, select = -c(...1))
 
 #Read in OECD dataset for non-OECD Countries
 
@@ -109,15 +109,15 @@ previous_years <- subset(previous_years, select = -c(X1))
 #dstruc$VAR_DESC
 #dstruc$CORP_TAX
 
-non_oecd_data <- get_dataset("CTS_CIT", start_time = 2000, end_time = 2020)
+non_oecd_data <- get_dataset("CTS_CIT", start_time = 2000, end_time = 2021)
 
 #Keep and rename selected columns
 
 non_oecd_data <- subset(non_oecd_data, non_oecd_data$CORP_TAX=="COMB_CIT_RATE")
 non_oecd_data <- subset(non_oecd_data, select = -c(CORP_TAX,TIME_FORMAT))
 
-colnames(non_oecd_data)[colnames(non_oecd_data)=="obsTime"] <- "year"
-colnames(non_oecd_data)[colnames(non_oecd_data)=="obsValue"] <- "rate"
+colnames(non_oecd_data)[colnames(non_oecd_data)=="Time"] <- "year"
+colnames(non_oecd_data)[colnames(non_oecd_data)=="ObsValue"] <- "rate"
 colnames(non_oecd_data)[colnames(non_oecd_data)=="COU"] <- "iso_3"
 
 
@@ -127,7 +127,7 @@ colnames(previous_years_long)[colnames(previous_years_long)=="variable"] <- "yea
 previous_years_long$value <- as.numeric(previous_years_long$value)
 
 previous_years_long <- merge(previous_years_long, non_oecd_data, by=c("iso_3", "year"), all=T)
-
+####Left off here
 previous_years_long$value <- if_else(is.na(previous_years_long$value), previous_years_long$rate, previous_years_long$value)
 previous_years_long <- subset(previous_years_long, select = -c(rate))
 colnames(previous_years_long)[colnames(previous_years_long)=="value"] <- "rate"
