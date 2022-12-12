@@ -1,6 +1,6 @@
 # Corporate Tax Rates around the World, 2020
 
-The Tax Foundation’s publication [Corporate Tax Rates around the World](https://taxfoundation.org/publications/corporate-tax-rates-around-the-world/) shows how statutory corporate income tax rates have developed since 1980, with data for over 200 jurisdictions for the year 2020. The dataset we compiled for the years 1980 to 2020 is made available as a resource for research.
+The Tax Foundation’s publication [Corporate Tax Rates around the World](https://taxfoundation.org/publications/corporate-tax-rates-around-the-world/) shows how statutory corporate income tax rates have developed since 1980, with data for over 200 jurisdictions for the year 2022. The dataset we compiled for the years 1980 to 2022 is made available as a resource for research.
 
 ## The Dataset
 
@@ -36,13 +36,11 @@ Location of **input** files to .R code file including:
 
 - `country_codes.csv` Dataset that includes all 249 sovereign states and dependent territories that have been assigned a country code by the International Organization for Standardization (ISO). Includes official country names in various languages, ISO country codes, continents, and further geographical information.
 
-- `data_rates_1980_2019.csv` Tax Foundation's dataset of statutory corporate income tax rates for the years 1980 to 2019. This dataset has been built in stages since 2015.
+- `data_rates_1980_2021.csv` Tax Foundation's dataset of statutory corporate income tax rates for the years 1980 to 2019. This dataset has been built in stages since 2015.
 
 - `gdp_historical.xlsx` U.S. Department of Agriculture's dataset of historical real Gross Domestic Product (GDP) and growth rates of GDP for 179 countries and various regions (in billions of 2010 dollars) for the years 1980 to 2018.
 
 - `gdp_projected.xlsx` U.S. Department of Agriculture's dataset of projected real Gross Domestic Product (GDP) and growth rates of GDP for 179 countries and various regions (in billions of 2010 dollars) for the years 2011 to 2031.
-
-- `kpmg_dataset_2010_2020.xlsx` KPMG's dataset of statutory corporate income tax rates for 172 jurisdictions for the years 2010 to 2020 (some historic rates are missing).
 
 ### /intermediate-outputs
 
@@ -57,20 +55,20 @@ Location of **intermediate output** files of .R code file including:
 ### /final-data
 Location of **final output** files of .R code file including
 
-- `final_data_2020.csv` Statutory corporate income tax rates and GDP levels of countries paired with ISO country codes, continents, and country groups for the year 2020. Only includes countries for which both the corporate income tax rates and GDP data were available.
+- `final_data_2022.csv` Statutory corporate income tax rates and GDP levels of countries paired with ISO country codes, continents, and country groups for the year 2020. Only includes countries for which both the corporate income tax rates and GDP data were available.
 
-- `final_data_2020_gdp_incomplete.csv` Statutory corporate income tax rates and GDP levels of countries paired with ISO country codes, continents, and country groups for the year 2020. Includes all countries for which we have data for the corporate income tax rate, including countries for which we do not have GDP data.
+- `final_data_2022_gdp_incomplete.csv` Statutory corporate income tax rates and GDP levels of countries paired with ISO country codes, continents, and country groups for the year 2020. Includes all countries for which we have data for the corporate income tax rate, including countries for which we do not have GDP data.
 
 - `final_data_long.csv` Statutory corporate income tax rates and GDP levels of all countries paired with ISO country codes, continents, and country groups for the years 1980 to 2020. Includes all countries that have an ISO country code, including the ones for which corporate income tax rates and/or GDP data was not available. In long format.
 
 ### /final-outputs
 Location of **output tables** that are included in the publication (either as tables or as charts).
 
-- `all_rates_2020.csv` Table showing the 2020 corporate tax rates for all countries we have data for (223 countries). This is the appendix table in the report.
+- `all_rates_2022.csv` Table showing the 2020 corporate tax rates for all countries we have data for (223 countries). This is the appendix table in the report.
 
 - `bottom_rates.csv` Table of the 20 countries with the lowest corporate income tax rates in the world in 2020 (excluding countries without a corporate tax).
 
-- `distribution_2020_count.csv` Table showing the distribution of corporate income tax rates in 2020 (as number of countries in each bracket rather than as share of countries in each bracket).
+- `distribution_2022_count.csv` Table showing the distribution of corporate income tax rates in 2020 (as number of countries in each bracket rather than as share of countries in each bracket).
 
 - `distribution_all_decades.csv` Table showing the distribution of corporate income tax rates as shares for each decade between 1980 and 2020.
 
