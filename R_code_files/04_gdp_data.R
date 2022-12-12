@@ -61,7 +61,7 @@ gdp_historical_2010<-(rbind(gdp_historical_2010,Zimbabwe))
 gdp <- merge(gdp_historical_2010, gdp_historical_2015, by="Country", All=T)
 gdp <- merge(gdp, gdp_projected_2015, by="Country", All=T)
 
-write.csv(gdp,"gdp.csv", row.names=F)
+write.csv(gdp,"intermediate_outputs/gdp.csv", row.names=F)
 colnames(gdp)[colnames(gdp)=="Country"] <- "country"
 
 #Renaming countries in gdp dataset to match iso-codes
