@@ -1,15 +1,15 @@
-# Corporate Tax Rates around the World, 2020
+# Corporate Tax Rates around the World, 2022
 
 The Tax Foundation’s publication [Corporate Tax Rates around the World](https://taxfoundation.org/publications/corporate-tax-rates-around-the-world/) shows how statutory corporate income tax rates have developed since 1980, with data for over 200 jurisdictions for the year 2022. The dataset we compiled for the years 1980 to 2022 is made available as a resource for research.
 
 ## The Dataset
 
 ### Scope
-The dataset compiled for this publication includes the 2020 statutory corporate income tax rates of 223 sovereign states and dependent territories around the world. Tax rates were researched only for jurisdictions that are among the around 250 sovereign states and dependent territories that have been assigned a country code by the International Organization for Standardization (ISO). (The jurisdictions Netherland Antilles (which was split into different jurisdictions in 2010) and Kosovo (which has not yet officially been assigned a country code) were added to the dataset.) As a result, zones or territories that are independent taxing jurisdictions but do not have their own country code are generally not included in the dataset.
+The dataset compiled for this publication includes the 2020 statutory corporate income tax rates of 225 sovereign states and dependent territories around the world. Tax rates were researched only for jurisdictions that are among the around 250 sovereign states and dependent territories that have been assigned a country code by the International Organization for Standardization (ISO). (The jurisdictions Netherland Antilles (which was split into different jurisdictions in 2010) and Kosovo (which has not yet officially been assigned a country code) were added to the dataset.) As a result, zones or territories that are independent taxing jurisdictions but do not have their own country code are generally not included in the dataset.
 
-In addition, the dataset includes historic statutory corporate income tax rates for the time period 1980 to 2019. However, these years cover tax rates of fewer than 223 jurisdictions due to missing data points. Please let Tax Foundation know if you are aware of any sources for historic corporate tax rates that are not mentioned in this report, as we constantly strive to improve our datasets.
+In addition, the dataset includes historic statutory corporate income tax rates for the time period 1980 to 2022. However, these years cover tax rates of fewer than 225 jurisdictions due to missing data points. Please let Tax Foundation know if you are aware of any sources for historic corporate tax rates that are not mentioned in this report, as we constantly strive to improve our datasets.
 
-To be able to calculate average statutory corporate income tax rates weighted by GDP, the dataset includes GDP data for 177 jurisdictions. When used to calculate average statutory corporate income tax rates, either weighted by GDP or unweighted, only these 177 jurisdictions are included (to ensure the comparability of the unweighted and weighted averages).
+To be able to calculate average statutory corporate income tax rates weighted by GDP, the dataset includes GDP data for 180 jurisdictions. When used to calculate average statutory corporate income tax rates, either weighted by GDP or unweighted, only these 180 jurisdictions are included (to ensure the comparability of the unweighted and weighted averages).
 
 
 ### Definition of Selected Corporate Income Tax Rate
@@ -64,7 +64,7 @@ Location of **final output** files of .R code file including
 ### /final-outputs
 Location of **output tables** that are included in the publication (either as tables or as charts).
 
-- `all_rates_2022.csv` Table showing the 2020 corporate tax rates for all countries we have data for (223 countries). This is the appendix table in the report.
+- `all_rates_2022.csv` Table showing the 2020 corporate tax rates for all countries we have data for (225 countries). This is the appendix table in the report.
 
 - `bottom_rates.csv` Table of the 20 countries with the lowest corporate income tax rates in the world in 2020 (excluding countries without a corporate tax).
 
