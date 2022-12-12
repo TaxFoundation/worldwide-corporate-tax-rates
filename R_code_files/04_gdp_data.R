@@ -2,12 +2,14 @@
 
 #Reading in GDP data
 gdp_historical_2010<- read_excel("source_data/gdp_historical_2010.xlsx", range = "A12:AN230")
-gdp_historical_2015<- read_excel("source_data/gdp_historical_2015.xlsx", range = "A14:V234")
-gdp_projected_2015 <- read_excel("source_data/gdp_projected_2015.xlsx", range = "A14:K234")
+gdp_historical_2015<- read_excel("source_data/gdp_historical_2015.xlsx", range = "A16:V236")
+gdp_projected_2015 <- read_excel("source_data/gdp_projected_2015.xlsx", range = "A15:L235")
 
 #Merging historical and projected data
-gdp_historical_2010 <-gdp_historical_2010[,-c(21:40)]
-gdp_projected_2015 <- gdp_projected_2015[,-c(2:9)]
+#delete from gdp_historical_2010 the years from 2000 to 2020 (years that are in gdp_historical_2015) 
+#in gdp_projected_2015 keep only the last two years
+gdp_historical_2010 <-gdp_historical_2010[,-c(22:40)]
+gdp_projected_2015 <- gdp_projected_2015[,-c(2:10)]
 
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Antigua Barbuda"] <- "Antigua and Barbuda"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Dominican Rep"] <- "Dominican Republic"
@@ -16,8 +18,8 @@ gdp_historical_2010$Country[gdp_historical_2010$Country == "St Lucia"] <- "St. L
 gdp_historical_2010$Country[gdp_historical_2010$Country == "St Vincent Grenadines"] <- "St. Vincent and Grenadines"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "UK"] <- "United Kingdom"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Bosnia Herzegovina"] <- "Bosnia and Herzegovina"
-gdp_historical_2015$Country[gdp_historical_2015$Country == "Côte d'Ivoire"] <- "Cote d'Ivoire"
-gdp_projected_2015$Country[gdp_projected_2015$Country == "Côte d'Ivoire"] <- "Cote d'Ivoire"
+gdp_historical_2015$Country[gdp_historical_2015$Country == "C?te d'Ivoire"] <- "Cote d'Ivoire"
+gdp_projected_2015$Country[gdp_projected_2015$Country == "C?te d'Ivoire"] <- "Cote d'Ivoire"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Guinea Bissau"] <- "Guinea-Bissau"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Central Afr Rep"] <- "Central African Republic"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Dem Rep Congo"] <- "Democratic Republic of the Congo"
@@ -27,8 +29,15 @@ gdp_historical_2010$Country[gdp_historical_2010$Country == "Rep Congo"] <- "Repu
 gdp_historical_2015$Country[gdp_historical_2015$Country == "Republic of Congo"] <- "Republic of the Congo"
 gdp_projected_2015$Country[gdp_projected_2015$Country == "Republic of Congo"] <- "Republic of the Congo"
 gdp_historical_2010$Country[gdp_historical_2010$Country == "Sao Tome Principe"] <- "Sao Tome and Principe"
-gdp_historical_2015$Country[gdp_historical_2015$Country == "São Tomé and Principe"] <- "Sao Tome and Principe"
-gdp_projected_2015$Country[gdp_projected_2015$Country == "São Tomé and Principe"] <- "Sao Tome and Principe"
+gdp_historical_2015$Country[gdp_historical_2015$Country == "S?o Tom? and Principe"] <- "Sao Tome and Principe"
+gdp_historical_2015$Country[gdp_historical_2015$Country == "SÃ£o TomÃ© and Principe"] <- "Sao Tome and Principe"
+
+gdp_projected_2015$Country[gdp_projected_2015$Country == "S?o Tom? and Principe"] <- "Sao Tome and Principe"
+gdp_projected_2015$Country[gdp_projected_2015$Country == "SÃ£o TomÃ© and Principe"] <- "Sao Tome and Principe"
+
+gdp_historical_2015$Country[gdp_historical_2015$Country == "Macedonia, North"] <- "Macedonia"
+gdp_projected_2015$Country[gdp_projected_2015$Country == "Macedonia, North"] <- "Macedonia"
+
 gdp_historical_2015$Country[gdp_historical_2015$Country == "St. Kitts Nevis"] <- "St. Kitts and Nevis"
 gdp_projected_2015$Country[gdp_projected_2015$Country == "St. Kitts Nevis"] <- "St. Kitts and Nevis"
 gdp_historical_2015$Country[gdp_historical_2015$Country == "St. Vincent Grenadines"] <- "St. Vincent and Grenadines"
@@ -44,7 +53,7 @@ Zimbabwe<-c("Zimbabwe",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
 gdp_historical_2010<-(rbind(gdp_historical_2010,Qatar))
 gdp_historical_2010<-(rbind(gdp_historical_2010,Zimbabwe))
 
-
+#to check country names are correct put all csv files in an excel and check they have the same name with the function EXACT
 #write.csv(gdp_historical_2010,"gdp_historical_2010.csv",row.names = F)
 #write.csv(gdp_historical_2015,"gdp_historical_2015.csv",row.names = F)
 #write.csv(gdp_projected_2015,"gdp_projected_2015.csv",row.names = F)
@@ -52,7 +61,7 @@ gdp_historical_2010<-(rbind(gdp_historical_2010,Zimbabwe))
 gdp <- merge(gdp_historical_2010, gdp_historical_2015, by="Country", All=T)
 gdp <- merge(gdp, gdp_projected_2015, by="Country", All=T)
 
-#write.csv(gdp,"gdp.csv", row.names=F)
+write.csv(gdp,"intermediate_outputs/gdp.csv", row.names=F)
 colnames(gdp)[colnames(gdp)=="Country"] <- "country"
 
 #Renaming countries in gdp dataset to match iso-codes
@@ -77,6 +86,7 @@ gdp$country[gdp$country == "United Kingdom"] <- "United Kingdom of Great Britain
 gdp$country[gdp$country == "United States"] <- "United States of America"
 gdp$country[gdp$country == "Venezuela"] <- "Venezuela (Bolivarian Republic of)"
 gdp$country[gdp$country == "Vietnam"] <- "Viet Nam"
+
 
 
 #Drop rows that contain data of regions
@@ -120,6 +130,7 @@ gdp <- subset(gdp, gdp$country != "Africa"
               & gdp$country != "Sub-Saharan Africa"
               & gdp$country != "World"
               & gdp$country != "World Less USA")
+
 
 #Merge gdp data with iso-codes
 gdp_iso <- merge(country_iso_cont, gdp, by="country")

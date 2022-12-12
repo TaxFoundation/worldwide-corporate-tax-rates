@@ -1,21 +1,18 @@
-"","ISO_3","Country","Continent","2020 Tax Rate","2021 Tax Rate","Change from 2020 to 2021"
-"3","AGO","Angola","Africa",30,25,-5
-"49","COG","Congo","Africa",30,28,-2
-"48","COD","Democratic Republic of the Congo","Africa",35,30,-5
-"88","GMB","Gambia","Africa",31,27,-4
-"227","TUN","Tunisia","Africa",25,15,-10
-"24","BGD","Bangladesh","Asia",25,32.5,7.5
-"37","BTN","Bhutan","Asia",30,25,-5
-"104","IDN","Indonesia","Asia",25,22,-3
-"126","LAO","Lao People's Democratic Republic","Asia",24,20,-4
-"132","LKA","Sri Lanka","Asia",28,24,-4
-"228","TUR","Turkey","Asia",22,20,-2
-"77","FRA","France","Europe",32.02,28.4075,-3.6125
-"85","GIB","Gibraltar","Europe",10,12.5,2.5
-"140","MCO","Monaco","Europe",28,26.5,-1.5
-"212","SWE","Sweden","Europe",21.4,20.6,-0.799999999999997
-"43","CHE","Switzerland","Europe",21.148581,19.698516,-1.450065
-"122","KIR","Kiribati","Oceania",35,30,-5
-"10","ARG","Argentina","South America",30,35,5
-"44","CHL","Chile","South America",25,10,-15
-"51","COL","Colombia","South America",32,31,-1
+"","ISO_3","Country","Continent","2021 Tax Rate","2022 Tax Rate","Change from 2021 to 2022"
+"215","SYC","Seychelles","Africa",30,25,-5
+"201","SLE","Sierra Leone","Africa",30,25,-5
+"207","SSD","South Sudan","Africa",25,30,5
+"250","ZMB","Zambia","Africa",35,30,-5
+"24","BGD","Bangladesh","Asia",32.5,30,-2.5
+"149","MMR","Myanmar","Asia",25,22,-3
+"221","TJK","Tajikistan","Asia",23,18,-5
+"228","TUR","Turkey","Asia",20,23,3
+"77","FRA","France","Europe",28.4075,25.825,-2.5825
+"91","GRC","Greece","Europe",24,22,-2
+"140","MCO","Monaco","Europe",26.5,25,-1.5
+"150","MNE","Montenegro","Europe",9,15,6
+"168","NLD","Netherlands","Europe",25,25.8,0.800000000000001
+"22","BES","Bonaire, Sint Eustatius and Saba","North America",25,25.8,0.800000000000001
+"187","PYF","French Polynesia","Oceania",27,25,-2
+"44","CHL","Chile","South America",10,27,17
+"51","COL","Colombia","South America",31,35,4

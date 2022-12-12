@@ -1,0 +1,226 @@
+"ISO3","Country","Continent","Corporate Tax Rate"
+"AFG","Afghanistan","AS",20
+"ALA","Aland Islands","EU",20
+"ALB","Albania","EU",15
+"DZA","Algeria","AF",26
+"ASM","American Samoa","OC",34
+"AND","Andorra","EU",10
+"AGO","Angola","AF",25
+"AIA","Anguilla","NO",0
+"ATG","Antigua and Barbuda","NO",25
+"ARG","Argentina","SA",35
+"ARM","Armenia","AS",18
+"ABW","Aruba","NO",25
+"AUS","Australia","OC",30
+"AUT","Austria","EU",25
+"AZE","Azerbaijan","AS",20
+"BHS","Bahamas","NO",0
+"BHR","Bahrain","AS",0
+"BGD","Bangladesh","AS",30
+"BRB","Barbados","NO",5.5
+"BLR","Belarus","EU",18
+"BEL","Belgium","EU",25
+"BLZ","Belize","NO",0
+"BEN","Benin","AF",30
+"BMU","Bermuda","NO",0
+"BTN","Bhutan","AS",25
+"BOL","Bolivia (Plurinational State of)","SA",25
+"BES","Bonaire, Sint Eustatius and Saba","NO",25.8
+"BIH","Bosnia and Herzegovina","EU",10
+"BWA","Botswana","AF",22
+"BRA","Brazil","SA",34
+"VGB","British Virgin Islands","NO",0
+"BRN","Brunei Darussalam","AS",18.5
+"BGR","Bulgaria","EU",10
+"BFA","Burkina Faso","AF",27.5
+"BDI","Burundi","AF",30
+"CPV","Cabo Verde","AF",22
+"KHM","Cambodia","AS",20
+"CMR","Cameroon","AF",33
+"CAN","Canada","NO",26.21
+"CYM","Cayman Islands","NO",0
+"CAF","Central African Republic","AF",30
+"TCD","Chad","AF",35
+"CHL","Chile","SA",27
+"CHN","China","AS",25
+"HKG","China, Hong Kong Special Administrative Region","AS",16.5
+"MAC","China, Macao Special Administrative Region","AS",12
+"COL","Colombia","SA",35
+"COM","Comoros","AF",50
+"COG","Congo","AF",28
+"COK","Cook Islands","OC",20
+"CRI","Costa Rica","NO",30
+"CIV","Cote d'Ivoire","AF",25
+"HRV","Croatia","EU",18
+"CUB","Cuba","NO",35
+"CUW","Curacao","NO",22
+"CYP","Cyprus","EU",12.5
+"CZE","Czechia","EU",19
+"COD","Democratic Republic of the Congo","AF",30
+"DNK","Denmark","EU",22
+"DJI","Djibouti","AF",25
+"DMA","Dominica","NO",25
+"DOM","Dominican Republic","NO",27
+"ECU","Ecuador","SA",25
+"EGY","Egypt","AF",22.5
+"SLV","El Salvador","NO",30
+"GNQ","Equatorial Guinea","AF",35
+"ERI","Eritrea","AF",30
+"EST","Estonia","EU",20
+"ETH","Ethiopia","AF",30
+"FLK","Falkland Islands (Malvinas)","SA",26
+"FRO","Faroe Islands","EU",18
+"FJI","Fiji","OC",20
+"FIN","Finland","EU",20
+"FRA","France","EU",25.825
+"PYF","French Polynesia","OC",25
+"GAB","Gabon","AF",30
+"GMB","Gambia","AF",27
+"GEO","Georgia","AS",15
+"DEU","Germany","EU",29.83
+"GHA","Ghana","AF",25
+"GIB","Gibraltar","EU",12.5
+"GRC","Greece","EU",22
+"GRL","Greenland","NO",26.5
+"GRD","Grenada","NO",28
+"GUM","Guam","OC",21
+"GTM","Guatemala","NO",25
+"GGY","Guernsey","EU",0
+"GIN","Guinea","AF",35
+"GNB","Guinea-Bissau","AF",25
+"GUY","Guyana","SA",25
+"HTI","Haiti","NO",30
+"HND","Honduras","NO",25
+"HUN","Hungary","EU",9
+"ISL","Iceland","EU",20
+"IND","India","AS",30
+"IDN","Indonesia","AS",22
+"IRN","Iran (Islamic Republic of)","AS",25
+"IRQ","Iraq","AS",15
+"IRL","Ireland","EU",12.5
+"IMN","Isle of Man","EU",0
+"ISR","Israel","AS",23
+"ITA","Italy","EU",27.81
+"JAM","Jamaica","NO",25
+"JPN","Japan","AS",29.74
+"JEY","Jersey","EU",0
+"JOR","Jordan","AS",20
+"KAZ","Kazakhstan","AS",20
+"KEN","Kenya","AF",30
+"KIR","Kiribati","OC",30
+"XKX","Kosovo, Republic of","EU",10
+"KWT","Kuwait","AS",15
+"KGZ","Kyrgyzstan","AS",10
+"LAO","Lao People's Democratic Republic","AS",20
+"LVA","Latvia","EU",20
+"LBN","Lebanon","AS",17
+"LSO","Lesotho","AF",25
+"LBR","Liberia","AF",25
+"LBY","Libya","AF",20
+"LIE","Liechtenstein","EU",12.5
+"LTU","Lithuania","EU",15
+"LUX","Luxembourg","EU",24.94
+"MDG","Madagascar","AF",20
+"MWI","Malawi","AF",30
+"MYS","Malaysia","AS",24
+"MDV","Maldives","AS",15
+"MLI","Mali","AF",30
+"MLT","Malta","EU",35
+"MRT","Mauritania","AF",25
+"MUS","Mauritius","AF",15
+"MEX","Mexico","NO",30
+"FSM","Micronesia (Federated States of)","OC",30
+"MCO","Monaco","EU",25
+"MNG","Mongolia","AS",25
+"MNE","Montenegro","EU",15
+"MSR","Montserrat","NO",30
+"MAR","Morocco","AF",31
+"MOZ","Mozambique","AF",32
+"MMR","Myanmar","AS",22
+"NAM","Namibia","AF",32
+"NRU","Nauru","OC",25
+"NPL","Nepal","AS",25
+"NLD","Netherlands","EU",25.8
+"NCL","New Caledonia","OC",30
+"NZL","New Zealand","OC",28
+"NIC","Nicaragua","NO",30
+"NER","Niger","AF",30
+"NGA","Nigeria","AF",30
+"NIU","Niue","OC",30
+"MNP","Northern Mariana Islands","OC",21
+"NOR","Norway","EU",22
+"OMN","Oman","AS",15
+"PAK","Pakistan","AS",29
+"PAN","Panama","NO",25
+"PNG","Papua New Guinea","OC",30
+"PRY","Paraguay","SA",10
+"PER","Peru","SA",29.5
+"PHL","Philippines","AS",25
+"POL","Poland","EU",19
+"PRT","Portugal","EU",31.5
+"PRI","Puerto Rico","NO",37.5
+"QAT","Qatar","AS",10
+"KOR","Republic of Korea","AS",27.5
+"MDA","Republic of Moldova","EU",12
+"ROU","Romania","EU",16
+"RUS","Russian Federation","EU",20
+"RWA","Rwanda","AF",30
+"BLM","Saint Barthelemy","NO",0
+"SHN","Saint Helena","AF",25
+"KNA","Saint Kitts and Nevis","NO",33
+"LCA","Saint Lucia","NO",30
+"MAF","Saint Martin (French Part)","NO",20
+"VCT","Saint Vincent and the Grenadines","NO",30
+"WSM","Samoa","OC",27
+"SMR","San Marino","EU",17
+"STP","Sao Tome and Principe","AF",25
+"SAU","Saudi Arabia","AS",20
+"SEN","Senegal","AF",30
+"SRB","Serbia","EU",15
+"SYC","Seychelles","AF",25
+"SLE","Sierra Leone","AF",25
+"SGP","Singapore","AS",17
+"SXM","Sint Maarten (Dutch part)","NO",34.5
+"SVK","Slovakia","EU",21
+"SVN","Slovenia","EU",19
+"SLB","Solomon Islands","OC",30
+"ZAF","South Africa","AF",28
+"SSD","South Sudan","AF",30
+"ESP","Spain","EU",25
+"LKA","Sri Lanka","AS",24
+"PSE","State of Palestine","AS",15
+"SDN","Sudan","AF",35
+"SUR","Suriname","SA",36
+"SWZ","Swaziland","AF",27.5
+"SWE","Sweden","EU",20.6
+"CHE","Switzerland","EU",19.699
+"SYR","Syrian Arab Republic","AS",28
+"TWN","Taiwan","AS",20
+"TJK","Tajikistan","AS",18
+"THA","Thailand","AS",20
+"MKD","The former Yugoslav Republic of Macedonia","EU",10
+"TLS","Timor-Leste","OC",10
+"TGO","Togo","AF",27
+"TKL","Tokelau","OC",0
+"TON","Tonga","OC",25
+"TTO","Trinidad and Tobago","NO",30
+"TUN","Tunisia","AF",15
+"TUR","Turkey","AS",23
+"TKM","Turkmenistan","AS",8
+"TCA","Turks and Caicos Islands","NO",0
+"UGA","Uganda","AF",30
+"UKR","Ukraine","EU",18
+"ARE","United Arab Emirates","AS",0
+"GBR","United Kingdom of Great Britain and Northern Ireland","EU",19
+"TZA","United Republic of Tanzania","AF",30
+"USA","United States of America","NO",25.808
+"VIR","United States Virgin Islands","NO",23.1
+"URY","Uruguay","SA",25
+"UZB","Uzbekistan","AS",15
+"VUT","Vanuatu","OC",0
+"VEN","Venezuela (Bolivarian Republic of)","SA",34
+"VNM","Viet Nam","AS",20
+"WLF","Wallis and Futuna Islands","OC",0
+"YEM","Yemen","AS",20
+"ZMB","Zambia","AF",30
+"ZWE","Zimbabwe","AF",24.72
