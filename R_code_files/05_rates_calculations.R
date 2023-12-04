@@ -69,7 +69,7 @@ rate_changes$change <- (rate_changes$'2023' - rate_changes$'2022')
 #Drop countries with no changes
 rate_changes <- subset(rate_changes, change!=0)
 
-write.csv(rate_changes, "final_outputs/rate_changes_all_delete.csv")
+#write.csv(rate_changes, "final_outputs/rate_changes_all_delete.csv")
 
 #Drop countries with only minor changes
 rate_changes <- subset(rate_changes, rate_changes$change > 0.5 | rate_changes$change < -0.5)
@@ -724,6 +724,7 @@ colnames(regional23)[colnames(regional23)=="count23"] <- "Number of Countries"
 write.csv(regional23, "final_outputs/rates_regional.csv")
 
 
+
 #Chart showing distribution of rates in 2023 (including countries with missing gdp data)
 dist <- hist(data2023_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50), main="2023 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
 distdata <- data.frame(dist$counts,dist$breaks[1:10])
@@ -872,9 +873,9 @@ all_years_final_count <- all_years_final
 all_years_final_count[all_years_final_count >= 0] <- 1
 all_years_final_count[is.na(all_years_final_count)] <- 0
 
-year_count <- data.frame(apply(all_years_final_count[5:47], MARGIN=2, FUN=sum))
+year_count <- data.frame(apply(all_years_final_count[5:48], MARGIN=2, FUN=sum))
 
-colnames(year_count)[colnames(year_count)=="apply.all_years_final_count.5.46...MARGIN...2..FUN...sum."] <- "Count"
+colnames(year_count)[colnames(year_count)=="apply.all_years_final_count.5.48...MARGIN...2..FUN...sum."] <- "Count"
 
 write.csv(year_count, "final_outputs/year_count.csv")
 
