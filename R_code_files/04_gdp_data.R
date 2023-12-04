@@ -136,11 +136,21 @@ gdp <- subset(gdp, gdp$country != "Africa"
               & gdp$country != "World"
               & gdp$country != "World less USA")
 
+#Change format of GDP data from wide to long
+gdp$country <- as.character(gdp$country)
+data$country <- as.character(data$country)
+gdp_long <- (melt(gdp, id=c("country")))
+colnames(gdp_long)[colnames(gdp_long)=="variable"] <- "year"
+colnames(gdp_long)[colnames(gdp_long)=="value"] <- "gdp"
+
+#delete the "y" before the year"
+gdp_long$year <- gsub("^.{0,1}", "", gdp_long$year)
 
 
+gdp_final <- spread(gdp_long, year, gdp)
 
 #Merge gdp data with iso-codes
-gdp_iso <- merge(country_iso_cont, gdp, by="country")
+gdp_iso <- merge(country_iso_cont, gdp_final, by="country")
 
 #Write gdp data
 write.csv(gdp_iso,"intermediate_outputs/gdp_iso.csv")
