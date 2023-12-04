@@ -5,12 +5,12 @@ rm(list=ls())
 gc()
 
 #Directory Variables####
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-R_code_files<-"C:/Github/worldwide-corporate-tax-rates/R_code_files/"
-source_data<-"C:/Github/worldwide-corporate-tax-rates/source_data/"
-intermediate_outputs<-"C:/Github/worldwide-corporate-tax-rates/intermediate_outputs/"
-final_data<-"C:/Github/worldwide-corporate-tax-rates/final_data/"
-final_outputs<-"C:/Github/worldwide-corporate-tax-rates/final_outputs/"
+#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+R_code_files<-"C:/Users/acer/Documents/Github/worldwide-corporate-tax-rates/R_code_files/"
+source_data<-"C:/Users/acer/Documents/Github/worldwide-corporate-tax-rates/source_data/"
+intermediate_outputs<-"C:/Users/acer/Documents/Github/worldwide-corporate-tax-rates/intermediate_outputs/"
+final_data<-"C:/Users/acer/Documents/Github/worldwide-corporate-tax-rates/final_data/"
+final_outputs<-"C:/Users/acer/Documents/Github/worldwide-corporate-tax-rates/final_outputs/"
 
 
 #Define Using function####
@@ -36,7 +36,7 @@ using<-function(...,prompt=TRUE){
     }
   }
 }
-setwd("C:/Github/worldwide-corporate-tax-rates")
+setwd("C:/Users/acer/Documents/GitHub/worldwide-corporate-tax-rates/")
 #setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 using(gtools)
@@ -52,7 +52,7 @@ using(reshape2)
 using(countrycode)
 using(tidyverse)
 using(stringr)
-using(IMFData)
+#using(IMFData)
 using(readr)
 using(scales)
 

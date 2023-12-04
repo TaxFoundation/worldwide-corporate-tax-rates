@@ -4,6 +4,33 @@ rates_final_long <- (melt(all_years_final, id=c("iso_2","iso_3","continent","cou
 colnames(rates_final_long)[colnames(rates_final_long)=="variable"] <- "year"
 colnames(rates_final_long)[colnames(rates_final_long)=="value"] <- "rate"
 
+
+
+Added this part....
+
+#Change format of GDP data from wide to long
+gdp_iso$country <- as.character(gdp_iso$country)
+data$country <- as.character(data$country)
+gdp_iso_long <- (melt(gdp, id=c("country")))
+colnames(gdp_iso_long)[colnames(gdp_long)=="variable"] <- "year"
+colnames(gdp_iso_long)[colnames(gdp_iso_long)=="value"] <- "gdp"
+
+#delete the "y" before the year"
+gdp_iso_long$year <- gsub("^.{0,1}", "", gdp_iso_long$year)
+
+gdp_iso_long <- (melt(gdp_iso, id=c("iso_2","iso_3","continent","country")))
+colnames(gdp_iso_long)[colnames(gdp_iso_long)=="variable"] <- "year"
+colnames(gdp_iso_long)[colnames(gdp_iso_long)=="value"] <- "gdp"
+
+#Merge rates and gdp
+rates_gdp <- merge(rates_final_long, gdp_iso_long, by =c("iso_2","iso_3", "continent","country", "year"), all=T)
+
+until here...
+
+
+
+
+
 gdp_iso_long <- (melt(gdp_iso, id=c("iso_2","iso_3","continent","country")))
 colnames(gdp_iso_long)[colnames(gdp_iso_long)=="variable"] <- "year"
 colnames(gdp_iso_long)[colnames(gdp_iso_long)=="value"] <- "gdp"
