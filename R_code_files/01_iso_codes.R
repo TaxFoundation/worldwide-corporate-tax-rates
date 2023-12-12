@@ -15,16 +15,16 @@ colnames(country_iso_cont)[colnames(country_iso_cont)=="Continent"] <- "continen
 country_iso_cont$continent <- as.character(country_iso_cont$continent)
 country_iso_cont$continent <- if_else(is.na(country_iso_cont$continent),"NO", country_iso_cont$continent)
 
-#Drop the jurisdiction "Sark" (the island is fiscally autonomous but has no company registry, no company law, and also no ISO-code)
-country_iso_cont <- subset(country_iso_cont, country_iso_cont$country != "Sark")
-
 #Add the jurisdictions Netherland Antilles (was split into different jurisdictions in 2010) and Kosovo (has not yet officially been assigned a country code)
 country_iso_cont$country <- as.character(country_iso_cont$country)
 country_iso_cont$iso_2 <- as.character(country_iso_cont$iso_2)
 country_iso_cont$iso_3 <- as.character(country_iso_cont$iso_3)
 
-country_iso_cont[nrow(country_iso_cont) + 1,] = list("Kosovo, Republic of", "XK", "XKX", "EU")
-country_iso_cont[nrow(country_iso_cont) + 1,] = list("Netherlands Antilles", "AN", "ANT", "NO")
+country_iso_cont[nrow(country_iso_cont) + 1 ,] = list("Kosovo, Republic of", "XK", "XKX", "EU")
+country_iso_cont[nrow(country_iso_cont) + 1 ,] = list("Netherlands Antilles", "AN", "ANT", "NO")
+
+#Drop the jurisdiction "Sark" (the island is fiscally autonomous but has no company registry, no company law, and also no ISO-code)
+country_iso_cont <- subset(country_iso_cont, country_iso_cont$country != "Sark")
 
 #Correct country names that were read in incorrectly (mostly because R does not recognize accents)
 
@@ -152,5 +152,3 @@ country_iso_cont_groups$brics <- ifelse(country_iso_cont$iso_3 == "BRA"
                                         | country_iso_cont$iso_3 == "RUS"
                                         | country_iso_cont$iso_3 == "ZAF"
                                         ,1,0)
-
-
