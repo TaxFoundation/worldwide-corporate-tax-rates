@@ -1,21 +1,21 @@
-"","Country","Continent","Rate"
-"16","Barbados","North America",5.5
-"17","Turkmenistan","Asia",8
-"19","Hungary","Europe",9
-"18","United Arab Emirates","Asia",9
-"20","Andorra","Europe",10
-"22","Bosnia and Herzegovina","Europe",10
-"21","Bulgaria","Europe",10
-"28","Kosovo, Republic of","Europe",10
-"23","Kyrgyzstan","Asia",10
-"25","Paraguay","South America",10
-"26","Qatar","Asia",10
-"24","The former Yugoslav Republic of Macedonia","Europe",10
-"27","Timor-Leste","Oceania",10
-"29","China, Macao Special Administrative Region","Asia",12
-"30","Republic of Moldova","Europe",12
-"31","Cyprus","Europe",12.5
-"32","Gibraltar","Europe",12.5
-"33","Ireland","Europe",12.5
-"34","Liechtenstein","Europe",12.5
-"35","Albania","Europe",15
+"","Country","Continent","Rate","iso_2","iso_3","Tax Rate Accounting for Global Minimum Tax"
+"19","Turkmenistan","Asia",8,"TM","TKM",8
+"3","Barbados","North America",9,"BB","BRB",15
+"9","Hungary","Europe",9,"HU","HUN",15
+"20","United Arab Emirates","Asia",9,"AE","ARE",9
+"2","Andorra","Europe",10,"AD","AND",10
+"4","Bosnia and Herzegovina","Europe",10,"BA","BIH",10
+"5","Bulgaria","Europe",10,"BG","BGR",15
+"11","Kosovo, Republic of","Europe",10,"XK","XKX",10
+"12","Kyrgyzstan","Asia",10,"KG","KGZ",10
+"14","Paraguay","South America",10,"PY","PRY",10
+"15","Qatar","Asia",10,"QA","QAT",10
+"17","The former Yugoslav Republic of Macedonia","Europe",10,"MK","MKD",10
+"18","Timor-Leste","Oceania",10,"TL","TLS",10
+"6","China, Macao Special Administrative Region","Asia",12,"MO","MAC",12
+"16","Republic of Moldova","Europe",12,"MD","MDA",12
+"7","Cyprus","Europe",12.5,"CY","CYP",12.5
+"10","Ireland","Europe",12.5,"IE","IRL",15
+"13","Liechtenstein","Europe",12.5,"LI","LIE",15
+"1","Albania","Europe",15,"AL","ALB",15
+"8","Georgia","Asia",15,"GE","GEO",15

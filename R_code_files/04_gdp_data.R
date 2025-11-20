@@ -1,7 +1,7 @@
 #GDP Data####
 
 #Reading in GDP data
-gdp<- read_excel("source_data/RealGDPValues.xlsx", range = "A14:BL234")
+gdp<- read_excel("source_data/RealGDPValues.xlsx", range = "A13:BN233")
 #gdp_historical_2010<- read_excel("source_data/gdp_historical_2010.xlsx", range = "A12:AN230")
 #gdp_historical_2015<- read_excel("source_data/gdp_historical_2015.xlsx", range = "A16:V236")
 #gdp_projected_2015 <- read_excel("source_data/gdp_projected_2015.xlsx", range = "A15:L235")
