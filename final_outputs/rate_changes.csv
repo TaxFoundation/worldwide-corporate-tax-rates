@@ -1,18 +1,29 @@
-"","ISO_3","Country","Continent","2023 Tax Rate","2024 Tax Rate","2024 Tax Rate Accounting for Global Minimum Tax","Change from 2023 to 2024"
-"53","CPV","Cabo Verde","Africa",22.44,21.42,21.42,-1.02
-"139","MAR","Morocco","Africa",32,33,33,1
-"192","RWA","Rwanda","Africa",30,28,28,-2
-"213","SWZ","Swaziland","Africa",27.5,25,25,-2.5
-"216","SYR","Syrian Arab Republic","Asia",28,25,25,-3
-"17","AUT","Austria","Europe",24,23,23,-1
-"30","BLR","Belarus","Europe",20,25,25,5
+"","ISO_3","Country","Continent","2024 Tax Rate","2025 Tax Rate","2025 Tax Rate Accounting for Global Minimum Tax","Change from 2024 to 2025"
+"90","GNQ","Equatorial Guinea","Africa",35,25,25,-10
+"139","MAR","Morocco","Africa",33,34,34,1
+"161","NAM","Namibia","Africa",32,30,30,-2
+"227","TUN","Tunisia","Africa",15,20,20,5
+"251","ZWE","Zimbabwe","Africa",24.72,25.75,25.75,1.03
+"26","BHR","Bahrain","Asia",0,0,15,15
+"188","QAT","Qatar","Asia",10,10,15,5
+"9","ARE","United Arab Emirates","Asia",9,9,15,6
 "25","BGR","Bulgaria","Europe",10,10,15,5
-"60","CZE","Czechia","Europe",19,21,21,2
-"85","GIB","Gibraltar","Europe",12.5,15,15,2.5
+"59","CYP","Cyprus","Europe",12.5,12.5,15,2.5
+"72","EST","Estonia","Europe",20,22,22,2
+"77","FRA","France","Europe",25.825,36.13,36.13,10.305
+"83","GGY","Guernsey","Europe",0,0,15,15
 "103","HUN","Hungary","Europe",9,9,15,6
-"111","ISL","Iceland","Europe",20,21,21,1
+"111","ISL","Iceland","Europe",21,20,20,-1
 "108","IRL","Ireland","Europe",12.5,12.5,15,2.5
+"105","IMN","Isle of Man","Europe",0,0,15,15
+"115","JEY","Jersey","Europe",0,0,15,15
 "131","LIE","Liechtenstein","Europe",12.5,12.5,15,2.5
-"211","SVN","Slovenia","Europe",19,22,22,3
-"35","BRB","Barbados","North America",5.5,9,15,9.5
-"75","FJI","Fiji","Oceania",20,25,25,5
+"134","LTU","Lithuania","Europe",15,16,16,1
+"135","LUX","Luxembourg","Europe",24.94,23.87,23.87,-1.07
+"184","PRT","Portugal","Europe",31.5,30.5,30.5,-1
+"191","RUS","Russian Federation","Europe",20,25,25,5
+"210","SVK","Slovakia","Europe",21,24,24,3
+"146","MKD","The former Yugoslav Republic of Macedonia","Europe",10,10,15,5
+"27","BHS","Bahamas","North America",0,0,15,15
+"35","BRB","Barbados","North America",9,9,15,6
+"32","BMU","Bermuda","North America",0,0,15,15

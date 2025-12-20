@@ -4,10 +4,10 @@ rates_final_long <- (melt(all_years_final, id=c("iso_2","iso_3","continent","cou
 colnames(rates_final_long)[colnames(rates_final_long)=="variable"] <- "year"
 colnames(rates_final_long)[colnames(rates_final_long)=="value"] <- "rate"
 
-#2024 min rate to long
-data2024_min_long <- (melt(data2024_min, id=c("iso_2","iso_3","continent","country")))
-colnames(data2024_min_long)[colnames(data2024_min_long)=="variable"] <- "year"
-colnames(data2024_min_long)[colnames(data2024_min_long)=="value"] <- "rate"
+#2025 min rate to long
+data2025_min_long <- (melt(data2025_min, id=c("iso_2","iso_3","continent","country")))
+colnames(data2025_min_long)[colnames(data2025_min_long)=="variable"] <- "year"
+colnames(data2025_min_long)[colnames(data2025_min_long)=="value"] <- "rate"
 
 gdp_iso_long <- (melt(gdp_iso, id=c("iso_2","iso_3","continent","country")))
 colnames(gdp_iso_long)[colnames(gdp_iso_long)=="variable"] <- "year"
@@ -16,20 +16,20 @@ colnames(gdp_iso_long)[colnames(gdp_iso_long)=="value"] <- "gdp"
 #Merge rates and gdp
 rates_gdp <- merge(rates_final_long, gdp_iso_long, by =c("iso_2","iso_3", "continent","country", "year"), all=T)
 
-#Merge 2024 min rate and gdp
-rates_gdp_2024_min <- merge(data2024_min_long, gdp_iso_long, by =c("iso_2","iso_3", "continent","country", "year"), all=T)
+#Merge 2025 min rate and gdp
+rates_gdp_2025_min <- merge(data2025_min_long, gdp_iso_long, by =c("iso_2","iso_3", "continent","country", "year"), all=T)
 
 #Merge 'rate and gdp' dataset with country groups
 rates_gdp <- merge(rates_gdp, country_iso_cont_groups, by =c("iso_2","iso_3", "continent","country"), all=T)
 final_data <- rates_gdp[order(rates_gdp$iso_3, rates_gdp$year),]
 
-#Merge '2024 min and gdp' dataset with country groups
-rates_gdp_2024_min <- merge(rates_gdp_2024_min, country_iso_cont_groups, by =c("iso_2","iso_3", "continent","country"), all=T)
-final_data_2024_min <- rates_gdp_2024_min[order(rates_gdp_2024_min$iso_3, rates_gdp_2024_min$year),]
+#Merge '2025 min and gdp' dataset with country groups
+rates_gdp_2025_min <- merge(rates_gdp_2025_min, country_iso_cont_groups, by =c("iso_2","iso_3", "continent","country"), all=T)
+final_data_2025_min <- rates_gdp_2025_min[order(rates_gdp_2025_min$iso_3, rates_gdp_2025_min$year),]
 
 #Write as final data file
 write.csv(final_data,"final_data/final_data_long.csv", row.names = FALSE)
-write.csv(final_data_2024_min,"final_data/final_data_2024_min_long.csv", row.names = FALSE)
+write.csv(final_data_2025_min,"final_data/final_data_2025_min_long.csv", row.names = FALSE)
 
 #Summary statistics####
 
@@ -38,71 +38,71 @@ complete_data <- final_data[complete.cases(final_data$rate, final_data$gdp),]
 complete_data$rate <- as.numeric(complete_data$rate)
 complete_data$gdp <- as.numeric(complete_data$gdp)
 
-#Drop if no gdp or 2024 min data
-complete_data_2024_min <- final_data_2024_min[complete.cases(final_data_2024_min$rate, final_data_2024_min$gdp),]
-complete_data_2024_min$rate <- as.numeric(complete_data_2024_min$rate)
-complete_data_2024_min$gdp <- as.numeric(complete_data_2024_min$gdp)
+#Drop if no gdp or 2025 min data
+complete_data_2025_min <- final_data_2025_min[complete.cases(final_data_2025_min$rate, final_data_2025_min$gdp),]
+complete_data_2025_min$rate <- as.numeric(complete_data_2025_min$rate)
+complete_data_2025_min$gdp <- as.numeric(complete_data_2025_min$gdp)
 
-#Creating the 2024 dataset that includes only countries for which we have gdp data
-data2024 <- subset(complete_data, year==2024, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
-write.csv(data2024, "final_data/final_data_2024.csv")
+#Creating the 2025 dataset that includes only countries for which we have gdp data
+data2025 <- subset(complete_data, year==2025, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
+write.csv(data2025, "final_data/final_data_2025.csv")
 
-#Creating the 2024_min dataset that includes only countries for which we have gdp data
-data_2024_min <- subset(complete_data_2024_min, year==2024, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
-write.csv(data_2024_min, "final_data/final_data_2024_min.csv")
+#Creating the 2025_min dataset that includes only countries for which we have gdp data
+data_2025_min <- subset(complete_data_2025_min, year==2025, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
+write.csv(data_2025_min, "final_data/final_data_2025_min.csv")
 
-#Creating the 2024 dataset that includes countries with missing gdp data as well
-data2024_gdp_mis <- subset(final_data, year==2024, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
-data2024_gdp_mis <- subset(data2024_gdp_mis, !is.na(data2024_gdp_mis$rate))
-write.csv(data2024_gdp_mis, "final_data/final_data_2024_gdp_incomplete.csv")
+#Creating the 2025 dataset that includes countries with missing gdp data as well
+data2025_gdp_mis <- subset(final_data, year==2025, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
+data2025_gdp_mis <- subset(data2025_gdp_mis, !is.na(data2025_gdp_mis$rate))
+write.csv(data2025_gdp_mis, "final_data/final_data_2025_gdp_incomplete.csv")
 
-#Creating the 2024_min dataset that includes countries with missing gdp data as well
-data2024_min_gdp_mis <- subset(final_data_2024_min, year==2024, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
-data2024_min_gdp_mis <- subset(data2024_min_gdp_mis, !is.na(data2024_min_gdp_mis$rate))
-write.csv(data2024_min_gdp_mis, "final_data/final_data_2024_min_gdp_incomplete.csv")
-
-
-#2024 simple mean (including only countries with gdp data)
-data2024$rate <- as.numeric(data2024$rate)
-simple_mean_24 <- mean(data2024$rate, na.rm = TRUE)
-
-#2024_min simple mean (including only countries with gdp data)
-data_2024_min$rate <- as.numeric(data_2024_min$rate)
-simple_mean_24_min <- mean(data_2024_min$rate, na.rm = TRUE)
-
-#2024 simple mean (including countries with missing gdp data)
-data2024_gdp_mis$rate <- as.numeric(data2024_gdp_mis$rate)
-simple_mean_24_gdp_mis <- mean(data2024_gdp_mis$rate, na.rm = TRUE)
-
-#2024_min simple mean (including countries with missing gdp data)
-data2024_min_gdp_mis$rate <- as.numeric(data2024_min_gdp_mis$rate)
-simple_mean_24_min_gdp_mis <- mean(data2024_min_gdp_mis$rate, na.rm = TRUE)
-
-#2024 weighted mean (including only countries with gdp data)
-weighted_mean_24 <- weighted.mean(data2024$rate, data2024$gdp, na.rm = TRUE)
-
-#2024_min weighted mean (including only countries with gdp data)
-weighted_mean_24_min <- weighted.mean(data_2024_min$rate, data_2024_min$gdp, na.rm = TRUE)
-
-#2024 number of rates (including only countries with gdp data)
-numrates_24 <- NROW(data2024$rate)
-numgdp_24 <- NROW(data2024$gdp)
-
-#2024 number of rates (including countries with missing gdp data)
-numrates_24_gdp_mis <- NROW(data2024_gdp_mis$rate)
-numgdp_24_gdp_mis <- NROW(data2024_gdp_mis$gdp)
+#Creating the 2025_min dataset that includes countries with missing gdp data as well
+data2025_min_gdp_mis <- subset(final_data_2025_min, year==2025, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
+data2025_min_gdp_mis <- subset(data2025_min_gdp_mis, !is.na(data2025_min_gdp_mis$rate))
+write.csv(data2025_min_gdp_mis, "final_data/final_data_2025_min_gdp_incomplete.csv")
 
 
-#Table showing rate changes between 2023 and 2024_min or 2024 ####
+#2025 simple mean (including only countries with gdp data)
+data2025$rate <- as.numeric(data2025$rate)
+simple_mean_25 <- mean(data2025$rate, na.rm = TRUE)
+
+#2025_min simple mean (including only countries with gdp data)
+data_2025_min$rate <- as.numeric(data_2025_min$rate)
+simple_mean_25_min <- mean(data_2025_min$rate, na.rm = TRUE)
+
+#2025 simple mean (including countries with missing gdp data)
+data2025_gdp_mis$rate <- as.numeric(data2025_gdp_mis$rate)
+simple_mean_25_gdp_mis <- mean(data2025_gdp_mis$rate, na.rm = TRUE)
+
+#2025_min simple mean (including countries with missing gdp data)
+data2025_min_gdp_mis$rate <- as.numeric(data2025_min_gdp_mis$rate)
+simple_mean_25_min_gdp_mis <- mean(data2025_min_gdp_mis$rate, na.rm = TRUE)
+
+#2025 weighted mean (including only countries with gdp data)
+weighted_mean_25 <- weighted.mean(data2025$rate, data2025$gdp, na.rm = TRUE)
+
+#2025_min weighted mean (including only countries with gdp data)
+weighted_mean_25_min <- weighted.mean(data_2025_min$rate, data_2025_min$gdp, na.rm = TRUE)
+
+#2025 number of rates (including only countries with gdp data)
+numrates_25 <- NROW(data2025$rate)
+numgdp_25 <- NROW(data2025$gdp)
+
+#2025 number of rates (including countries with missing gdp data)
+numrates_25_gdp_mis <- NROW(data2025_gdp_mis$rate)
+numgdp_25_gdp_mis <- NROW(data2025_gdp_mis$gdp)
+
+
+#Table showing rate changes between 2024 and 2025_min or 2025 ####
 rate_changes <- all_years_final_min
-rate_changes <- subset(rate_changes, select = c("iso_3", "country", "continent", 2023, 2024,"2024_min"))
+rate_changes <- subset(rate_changes, select = c("iso_3", "country", "continent", 2024, 2025,"2025_min"))
 rate_changes <- rate_changes[complete.cases(rate_changes),]
 
-rate_changes$'2023'<- as.numeric(rate_changes$'2023')
 rate_changes$'2024'<- as.numeric(rate_changes$'2024')
-rate_changes$'2024_min'<- as.numeric(rate_changes$'2024_min')
+rate_changes$'2025'<- as.numeric(rate_changes$'2025')
+rate_changes$'2025_min'<- as.numeric(rate_changes$'2025_min')
 
-rate_changes$change <- if_else(rate_changes$'2024_min'>rate_changes$'2024',rate_changes$'2024_min'- rate_changes$'2023',rate_changes$'2024'- rate_changes$'2023' )
+rate_changes$change <- if_else(rate_changes$'2025_min'>rate_changes$'2025',rate_changes$'2025_min'- rate_changes$'2024',rate_changes$'2025'- rate_changes$'2024' )
 
 #Drop countries with no changes
 rate_changes <- subset(rate_changes, change!=0)
@@ -123,10 +123,10 @@ rate_changes$continent <- if_else(rate_changes$continent == "SA", "South America
 colnames(rate_changes)[colnames(rate_changes)=="iso_3"] <- "ISO_3"
 colnames(rate_changes)[colnames(rate_changes)=="country"] <- "Country"
 colnames(rate_changes)[colnames(rate_changes)=="continent"] <- "Continent"
-colnames(rate_changes)[colnames(rate_changes)=="2023"] <- "2023 Tax Rate"
 colnames(rate_changes)[colnames(rate_changes)=="2024"] <- "2024 Tax Rate"
-colnames(rate_changes)[colnames(rate_changes)=="2024_min"] <- "2024 Tax Rate Accounting for Global Minimum Tax"
-colnames(rate_changes)[colnames(rate_changes)=="change"] <- "Change from 2023 to 2024"
+colnames(rate_changes)[colnames(rate_changes)=="2025"] <- "2025 Tax Rate"
+colnames(rate_changes)[colnames(rate_changes)=="2025_min"] <- "2025 Tax Rate Accounting for Global Minimum Tax"
+colnames(rate_changes)[colnames(rate_changes)=="change"] <- "Change from 2024 to 2025"
 
 #Order and write table
 rate_changes <- rate_changes[order(rate_changes$Continent, rate_changes$Country),]
@@ -136,7 +136,7 @@ write.csv(rate_changes, "final_outputs/rate_changes.csv")
 #Top, Bottom, and Zero Rates
 
 #Top
-toprate <- arrange(data2024_gdp_mis, desc(rate))
+toprate <- arrange(data2025_gdp_mis, desc(rate))
 toprate <- toprate[1:20,]
 
 toprate$continent <- if_else(toprate$continent == "EU", "Europe", toprate$continent)
@@ -155,7 +155,7 @@ colnames(toprate)[colnames(toprate)=="rate"] <- "Rate"
 toprate <- toprate[order(-toprate$Rate, toprate$Country),]
 
 #bottom
-bottomrate <- arrange(data2024_gdp_mis, rate)
+bottomrate <- arrange(data2025_gdp_mis, rate)
 bottomrate <- subset(bottomrate, rate > 0)
 bottomrate <- bottomrate[1:20,]
 
@@ -168,19 +168,19 @@ bottomrate$continent <- if_else(bottomrate$continent == "SA", "South America", b
 
 bottomrate <- subset(bottomrate, select = c(country, continent, rate))
 
-#Merge bottomrate with data2024_min
-bottomrate <- merge(bottomrate, data2024_min, by =c("country"))
+#Merge bottom rate with data2025_min
+bottomrate <- merge(bottomrate, data2025_min, by =c("country"))
 bottomrate <- bottomrate[,-c(6)]
 
 colnames(bottomrate)[colnames(bottomrate)=="country"] <- "Country"
 colnames(bottomrate)[colnames(bottomrate)=="continent.x"] <- "Continent"
 colnames(bottomrate)[colnames(bottomrate)=="rate"] <- "Rate"
-colnames(bottomrate)[colnames(bottomrate)=="2024"] <- "Tax Rate Accounting for Global Minimum Tax"
+colnames(bottomrate)[colnames(bottomrate)=="2025"] <- "Tax Rate Accounting for Global Minimum Tax"
 bottomrate <- bottomrate[order(bottomrate$Rate, bottomrate$Country),]
 
 
 #zero
-zerorate <- arrange(data2024_gdp_mis, rate)
+zerorate <- arrange(data2025_gdp_mis, rate)
 zerorate <- subset(zerorate, rate==0)
 
 zerorate$continent <- if_else(zerorate$continent == "EU", "Europe", zerorate$continent)
@@ -192,14 +192,14 @@ zerorate$continent <- if_else(zerorate$continent == "SA", "South America", zeror
 
 zerorate <- subset(zerorate, select = c(country, continent, rate))
 
-#Merge zerorate with data2024_min
-zerorate <- merge(zerorate, data2024_min, by =c("country"))
+#Merge zero rate with data2025_min
+zerorate <- merge(zerorate, data2025_min, by =c("country"))
 zerorate <- zerorate[,-c(6)]
 
 colnames(zerorate)[colnames(zerorate)=="country"] <- "Country"
 colnames(zerorate)[colnames(zerorate)=="continent.x"] <- "Continent"
 colnames(zerorate)[colnames(zerorate)=="rate"] <- "Rate"
-colnames(zerorate)[colnames(zerorate)=="2024"] <- "Tax Rate Accounting for Global Minimum Tax"
+colnames(zerorate)[colnames(zerorate)=="2025"] <- "Tax Rate Accounting for Global Minimum Tax"
 
 zerorate <- zerorate[order(zerorate$Country),]
 
@@ -211,125 +211,125 @@ write.csv(zerorate, "final_outputs/zero_rates.csv")
 
 #Regional distribution###
 
-#2024 by region
+#2025 by region
 #Creating regional sets (including only countries with gdp data)
-africa <- subset(data2024, continent=="AF")
+africa <- subset(data2025, continent=="AF")
 africa$rate <- as.numeric(africa$rate)
 africa$gdp <- as.numeric(africa$gdp)
 
-asia <- subset(data2024, continent=="AS")
+asia <- subset(data2025, continent=="AS")
 asia$rate <- as.numeric(asia$rate)
 asia$gdp <- as.numeric(asia$gdp)
 
-europe <- subset(data2024, continent=="EU")
+europe <- subset(data2025, continent=="EU")
 europe$rate <- as.numeric(europe$rate)
 europe$gdp <- as.numeric(europe$gdp)
 
-northa <- subset(data2024, continent=="NO")
+northa <- subset(data2025, continent=="NO")
 northa$rate <- as.numeric(northa$rate)
 northa$gdp <- as.numeric(northa$gdp)
 
-southa <- subset(data2024, continent=="SA")
+southa <- subset(data2025, continent=="SA")
 southa$rate <- as.numeric(southa$rate)
 southa$gdp <- as.numeric(southa$gdp)
 
-oceania <- subset(data2024, continent=="OC")
+oceania <- subset(data2025, continent=="OC")
 oceania$rate <- as.numeric(oceania$rate)
 oceania$gdp <- as.numeric(oceania$gdp)
 
-eu27 <- subset(data2024, eu27==1)
+eu27 <- subset(data2025, eu27==1)
 eu27$rate <- as.numeric(eu27$rate)
 eu27$gdp <- as.numeric(eu27$gdp)
 
-brics <- subset(data2024, brics==1)
+brics <- subset(data2025, brics==1)
 brics$rate <- as.numeric(brics$rate)
 brics$gdp <- as.numeric(brics$gdp)
 
-g7 <- subset(data2024, gseven==1)
+g7 <- subset(data2025, gseven==1)
 g7$rate <- as.numeric(g7$rate)
 g7$gdp <- as.numeric(g7$gdp)
 
-g20 <- subset(data2024, gtwenty==1)
+g20 <- subset(data2025, gtwenty==1)
 g20$rate <- as.numeric(g20$rate)
 g20$gdp <- as.numeric(g20$gdp)
 
-oecd <- subset(data2024, oecd==1)
+oecd <- subset(data2025, oecd==1)
 oecd$rate <- as.numeric(oecd$rate)
 oecd$gdp <- as.numeric(oecd$gdp)
 
 
-#Creating regional sets for 2024_min (including only countries with gdp data)
-africa_min <- subset(data_2024_min, continent=="AF")
+#Creating regional sets for 2025_min (including only countries with gdp data)
+africa_min <- subset(data_2025_min, continent=="AF")
 africa_min$rate <- as.numeric(africa_min$rate)
 africa_min$gdp <- as.numeric(africa_min$gdp)
 
-asia_min <- subset(data_2024_min, continent=="AS")
+asia_min <- subset(data_2025_min, continent=="AS")
 asia_min$rate <- as.numeric(asia_min$rate)
 asia_min$gdp <- as.numeric(asia_min$gdp)
 
-europe_min <- subset(data_2024_min, continent=="EU")
+europe_min <- subset(data_2025_min, continent=="EU")
 europe_min$rate <- as.numeric(europe_min$rate)
 europe_min$gdp <- as.numeric(europe_min$gdp)
 
-northa_min <- subset(data_2024_min, continent=="NO")
+northa_min <- subset(data_2025_min, continent=="NO")
 northa_min$rate <- as.numeric(northa_min$rate)
 northa_min$gdp <- as.numeric(northa_min$gdp)
 
-southa_min <- subset(data_2024_min, continent=="SA")
+southa_min <- subset(data_2025_min, continent=="SA")
 southa_min$rate <- as.numeric(southa_min$rate)
 southa_min$gdp <- as.numeric(southa_min$gdp)
 
-oceania_min <- subset(data_2024_min, continent=="OC")
+oceania_min <- subset(data_2025_min, continent=="OC")
 oceania_min$rate <- as.numeric(oceania_min$rate)
 oceania_min$gdp <- as.numeric(oceania_min$gdp)
 
-eu27_min <- subset(data_2024_min, eu27==1)
+eu27_min <- subset(data_2025_min, eu27==1)
 eu27_min$rate <- as.numeric(eu27_min$rate)
 eu27_min$gdp <- as.numeric(eu27_min$gdp)
 
-brics_min <- subset(data_2024_min, brics==1)
+brics_min <- subset(data_2025_min, brics==1)
 brics_min$rate <- as.numeric(brics_min$rate)
 brics_min$gdp <- as.numeric(brics_min$gdp)
 
-g7_min <- subset(data_2024_min, gseven==1)
+g7_min <- subset(data_2025_min, gseven==1)
 g7_min$rate <- as.numeric(g7_min$rate)
 g7_min$gdp <- as.numeric(g7_min$gdp)
 
-g20_min <- subset(data_2024_min, gtwenty==1)
+g20_min <- subset(data_2025_min, gtwenty==1)
 g20_min$rate <- as.numeric(g20_min$rate)
 g20_min$gdp <- as.numeric(g20_min$gdp)
 
-oecd_min <- subset(data_2024_min, oecd==1)
+oecd_min <- subset(data_2025_min, oecd==1)
 oecd_min$rate <- as.numeric(oecd_min$rate)
 oecd_min$gdp <- as.numeric(oecd_min$gdp)
 
 
 #Creating regional sets (including countries with missing gdp data)
-africa_gdp_mis <- subset(data2024_gdp_mis, continent=="AF")
-asia_gdp_mis <- subset(data2024_gdp_mis, continent=="AS")
-europe_gdp_mis <- subset(data2024_gdp_mis, continent=="EU")
-northa_gdp_mis <- subset(data2024_gdp_mis, continent=="NO")
-southa_gdp_mis <- subset(data2024_gdp_mis, continent=="SA")
-oceania_gdp_mis <- subset(data2024_gdp_mis, continent=="OC")
-eu_gdp_mis <- subset(data2024_gdp_mis, eu27==1)
-brics_gdp_mis <- subset(data2024_gdp_mis, brics==1)
-g7_gdp_mis <- subset(data2024_gdp_mis, gseven==1)
-g20_gdp_mis <- subset(data2024_gdp_mis, gtwenty==1)
-oecd_gdp_mis <- subset(data2024_gdp_mis, oecd==1)
+africa_gdp_mis <- subset(data2025_gdp_mis, continent=="AF")
+asia_gdp_mis <- subset(data2025_gdp_mis, continent=="AS")
+europe_gdp_mis <- subset(data2025_gdp_mis, continent=="EU")
+northa_gdp_mis <- subset(data2025_gdp_mis, continent=="NO")
+southa_gdp_mis <- subset(data2025_gdp_mis, continent=="SA")
+oceania_gdp_mis <- subset(data2025_gdp_mis, continent=="OC")
+eu_gdp_mis <- subset(data2025_gdp_mis, eu27==1)
+brics_gdp_mis <- subset(data2025_gdp_mis, brics==1)
+g7_gdp_mis <- subset(data2025_gdp_mis, gseven==1)
+g20_gdp_mis <- subset(data2025_gdp_mis, gtwenty==1)
+oecd_gdp_mis <- subset(data2025_gdp_mis, oecd==1)
 
 
-#Creating regional sets for2024_min (including countries with missing gdp data)
-africa_min_gdp_mis <- subset(data2024_min_gdp_mis, continent=="AF")
-asia_min_gdp_mis <- subset(data2024_min_gdp_mis, continent=="AS")
-europe_min_gdp_mis <- subset(data2024_min_gdp_mis, continent=="EU")
-northa_min_gdp_mis <- subset(data2024_min_gdp_mis, continent=="NO")
-southa_min_gdp_mis <- subset(data2024_min_gdp_mis, continent=="SA")
-oceania_min_gdp_mis <- subset(data2024_min_gdp_mis, continent=="OC")
-eu_min_gdp_mis <- subset(data2024_min_gdp_mis, eu27==1)
-brics_min_gdp_mis <- subset(data2024_min_gdp_mis, brics==1)
-g7_min_gdp_mis <- subset(data2024_min_gdp_mis, gseven==1)
-g20_min_gdp_mis <- subset(data2024_min_gdp_mis, gtwenty==1)
-oecd_min_gdp_mis <- subset(data2024_min_gdp_mis, oecd==1)
+#Creating regional sets for2025_min (including countries with missing gdp data)
+africa_min_gdp_mis <- subset(data2025_min_gdp_mis, continent=="AF")
+asia_min_gdp_mis <- subset(data2025_min_gdp_mis, continent=="AS")
+europe_min_gdp_mis <- subset(data2025_min_gdp_mis, continent=="EU")
+northa_min_gdp_mis <- subset(data2025_min_gdp_mis, continent=="NO")
+southa_min_gdp_mis <- subset(data2025_min_gdp_mis, continent=="SA")
+oceania_min_gdp_mis <- subset(data2025_min_gdp_mis, continent=="OC")
+eu_min_gdp_mis <- subset(data2025_min_gdp_mis, eu27==1)
+brics_min_gdp_mis <- subset(data2025_min_gdp_mis, brics==1)
+g7_min_gdp_mis <- subset(data2025_min_gdp_mis, gseven==1)
+g20_min_gdp_mis <- subset(data2025_min_gdp_mis, gtwenty==1)
+oecd_min_gdp_mis <- subset(data2025_min_gdp_mis, oecd==1)
 
 
 
@@ -346,7 +346,7 @@ g7_mean <- mean(g7$rate, na.rm = TRUE)
 g20_mean <- mean(g20$rate, na.rm=TRUE)
 oecd_mean <- mean(oecd$rate, na.rm=TRUE)
 
-#Simple Means 2024_min
+#Simple Means 2025_min
 africa_min_mean <- mean(africa_min$rate, na.rm=TRUE)
 asia_min_mean <- mean(asia_min$rate, na.rm=TRUE)
 europe_min_mean <- mean(europe_min$rate, na.rm=TRUE)
@@ -372,7 +372,7 @@ g7_wmean <- weighted.mean(g7$rate, g7$gdp, na.rm = TRUE)
 g20_wmean <- weighted.mean(g20$rate, g20$gdp, na.rm=TRUE)
 oecd_wmean <- weighted.mean(oecd$rate, oecd$gdp, na.rm=TRUE)
 
-#Weighted Means for 2024_min
+#Weighted Means for 2025_min
 africa_min_wmean <- weighted.mean(africa_min$rate, africa_min$gdp, na.rm=TRUE)
 asia_min_wmean <- weighted.mean(asia_min$rate, asia_min$gdp, na.rm=TRUE)
 europe_min_wmean <- weighted.mean(europe_min$rate, europe_min$gdp, na.rm=TRUE)
@@ -401,21 +401,21 @@ oecd_count <- NROW(oecd$gdp)
 #compile
 region <- c("Africa","Asia","Europe","North America","Oceania","South America","G7","OECD",
             "BRICS","EU27","G20","World")
-avgrate24 <- c(africa_mean,asia_mean,europe_mean,northa_mean,
+avgrate25 <- c(africa_mean,asia_mean,europe_mean,northa_mean,
                oceania_mean,southa_mean, g7_mean,oecd_mean,brics_mean,
-               eu_mean,g20_mean,simple_mean_24)
-avgrate24_min <- c(africa_min_mean,asia_min_mean,europe_min_mean,northa_min_mean,
+               eu_mean,g20_mean,simple_mean_25)
+avgrate25_min <- c(africa_min_mean,asia_min_mean,europe_min_mean,northa_min_mean,
                oceania_min_mean,southa_min_mean, g7_min_mean,oecd_min_mean,brics_min_mean,
-               eu_min_mean,g20_min_mean,simple_mean_24_min)
-wavgrate24 <-c(africa_wmean,asia_wmean,europe_wmean,northa_wmean,
+               eu_min_mean,g20_min_mean,simple_mean_25_min)
+wavgrate25 <-c(africa_wmean,asia_wmean,europe_wmean,northa_wmean,
                oceania_wmean,southa_wmean,g7_wmean,oecd_wmean,brics_wmean,
-               eu_wmean,g20_wmean,weighted_mean_24)
-wavgrate24_min <-c(africa_min_wmean,asia_min_wmean,europe_min_wmean,northa_min_wmean,
+               eu_wmean,g20_wmean,weighted_mean_25)
+wavgrate25_min <-c(africa_min_wmean,asia_min_wmean,europe_min_wmean,northa_min_wmean,
                oceania_min_wmean,southa_min_wmean,g7_min_wmean,oecd_min_wmean,brics_min_wmean,
-               eu_min_wmean,g20_min_wmean,weighted_mean_24_min)
-count24 <-c(africa_count,asia_count,europe_count,northa_count,oceania_count,southa_count,
-            g7_count,oecd_count,brics_count,eu_count,g20_count, numgdp_24)
-regional24 <- data.frame(region,avgrate24,avgrate24_min,wavgrate24,wavgrate24_min,count24)
+               eu_min_wmean,g20_min_wmean,weighted_mean_25_min)
+count25 <-c(africa_count,asia_count,europe_count,northa_count,oceania_count,southa_count,
+            g7_count,oecd_count,brics_count,eu_count,g20_count, numgdp_25)
+regional25 <- data.frame(region,avgrate25,avgrate25_min,wavgrate25,wavgrate25_min,count25)
 
 #Historical rates by every decade
 
@@ -839,7 +839,7 @@ count80 <- c(africa_count80,asia_count80,europe_count80,northa_count80,oceania_c
 regional80 <- data.frame(region,avgrate80,wavgrate80,count80)
 
 #Regional decade data
-allregional <- data.frame(merge(regional24, regional10, by = c("region"), all = TRUE))
+allregional <- data.frame(merge(regional25, regional10, by = c("region"), all = TRUE))
 allregional <- data.frame(merge(allregional, regional00, by = c("region"), all= TRUE))
 allregional <- data.frame(merge(allregional, regional90, by = c("region"), all = TRUE))
 allregional <- data.frame(merge(allregional, regional80, by = c("region"), all = TRUE))
@@ -854,28 +854,28 @@ write.csv(allregional, "final_outputs/regional_all_data.csv")
 #      write.csv(rate_changes, "final_outputs/rate_changes.csv")
 
 #Format and write table showing rates by region
-colnames(regional24)[colnames(regional24)=="region"] <- "Region"
-colnames(regional24)[colnames(regional24)=="avgrate24"] <- "Average Rate"
-colnames(regional24)[colnames(regional24)=="wavgrate24"] <- "Weighted Average Rate"
-colnames(regional24)[colnames(regional24)=="avgrate24_min"] <- "Average Rate Accounting for Global Minimum Tax"
-colnames(regional24)[colnames(regional24)=="wavgrate24_min"] <- "Weighted Average Rate Accounting for Global Minimum Tax"
-colnames(regional24)[colnames(regional24)=="count24"] <- "Number of Countries"
-write.csv(regional24, "final_outputs/rates_regional.csv")
+colnames(regional25)[colnames(regional25)=="region"] <- "Region"
+colnames(regional25)[colnames(regional25)=="avgrate25"] <- "Average Rate"
+colnames(regional25)[colnames(regional25)=="wavgrate25"] <- "Weighted Average Rate"
+colnames(regional25)[colnames(regional25)=="avgrate25_min"] <- "Average Rate Accounting for Global Minimum Tax"
+colnames(regional25)[colnames(regional25)=="wavgrate25_min"] <- "Weighted Average Rate Accounting for Global Minimum Tax"
+colnames(regional25)[colnames(regional25)=="count25"] <- "Number of Countries"
+write.csv(regional25, "final_outputs/rates_regional.csv")
 
 
-#Chart showing distribution of rates in 2024 (including countries with missing gdp data)
-dist <- hist(data2024_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50), main="2024 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+#Chart showing distribution of rates in 2025 (including countries with missing gdp data)
+dist <- hist(data2025_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50), main="2025 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
 distdata <- data.frame(dist$counts,dist$breaks[1:10])
-write.csv(distdata, "final_outputs/distribution_2024_count.csv")
+write.csv(distdata, "final_outputs/distribution_2025_count.csv")
 
-#Chart showing distribution of rates in 2024_min (including countries with missing gdp data)
-dist_min <- hist(data2024_min_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50), main="2024 Rates Accounting for Global Minimum Tax", xlab="Rate", col="dodgerblue", las=1)
+#Chart showing distribution of rates in 2025_min (including countries with missing gdp data)
+dist_min <- hist(data2025_min_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50), main="2025 Rates Accounting for Global Minimum Tax", xlab="Rate", col="dodgerblue", las=1)
 distdata_min <- data.frame(dist_min$counts,dist_min$breaks[1:10])
-write.csv(distdata_min, "final_outputs/distribution_2024_min_count.csv")
+write.csv(distdata_min, "final_outputs/distribution_2025_min_count.csv")
 
 
 
-#Time series graph (only includes countries for which we have GDP data) does not include 2024_min mean and weighted mean.
+#Time series graph (only includes countries for which we have GDP data) does not include 2025_min mean and weighted mean.
 complete_data$rate <- as.numeric(complete_data$rate)
 complete_data$gdp <- as.numeric(complete_data$gdp)
 
@@ -886,19 +886,19 @@ write.csv(timeseries, "final_outputs/rate_time_series.csv", row.names = FALSE)
 
 #Chart showing how distribution has changed each decade (including countries with missing gdp data)
 
-#2024 distribution (in percent rather than country counts)
-dist_percent <- hist(data2024_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="2024 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
+#2025 distribution (in percent rather than country counts)
+dist_percent <- hist(data2025_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="2025 Corporate Income Tax Rates", xlab="Rate", col="dodgerblue", las=1)
 distdata_percent <- data.frame(dist_percent$counts, dist_percent$breaks[1:15])
 colnames(distdata_percent)[colnames(distdata_percent)=="dist_percent.breaks.1.15."] <- "break"
 
-distdata_percent$dist_percent.counts <- distdata_percent$dist_percent.counts / numrates_24_gdp_mis
+distdata_percent$dist_percent.counts <- distdata_percent$dist_percent.counts / numrates_25_gdp_mis
 
-#2024_min distribution (in percent rather than country counts)
-dist_percent_min <- hist(data2024_min_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="2024 Rates Accounting for Global Minimum Tax", xlab="Rate", col="dodgerblue", las=1)
+#2025_min distribution (in percent rather than country counts)
+dist_percent_min <- hist(data2025_min_gdp_mis$rate, breaks=c(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75), main="2025 Rates Accounting for Global Minimum Tax", xlab="Rate", col="dodgerblue", las=1)
 distdata_percent_min <- data.frame(dist_percent_min$counts, dist_percent_min$breaks[1:15])
 colnames(distdata_percent_min)[colnames(distdata_percent_min)=="dist_percent_min.breaks.1.15."] <- "break"
 
-distdata_percent_min$dist_percent_min.counts <- distdata_percent_min$dist_percent_min.counts / numrates_24_gdp_mis
+distdata_percent_min$dist_percent_min.counts <- distdata_percent_min$dist_percent_min.counts / numrates_25_gdp_mis
 
 #2010 distribution
 data2010_gdp_mis <- subset(final_data, year==2010, select = c(iso_3, continent, country, year, rate, gdp, oecd, eu27, gseven, gtwenty, brics))
@@ -968,8 +968,8 @@ colnames(alldist )[colnames(alldist)=="break."] <- "break"
 alldist <- data.frame(merge(alldist, dist80data, by = c("break"), all= TRUE))
 
 colnames(alldist )[colnames(alldist)=="break."] <- "Rate Category"
-colnames(alldist )[colnames(alldist)=="dist_percent.counts"] <- "2024"
-colnames(alldist )[colnames(alldist)=="dist_percent_min.counts"] <- "2024_min"
+colnames(alldist )[colnames(alldist)=="dist_percent.counts"] <- "2025"
+colnames(alldist )[colnames(alldist)=="dist_percent_min.counts"] <- "2025_min"
 colnames(alldist )[colnames(alldist)=="dist10.counts"] <- "2010"
 colnames(alldist )[colnames(alldist)=="dist00.counts"] <- "2000"
 colnames(alldist )[colnames(alldist)=="dist90.counts"] <- "1990"
@@ -1025,25 +1025,26 @@ all_years_final$'2021' <- as.numeric(all_years_final$'2021')
 all_years_final$'2022' <- as.numeric(all_years_final$'2022')
 all_years_final$'2023' <- as.numeric(all_years_final$'2023')
 all_years_final$'2024' <- as.numeric(all_years_final$'2024')
+all_years_final$'2025' <- as.numeric(all_years_final$'2025')
 all_years_final_count <- all_years_final
 all_years_final_count[all_years_final_count >= 0] <- 1
 all_years_final_count[is.na(all_years_final_count)] <- 0
 
-year_count <- data.frame(apply(all_years_final_count[5:49], MARGIN=2, FUN=sum))
+year_count <- data.frame(apply(all_years_final_count[5:50], MARGIN=2, FUN=sum))
 
-colnames(year_count)[colnames(year_count)=="apply.all_years_final_count.5.49...MARGIN...2..FUN...sum."] <- "Count"
+colnames(year_count)[colnames(year_count)=="apply.all_years_final_count.5.50...MARGIN...2..FUN...sum."] <- "Count"
 
 write.csv(year_count, "final_outputs/year_count.csv")
 
-#Table with all 2024 tax rates
-all_rates_2024 <- data2024_gdp_mis
+#Table with all 2025 tax rates
+all_rates_2025 <- data2025_gdp_mis
 
-all_rates_2024 <- subset(all_rates_2024, year==2024, select = c(iso_3, country, continent, rate))
-all_rates_2024 <- all_rates_2024[order(all_rates_2024$country),]
+all_rates_2025 <- subset(all_rates_2025, year==2025, select = c(iso_3, country, continent, rate))
+all_rates_2025 <- all_rates_2025[order(all_rates_2025$country),]
 
-colnames(all_rates_2024)[colnames(all_rates_2024)=="iso_3"] <- "ISO3"
-colnames(all_rates_2024)[colnames(all_rates_2024)=="country"] <- "Country"
-colnames(all_rates_2024)[colnames(all_rates_2024)=="continent"] <- "Continent"
-colnames(all_rates_2024)[colnames(all_rates_2024)=="rate"] <- "Corporate Tax Rate"
+colnames(all_rates_2025)[colnames(all_rates_2025)=="iso_3"] <- "ISO3"
+colnames(all_rates_2025)[colnames(all_rates_2025)=="country"] <- "Country"
+colnames(all_rates_2025)[colnames(all_rates_2025)=="continent"] <- "Continent"
+colnames(all_rates_2025)[colnames(all_rates_2025)=="rate"] <- "Corporate Tax Rate"
 
-write.csv(all_rates_2024, "final_outputs/all_rates_2024.csv", row.names = FALSE)
+write.csv(all_rates_2025, "final_outputs/all_rates_2025.csv", row.names = FALSE)

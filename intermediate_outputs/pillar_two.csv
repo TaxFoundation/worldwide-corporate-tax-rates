@@ -1,4 +1,4 @@
-"","country","iso_3","continent","Joined the Pillar Two Statement","2024_IIR","2024_UTPR","2024_QDMTT"
+"","country","iso_3","continent","Joined the Pillar Two Statement","2025_IIR","2025_UTPR","2025_QDMTT"
 "1","Afghanistan","AFG","AS","No",NA,NA,NA
 "2","Aland Islands","ALA","EU","No",NA,NA,NA
 "3","Albania","ALB","EU","Yes","No","No","No"
@@ -8,45 +8,45 @@
 "7","Angola","AGO","AF","Yes","No","No","No"
 "8","Anguilla","AIA","NO","No",NA,NA,NA
 "9","Antarctica","ATA","AN","No",NA,NA,NA
-"10","Antigua and Barbuda","ATG","NO","No",NA,NA,NA
+"10","Antigua and Barbuda","ATG","NO","Yes","No","No","No"
 "11","Argentina","ARG","SA","Yes","No","No","No"
 "12","Armenia","ARM","AS","Yes","No","No","No"
 "13","Aruba","ABW","NO","No",NA,NA,NA
-"14","Australia","AUS","OC","Yes","Yes","No","Yes"
-"15","Austria","AUT","EU","Yes","Yes","No","Yes"
+"14","Australia","AUS","OC","Yes","Yes","Yes","Yes"
+"15","Austria","AUT","EU","Yes","Yes","Yes","Yes"
 "16","Azerbaijan","AZE","AS","Yes","No","No","No"
-"17","Bahamas","BHS","NO","Yes","No","No","No"
-"18","Bahrain","BHR","AS","Yes","No","No","No"
+"17","Bahamas","BHS","NO","Yes","No","No","Yes"
+"18","Bahrain","BHR","AS","Yes","No","No","Yes"
 "19","Bangladesh","BGD","AS","No",NA,NA,NA
 "20","Barbados","BRB","NO","Yes","No","No","Yes"
 "21","Belarus","BLR","EU","No",NA,NA,NA
-"22","Belgium","BEL","EU","Yes","Yes","No","Yes"
+"22","Belgium","BEL","EU","Yes","Yes","Yes","Yes"
 "23","Belize","BLZ","NO","No",NA,NA,NA
 "24","Benin","BEN","AF","No",NA,NA,NA
-"25","Bermuda","BMU","NO","Yes","No","No","No"
+"25","Bermuda","BMU","NO","Yes","No","No","Yes"
 "26","Bhutan","BTN","AS","No",NA,NA,NA
-"27","Bolivia (Plurinational State of)","BOL","SA","No",NA,NA,NA
+"27","Bolivia (Plurinational State of)","BOL","SA","No","No","No","No"
 "28","Bonaire, Sint Eustatius and Saba","BES","NO","No",NA,NA,NA
 "29","Bosnia and Herzegovina","BIH","EU","Yes","No","No","No"
 "30","Botswana","BWA","AF","No",NA,NA,NA
 "31","Bouvet Island","BVT","AN","No",NA,NA,NA
-"32","Brazil","BRA","SA","Yes","No","No","No"
+"32","Brazil","BRA","SA","Yes","No","No","Yes"
 "33","British Indian Ocean Territory","IOT","AS","No",NA,NA,NA
 "34","British Virgin Islands","VGB","NO","Yes","No","No","No"
 "35","Brunei Darussalam","BRN","AS","No",NA,NA,NA
-"36","Bulgaria","BGR","EU","Yes","Yes","No","Yes"
+"36","Bulgaria","BGR","EU","Yes","Yes","Yes","Yes"
 "37","Burkina Faso","BFA","AF","No",NA,NA,NA
 "38","Burundi","BDI","AF","No",NA,NA,NA
 "39","Cabo Verde","CPV","AF","Yes","No","No","No"
 "40","Cambodia","KHM","AS","No",NA,NA,NA
 "41","Cameroon","CMR","AF","Yes","No","No","No"
-"42","Canada","CAN","NO","Yes","Yes","No","Yes"
+"42","Canada","CAN","NO","Yes","Yes","Yes","Yes"
 "43","Cayman Islands","CYM","NO","Yes","No","No","No"
 "44","Central African Republic","CAF","AF","No",NA,NA,NA
 "45","Chad","TCD","AF","No",NA,NA,NA
 "46","Chile","CHL","SA","Yes","No","No","No"
 "47","China","CHN","AS","Yes","No","No","No"
-"48","China, Hong Kong Special Administrative Region","HKG","AS","Yes","No","No","No"
+"48","China, Hong Kong Special Administrative Region","HKG","AS","Yes","Yes","No","Yes"
 "49","China, Macao Special Administrative Region","MAC","AS","No",NA,NA,NA
 "50","Christmas Island","CXR","AS","No",NA,NA,NA
 "51","Cocos (Keeling) Islands","CCK","AS","No",NA,NA,NA
@@ -56,20 +56,20 @@
 "55","Cook Islands","COK","OC","No",NA,NA,NA
 "56","Costa Rica","CRI","NO","Yes","No","No","No"
 "57","Cote d'Ivoire","CIV","AF","No",NA,NA,NA
-"58","Croatia","HRV","EU","Yes","Yes","No","Yes"
+"58","Croatia","HRV","EU","Yes","Yes","Yes","Yes"
 "59","Cuba","CUB","NO","No",NA,NA,NA
-"60","Curacao","CUW","NO","No",NA,NA,NA
-"61","Cyprus","CYP","EU","No","Yes","No","No"
-"62","Czechia","CZE","EU","Yes","Yes","No","Yes"
+"60","Curacao","CUW","NO","Yes","Yes","No","Yes"
+"61","Cyprus","CYP","EU","No","Yes","Yes","Yes"
+"62","Czechia","CZE","EU","Yes","Yes","Yes","Yes"
 "63","Democratic People's Republic of Korea","PRK","AS","No",NA,NA,NA
 "64","Democratic Republic of the Congo","COD","AF","Yes","No","No","No"
-"65","Denmark","DNK","EU","Yes","Yes","No","Yes"
+"65","Denmark","DNK","EU","Yes","Yes","Yes","Yes"
 "66","Djibouti","DJI","AF","No",NA,NA,NA
-"67","Dominica","DMA","NO","No",NA,NA,NA
+"67","Dominica","DMA","NO","Yes","No","No","No"
 "68","Dominican Republic","DOM","NO","Yes","No","No","No"
-"69","Ecuador","ECU","SA","No",NA,NA,NA
+"69","Ecuador","ECU","SA","No","No","No","No"
 "70","Egypt","EGY","AF","Yes","No","No","No"
-"71","El Salvador","SLV","NO","No",NA,NA,NA
+"71","El Salvador","SLV","NO","No","No","No","No"
 "72","Equatorial Guinea","GNQ","AF","No",NA,NA,NA
 "73","Eritrea","ERI","AF","No",NA,NA,NA
 "74","Estonia","EST","EU","Yes","No","No","No"
@@ -77,24 +77,24 @@
 "76","Falkland Islands (Malvinas)","FLK","SA","No",NA,NA,NA
 "77","Faroe Islands","FRO","EU","No",NA,NA,NA
 "78","Fiji","FJI","OC","No",NA,NA,NA
-"79","Finland","FIN","EU","Yes","Yes","No","Yes"
-"80","France","FRA","EU","Yes","Yes","No","Yes"
+"79","Finland","FIN","EU","Yes","Yes","Yes","Yes"
+"80","France","FRA","EU","Yes","Yes","Yes","Yes"
 "81","French Guiana","GUF","SA","No",NA,NA,NA
 "82","French Polynesia","PYF","OC","No",NA,NA,NA
 "83","French Southern Territories","ATF","AN","No",NA,NA,NA
 "84","Gabon","GAB","AF","No",NA,NA,NA
 "85","Gambia","GMB","AF","No",NA,NA,NA
 "86","Georgia","GEO","AS","Yes","No","No","No"
-"87","Germany","DEU","EU","Yes","Yes","No","Yes"
+"87","Germany","DEU","EU","Yes","Yes","Yes","Yes"
 "88","Ghana","GHA","AF","No",NA,NA,NA
-"89","Gibraltar","GIB","EU","Yes","No","No","Yes"
-"90","Greece","GRC","EU","Yes","Yes","No","Yes"
+"89","Gibraltar","GIB","EU","Yes","Yes","No","Yes"
+"90","Greece","GRC","EU","Yes","Yes","Yes","Yes"
 "91","Greenland","GRL","NO","Yes","No","No","No"
 "92","Grenada","GRD","NO","No",NA,NA,NA
 "93","Guadeloupe","GLP","NO","No",NA,NA,NA
 "94","Guam","GUM","OC","No",NA,NA,NA
-"95","Guatemala","GTM","NO","No",NA,NA,NA
-"96","Guernsey","GGY","EU","Yes","No","No","No"
+"95","Guatemala","GTM","NO","No","No","No","No"
+"96","Guernsey","GGY","EU","Yes","Yes","No","Yes"
 "97","Guinea","GIN","AF","No",NA,NA,NA
 "98","Guinea-Bissau","GNB","AF","No",NA,NA,NA
 "99","Guyana","GUY","SA","No",NA,NA,NA
@@ -102,25 +102,25 @@
 "101","Heard Island and McDonald Islands","HMD","AN","No",NA,NA,NA
 "102","Holy See","VAT","EU","No",NA,NA,NA
 "103","Honduras","HND","NO","Yes","No","No","No"
-"104","Hungary","HUN","EU","Yes","Yes","No","Yes"
+"104","Hungary","HUN","EU","Yes","Yes","Yes","Yes"
 "105","Iceland","ISL","EU","Yes","No","No","No"
 "106","India","IND","AS","Yes","No","No","No"
-"107","Indonesia","IDN","AS","Yes","No","No","No"
+"107","Indonesia","IDN","AS","Yes","Yes","No","Yes"
 "108","Iran (Islamic Republic of)","IRN","AS","No",NA,NA,NA
 "109","Iraq","IRQ","AS","No",NA,NA,NA
-"110","Ireland","IRL","EU","Yes","Yes","No","Yes"
-"111","Isle of Man","IMN","EU","Yes","No","No","No"
+"110","Ireland","IRL","EU","Yes","Yes","Yes","Yes"
+"111","Isle of Man","IMN","EU","Yes","Yes","No","Yes"
 "112","Israel","ISR","AS","Yes","No","No","No"
-"113","Italy","ITA","EU","Yes","Yes","No","Yes"
+"113","Italy","ITA","EU","Yes","Yes","Yes","Yes"
 "114","Jamaica","JAM","NO","Yes","No","No","No"
 "115","Japan","JPN","AS","Yes","Yes","No","No"
-"116","Jersey","JEY","EU","Yes","No","No","No"
+"116","Jersey","JEY","EU","Yes","Yes","No","Yes"
 "117","Jordan","JOR","AS","Yes","No","No","No"
 "118","Kazakhstan","KAZ","AS","Yes","No","No","No"
-"119","Kenya","KEN","AF","No","No","No","No"
+"119","Kenya","KEN","AF","No","No","No","Yes"
 "120","Kiribati","KIR","OC","No",NA,NA,NA
 "121","Kosovo, Republic of","XKX","EU","No","No","No","No"
-"122","Kuwait","KWT","AS","No","No","No","No"
+"122","Kuwait","KWT","AS","No","No","No","Yes"
 "123","Kyrgyzstan","KGZ","AS","No",NA,NA,NA
 "124","Lao People's Democratic Republic","LAO","AS","No",NA,NA,NA
 "125","Latvia","LVA","EU","Yes","No","No","No"
@@ -130,17 +130,17 @@
 "129","Libya","LBY","AF","No",NA,NA,NA
 "130","Liechtenstein","LIE","EU","Yes","Yes","No","Yes"
 "131","Lithuania","LTU","EU","Yes","No","No","No"
-"132","Luxembourg","LUX","EU","Yes","Yes","No","Yes"
+"132","Luxembourg","LUX","EU","Yes","Yes","Yes","Yes"
 "133","Madagascar","MDG","AF","No",NA,NA,NA
 "134","Malawi","MWI","AF","No",NA,NA,NA
-"135","Malaysia","MYS","AS","Yes","No","No","No"
+"135","Malaysia","MYS","AS","Yes","Yes","No","Yes"
 "136","Maldives","MDV","AS","No",NA,NA,NA
 "137","Mali","MLI","AF","No",NA,NA,NA
 "138","Malta","MLT","EU","Yes","No","No","No"
 "139","Marshall Islands","MHL","OC","No",NA,NA,NA
 "140","Martinique","MTQ","NO","No",NA,NA,NA
 "141","Mauritania","MRT","AF","No",NA,NA,NA
-"142","Mauritius","MUS","AF","Yes","No","No","No"
+"142","Mauritius","MUS","AF","Yes","No","No","Yes"
 "143","Mayotte","MYT","AF","No",NA,NA,NA
 "144","Mexico","MEX","NO","Yes","No","No","No"
 "145","Micronesia (Federated States of)","FSM","OC","No",NA,NA,NA
@@ -149,23 +149,23 @@
 "148","Montenegro","MNE","EU","Yes","No","No","No"
 "149","Montserrat","MSR","NO","No",NA,NA,NA
 "150","Morocco","MAR","AF","No",NA,NA,NA
-"151","Mozambique","MOZ","AF","No",NA,NA,NA
+"151","Mozambique","MOZ","AF","No","No","No","No"
 "152","Myanmar","MMR","AS","No",NA,NA,NA
 "153","Namibia","NAM","AF","Yes","No","No","No"
 "154","Nauru","NRU","OC","No",NA,NA,NA
 "155","Nepal","NPL","AS","No",NA,NA,NA
-"156","Netherlands","NLD","EU","Yes","Yes","No","Yes"
+"156","Netherlands","NLD","EU","Yes","Yes","Yes","Yes"
 "157","Netherlands Antilles","ANT","NO","No",NA,NA,NA
 "158","New Caledonia","NCL","OC","No",NA,NA,NA
-"159","New Zealand","NZL","OC","Yes","No","No","No"
-"160","Nicaragua","NIC","NO","No",NA,NA,NA
+"159","New Zealand","NZL","OC","Yes","Yes","Yes","No"
+"160","Nicaragua","NIC","NO","No","No","No","No"
 "161","Niger","NER","AF","No",NA,NA,NA
 "162","Nigeria","NGA","AF","No","No","No","No"
 "163","Niue","NIU","OC","No",NA,NA,NA
 "164","Norfolk Island","NFK","OC","No",NA,NA,NA
 "165","Northern Mariana Islands","MNP","OC","No",NA,NA,NA
-"166","Norway","NOR","EU","Yes","Yes","No","Yes"
-"167","Oman","OMN","AS","Yes","No","No","No"
+"166","Norway","NOR","EU","Yes","Yes","Yes","Yes"
+"167","Oman","OMN","AS","Yes","Yes","No","No"
 "168","Pakistan","PAK","AS","No","No","No","No"
 "169","Palau","PLW","OC","No",NA,NA,NA
 "170","Panama","PAN","NO","Yes","No","No","No"
@@ -174,68 +174,68 @@
 "173","Peru","PER","SA","Yes","No","No","No"
 "174","Philippines","PHL","AS","No","No","No","No"
 "175","Pitcairn","PCN","OC","No",NA,NA,NA
-"176","Poland","POL","EU","Yes","No","No","No"
-"177","Portugal","PRT","EU","Yes","Yes","No","Yes"
+"176","Poland","POL","EU","Yes","Yes","Yes","Yes"
+"177","Portugal","PRT","EU","Yes","Yes","Yes","Yes"
 "178","Puerto Rico","PRI","NO","No","No","No","No"
-"179","Qatar","QAT","AS","Yes","No","No","No"
-"180","Republic of Korea","KOR","AS","Yes","Yes","No","No"
+"179","Qatar","QAT","AS","Yes","No","No","Yes"
+"180","Republic of Korea","KOR","AS","Yes","Yes","Yes","No"
 "181","Republic of Moldova","MDA","EU","No","No","No","No"
 "182","Reunion","REU","AF","No",NA,NA,NA
-"183","Romania","ROU","EU","Yes","Yes","No","Yes"
+"183","Romania","ROU","EU","Yes","Yes","Yes","Yes"
 "184","Russian Federation","RUS","EU","No",NA,NA,NA
 "185","Rwanda","RWA","AF","No",NA,NA,NA
 "186","Saint Barthelemy","BLM","NO","No",NA,NA,NA
 "187","Saint Helena","SHN","AF","No",NA,NA,NA
-"188","Saint Kitts and Nevis","KNA","NO","No",NA,NA,NA
-"189","Saint Lucia","LCA","NO","No",NA,NA,NA
+"188","Saint Kitts and Nevis","KNA","NO","Yes","No","No","No"
+"189","Saint Lucia","LCA","NO","Yes","No","No","No"
 "190","Saint Martin (French Part)","MAF","NO","No",NA,NA,NA
 "191","Saint Pierre and Miquelon","SPM","NO","No",NA,NA,NA
-"192","Saint Vincent and the Grenadines","VCT","NO","No",NA,NA,NA
+"192","Saint Vincent and the Grenadines","VCT","NO","Yes","No","No","No"
 "193","Samoa","WSM","OC","No",NA,NA,NA
 "194","San Marino","SMR","EU","No",NA,NA,NA
 "195","Sao Tome and Principe","STP","AF","No",NA,NA,NA
 "196","Saudi Arabia","SAU","AS","Yes","No","No","No"
 "197","Senegal","SEN","AF","Yes","No","No","No"
 "198","Serbia","SRB","EU","Yes","No","No","No"
-"199","Seychelles","SYC","AF","No",NA,NA,NA
+"199","Seychelles","SYC","AF","Yes","No","No","No"
 "200","Sierra Leone","SLE","AF","Yes","No","No","No"
-"201","Singapore","SGP","AS","Yes","No","No","No"
+"201","Singapore","SGP","AS","Yes","Yes","No","Yes"
 "202","Sint Maarten (Dutch part)","SXM","NO","No",NA,NA,NA
 "203","Slovakia","SVK","EU","Yes","No","No","Yes"
-"204","Slovenia","SVN","EU","Yes","Yes","No","Yes"
+"204","Slovenia","SVN","EU","Yes","Yes","Yes","Yes"
 "205","Solomon Islands","SLB","OC","No",NA,NA,NA
 "206","Somalia","SOM","AF","No",NA,NA,NA
 "207","South Africa","ZAF","AF","Yes","Yes","No","Yes"
 "208","South Georgia and the South Sandwich Islands","SGS","AN","No",NA,NA,NA
 "209","South Sudan","SSD","AF","No",NA,NA,NA
-"210","Spain","ESP","EU","Yes","Yes","No","Yes"
+"210","Spain","ESP","EU","Yes","Yes","Yes","Yes"
 "211","Sri Lanka","LKA","AS","No","No","No","No"
 "212","State of Palestine","PSE","AS","No",NA,NA,NA
 "213","Sudan","SDN","AF","No",NA,NA,NA
 "214","Suriname","SUR","SA","No",NA,NA,NA
 "215","Svalbard and Jan Mayen Islands","SJM","EU","No",NA,NA,NA
 "216","Swaziland","SWZ","AF","Yes","No","No","No"
-"217","Sweden","SWE","EU","Yes","Yes","No","Yes"
-"218","Switzerland","CHE","EU","Yes","No","No","Yes"
+"217","Sweden","SWE","EU","Yes","Yes","Yes","Yes"
+"218","Switzerland","CHE","EU","Yes","Yes","No","Yes"
 "219","Syrian Arab Republic","SYR","AS","No",NA,NA,NA
 "220","Taiwan","TWN","AS","No","No","No","No"
 "221","Tajikistan","TJK","AS","No",NA,NA,NA
-"222","Thailand","THA","AS","Yes","No","No","No"
-"223","The former Yugoslav Republic of Macedonia","MKD","EU","Yes","No","No","No"
+"222","Thailand","THA","AS","Yes","Yes","Yes","Yes"
+"223","The former Yugoslav Republic of Macedonia","MKD","EU","Yes","Yes","Yes","Yes"
 "224","Timor-Leste","TLS","OC","No",NA,NA,NA
 "225","Togo","TGO","AF","No",NA,NA,NA
 "226","Tokelau","TKL","OC","No",NA,NA,NA
 "227","Tonga","TON","OC","No",NA,NA,NA
 "228","Trinidad and Tobago","TTO","NO","Yes","No","No","No"
 "229","Tunisia","TUN","AF","Yes","No","No","No"
-"230","Turkey","TUR","AS","Yes","Yes","No","Yes"
+"230","Turkey","TUR","AS","Yes","Yes","Yes","Yes"
 "231","Turkmenistan","TKM","AS","No",NA,NA,NA
 "232","Turks and Caicos Islands","TCA","NO","No",NA,NA,NA
 "233","Tuvalu","TUV","OC","No",NA,NA,NA
-"234","Uganda","UGA","AF","No",NA,NA,NA
+"234","Uganda","UGA","AF","No","No","No","No"
 "235","Ukraine","UKR","EU","Yes","No","No","No"
-"236","United Arab Emirates","ARE","AS","Yes","No","No","No"
-"237","United Kingdom of Great Britain and Northern Ireland","GBR","EU","Yes","Yes","No","Yes"
+"236","United Arab Emirates","ARE","AS","Yes","No","No","Yes"
+"237","United Kingdom of Great Britain and Northern Ireland","GBR","EU","Yes","Yes","Yes","Yes"
 "238","United Republic of Tanzania","TZA","AF","No",NA,NA,NA
 "239","United States Minor Outlying Islands","UMI","OC","No",NA,NA,NA
 "240","United States of America","USA","NO","Yes","No","No","No"

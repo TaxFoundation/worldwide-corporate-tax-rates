@@ -45,6 +45,7 @@ gdp$Country[gdp$Country == "São Tomé and Principe"] <- "Sao Tome and Principe"
 #gdp_projected_2015$Country[gdp_projected_2015$Country == "St. Vincent Grenadines"] <- "St. Vincent and Grenadines"
 #gdp_historical_2015$Country[gdp_historical_2015$Country == "Swaziland/Eswatini"] <- "Swaziland"
 gdp$Country[gdp$Country == "Swaziland/Eswatini"] <- "Swaziland"
+gdp$Country[gdp$Country == "Burma"] <- "Myanmar"
 
 
 #Add Qatar and Zimbabwe to gdp_historical_2010
@@ -138,12 +139,16 @@ gdp <- subset(gdp, gdp$country != "Africa"
 
 #Change format of GDP data from wide to long
 gdp$country <- as.character(gdp$country)
+write.csv(gdp,"intermediate_outputs/gdp_check.csv", row.names=F)
+
 gdp_long <- (melt(gdp, id=c("country")))
 colnames(gdp_long)[colnames(gdp_long)=="variable"] <- "year"
 colnames(gdp_long)[colnames(gdp_long)=="value"] <- "gdp"
 
 #delete the "y" before the year"
 gdp_long$year <- gsub("^.{0,1}", "", gdp_long$year)
+
+
 
 gdp_final <- spread(gdp_long, year, gdp)
 

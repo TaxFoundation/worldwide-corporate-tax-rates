@@ -11,14 +11,13 @@
 #dstruc$VAR_DESC
 #dstruc$CORP_TAX
 
-url = "https://sdmx.oecd.org/public/rest/data/OECD.CTP.TPS,DSD_TAX_CIT@DF_CIT,1.0/AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+WXOECD+ALB+AGO+AND+AIA+ATG+ARG+ARM+ABW+AZE+BHS+BHR+GGY+BRB+BLZ+BEN+BMU+BIH+BWA+BRA+VGB+BRN+BGR+BFA+CPV+CMR+CYM+CHN+COG+COK+CIV+HRV+CUW+COD+DJI+DMA+DOM+EGY+SWZ+FRO+GAB+GEO+GIB+GRL+GRD+HTI+HND+HKG+IND+IDN+IMN+JAM+JEY+JOR+KAZ+KEN+KWT+LBR+LIE+MAC+MYS+MDV+MLT+MRT+MUS+MCO+MNG+MNE+MSR+MAR+NAM+NGA+MKD+OMN+PAK+PAN+PNG+PRY+PER+PHL+QAT+ROU+KNA+LCA+VCT+WSM+SMR+SAU+SEN+SRB+SYC+SLE+SGP+ZAF+LKA+THA+TGO+TTO+TUN+TCA+UKR+ARE+URY+UZB+VNM+ZMB+AUS.A.CIT_C.ST..S13..?startPeriod=2024&endPeriod=2024&dimensionAtObservation=AllDimensions&format=csvfilewithlabels"
+url = "https://sdmx.oecd.org/public/rest/data/OECD.CTP.TPS,DSD_TAX_CIT@DF_CIT,2.0/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+ALB+AGO+AND+AIA+ATG+ARG+ARM+ABW+AZE+BHS+BHR+GGY+BRB+BLZ+BEN+BMU+BIH+BWA+BRA+VGB+BRN+BGR+BFA+CPV+CMR+CYM+CHN+COG+COK+CIV+HRV+CUW+COD+DJI+DMA+DOM+EGY+SWZ+FRO+FJI+GAB+GEO+GIB+GRL+GRD+HTI+HND+HKG+IND+IDN+IMN+JAM+JEY+JOR+KAZ+KEN+KWT+LBR+LIE+MAC+MYS+MDV+MLT+MRT+MUS+MCO+MNG+MNE+MSR+MAR+NAM+NGA+MKD+OMN+PAK+PAN+PNG+PRY+PER+PHL+QAT+ROU+KNA+LCA+VCT+WSM+SMR+SAU+SEN+SRB+SYC+SLE+SGP+ZAF+LKA+THA+TGO+TTO+TUN+TCA+UKR+ARE+URY+UZB+VNM+ZMB.A.CIT_C.ST..S13...?startPeriod=2025&endPeriod=2025&dimensionAtObservation=AllDimensions&format=csvfilewithlabels"
+#url = "https://sdmx.oecd.org/public/rest/data/OECD.CTP.TPS,DSD_TAX_CIT@DF_CIT,1.0/AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+WXOECD+ALB+AGO+AND+AIA+ATG+ARG+ARM+ABW+AZE+BHS+BHR+GGY+BRB+BLZ+BEN+BMU+BIH+BWA+BRA+VGB+BRN+BGR+BFA+CPV+CMR+CYM+CHN+COG+COK+CIV+HRV+CUW+COD+DJI+DMA+DOM+EGY+SWZ+FRO+GAB+GEO+GIB+GRL+GRD+HTI+HND+HKG+IND+IDN+IMN+JAM+JEY+JOR+KAZ+KEN+KWT+LBR+LIE+MAC+MYS+MDV+MLT+MRT+MUS+MCO+MNG+MNE+MSR+MAR+NAM+NGA+MKD+OMN+PAK+PAN+PNG+PRY+PER+PHL+QAT+ROU+KNA+LCA+VCT+WSM+SMR+SAU+SEN+SRB+SYC+SLE+SGP+ZAF+LKA+THA+TGO+TTO+TUN+TCA+UKR+ARE+URY+UZB+VNM+ZMB+AUS.A.CIT_C.ST..S13..?startPeriod=2025&endPeriod=2025&dimensionAtObservation=AllDimensions&format=csvfilewithlabels"
 oecd_data<-read.csv(url)
 
-#Keep and rename selected columns
-
-oecd_data<-oecd_data[c(5,23)]
-colnames(oecd_data)<-c("iso_3","2024")
-oecd_data_2024<-oecd_data
+oecd_data<-oecd_data[c(5,25)]
+colnames(oecd_data)<-c("iso_3","2025")
+oecd_data_2025<-oecd_data
 
 #oecd_data_2023 <- subset(oecd_data_2023, oecd_data_2023$CORP_TAX=="COMB_CIT_RATE")
 #oecd_data_2023 <- subset(oecd_data_2023, select = -c(CORP_TAX,TIME_FORMAT,Time))
@@ -96,8 +95,8 @@ oecd_data_2024<-oecd_data
 
 #Dataset for previous years####
 
-#Read in dataset Tax Foundation has compiled over the years for 1980-2023
-previous_years <- read_csv("source_data/data_rates_1980_2023.csv")
+#Read in dataset Tax Foundation has compiled over the years for 1980-2024
+previous_years <- read_csv("source_data/data_rates_1980_2024.csv")
 
 #Drop column that is not needed
 previous_years <- subset(previous_years, select = -c(...1))
@@ -164,21 +163,24 @@ previous_years <- subset(previous_years, select = -c(...1))
 #oecd_all_2023 <- subset(oecd_all_2023, select = -c(redundant))
 
 
-#Combine 2024 data ("oecd_data_2024") with data from previous years ("previous_years")
-all_years_preliminary <- merge(oecd_data_2024, previous_years, by="iso_3", all=T)
-all_years_preliminary <- all_years_preliminary[, c("iso_2", "iso_3", "continent", "country", 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024)]
+#Combine 2025 data ("oecd_data_2025") with data from previous years ("previous_years")
+all_years_preliminary <- merge(oecd_data_2025, previous_years, by="iso_3", all=T)
+all_years_preliminary <- all_years_preliminary[, c("iso_2", "iso_3", "continent", "country", 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025)]
 
 #Read in Pillar Two data
-pillar_two <- read_excel("source_data/2024_PWC_PillarII.xlsx")
+pillar_two <- read_excel("source_data/2025_PWC_PillarII.xlsx")
 #Keep and rename selected columns
-pillar_two <- pillar_two[,-c(7:12)]
+pillar_two <- pillar_two[,-c(4:6)]
+pillar_two <- pillar_two[,-c(7:9)]
 pillar_two <- pillar_two[,-c(1:1)]
 colnames(pillar_two)[colnames(pillar_two)=="Territory"] <- "country"
 
 #Change country names to match official ISO-names
+pillar_two$country[pillar_two$country == "Bolivia"] <- "Bolivia (Plurinational State of)"
 pillar_two$country[pillar_two$country == "Cape Verde"] <- "Cabo Verde"
 pillar_two$country[pillar_two$country == "Czech Republic"] <- "Czechia"
 pillar_two$country[pillar_two$country == "DR Congo"] <- "Democratic Republic of the Congo"
+pillar_two$country[pillar_two$country == "Curaçao"] <- "Curacao"
 pillar_two$country[pillar_two$country == "Eswatini"] <- "Swaziland"
 pillar_two$country[pillar_two$country == "Hong Kong SAR, China"] <-  "China, Hong Kong Special Administrative Region"
 pillar_two$country[pillar_two$country == "Moldova"] <- "Republic of Moldova"
@@ -193,6 +195,10 @@ pillar_two$country[pillar_two$country =="Kosovo"] <- "Kosovo, Republic of"
 
 #Merge Pillar Two data with iso-codes
 pillar_two <- merge(country_iso_cont, pillar_two, by="country", all=T)
+
+#correct Bermuda
+pillar_two[c("2025_QDMTT")][pillar_two$iso_3 == "BMU",] <- "Yes"
+
 pillar_two <- pillar_two[,-c(2:2)]
 pillar_two$"Joined the Pillar Two Statement" <- as.character(pillar_two$"Joined the Pillar Two Statement")
 pillar_two$'Joined the Pillar Two Statement'<- if_else ( is.na(pillar_two$'Joined the Pillar Two Statement'),"No", pillar_two$'Joined the Pillar Two Statement')
